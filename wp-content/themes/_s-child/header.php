@@ -58,7 +58,7 @@
                     </div>
                     <div class="nv_item">
                         シッター募集
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                        <a href="<?php echo esc_url(home_url('/entry')); ?>" class="a"></a>
                     </div>
                     <div class="nv_item">
                         ご質問・お問い合わせ
