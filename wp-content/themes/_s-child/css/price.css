@@ -1,0 +1,84 @@
+/********************************
+ご利用料金
+*********************************/
+
+.price1 {
+    text-align: center;
+}
+
+.price1_tltle {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+.price1_price {
+    font-size: 30px;
+    font-weight: bold;
+    max-width: 406px;
+    margin: 0 auto;
+}
+
+.price1_price span {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.price1_price_des {
+    text-align: left;
+    font-size: 12px;
+    max-width: 406px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.price1_calc {
+    margin-bottom: 40px;
+}
+
+.calc1, .calc2, .calc3 {
+    padding: 10px 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+.calc1 {
+    background-color: #bc98ff;
+}
+
+.calc2 {
+    background-color: #d593b4;
+}
+
+.calc3 {
+    background-color: #a1d073;
+}
+
+.calcp {
+    font-size: 30px;
+}
+
+/********************************
+料金表
+*********************************/
+
+.price2 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.price2 table {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.price2 td {
+    text-align: center;
+    border-bottom: dotted 1px #606060;
+}
+
+.price2_bottom {
+    max-width: 500px;
+    margin: 40px auto;
+}

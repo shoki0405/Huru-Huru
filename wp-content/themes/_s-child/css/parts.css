@@ -1,0 +1,10 @@
+.right_list {
+    position: fixed;
+    right: 0;
+    top: 540px;
+    z-index: 9999;
+}
+
+.right_item {
+    width: 100px;
+}

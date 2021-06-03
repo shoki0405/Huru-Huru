@@ -1,0 +1,77 @@
+/********************************
+HURU-HURUとは
+*********************************/
+
+.overview_content1 {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.overview_content1_title {
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.overview_content1_des {
+    margin-bottom: 80px;
+}
+
+.overview_content1_img {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.overview_content2 {
+    text-align: center;
+    padding: 80px;
+    margin-bottom: 40px;
+}
+
+.overview_content2_inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.overview_content2_title {
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    padding: 10px 0;
+    background-color: #fff;
+}
+
+.overview_content2_img {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.overview_content2_head {
+    background-color: #fff;
+    text-align: left;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.overview_content2_head img {
+    object-fit: contain;
+    width: 20px;
+    vertical-align: middle;
+}
+
+.overview_img_half img {
+    width: 15px;
+}
+
+.overview_content2_data {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 40px;
+}

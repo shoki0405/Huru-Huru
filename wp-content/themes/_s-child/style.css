@@ -1,0 +1,15 @@
+/*
+Theme Name: _s-child
+Template: _s
+*/
+
+@import "css/base.css";
+@import "css/header.css";
+@import "css/footer.css";
+@import "css/front.css";
+@import "css/parts.css";
+@import "css/news.css";
+@import "css/post.css";
+@import "css/page.css";
+@import "css/service.css";
+@import "css/price.css";
