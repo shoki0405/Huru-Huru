@@ -32,7 +32,7 @@ $img_fol_price = get_stylesheet_directory_uri() . "/img/price/";
         <div>
             <table class="t1">
                 <tr>
-                    <td colspan="3">
+                    <td class="td_title" colspan="3">
                         会員種別と基本料金
                     </td>
                 </tr>
@@ -59,8 +59,8 @@ $img_fol_price = get_stylesheet_directory_uri() . "/img/price/";
         <div>
             <table class="t2">
                 <tr>
-                    <td colspan="3">
-                        会員種別と基本料金
+                    <td class="td_title" colspan="3">
+                        基本料金(利用料金)
                     </td>
                 </tr>
                 <tr>
@@ -85,8 +85,8 @@ $img_fol_price = get_stylesheet_directory_uri() . "/img/price/";
         <div>
             <table class="t3">
                 <tr>
-                    <td colspan="2">
-                        会員種別と基本料金
+                    <td class="td_title" colspan="2">
+                        オプション料金
                     </td>
                 </tr>
                 <tr>
@@ -153,79 +153,121 @@ $img_fol_price = get_stylesheet_directory_uri() . "/img/price/";
 
 
     <div class="price3">
-        <div>東京都ベビーシッター利用支援</div>
+        <div class="price3_inner">
+            <div class="price3_title">東京都ベビーシッター利用支援</div>
 
-        <div class="price2_bottom">
-            <img src="<?php echo $img_fol_price; ?>price2_bottom.svg" alt="">
-        </div>
-
-        <div>
-            利用可能時間
-            <span class="price2_bottom">
-                <img src="<?php echo $img_fol_price; ?>price2_bottom.svg" alt="">
-            </span>
-        </div>
-        <div>
-            月曜日から土曜日までの午前7時～午後10時まで<br><br>
-
-            〈 保育短時間認定 〉<br>
-            1日8時間まで かつ 月160時間まで<br><br>
-
-            〈 保育標準時間認定〉<br>
-            1日11時間まで かつ 月220時間まで<br><br>
-
-            ※きょうだいの保育や保育所への送迎、家事等のサービスは含みません。<br>
-            ※保護者が休暇の日（体調不良を含む）は助成対象外となります。<br>
-            ※お子さまが病気になった場合は、助成対象外となります。
-        </div>
-
-        <div>
-            対象自治体
-            <span class="price2_bottom">
-                <img src="<?php echo $img_fol_price; ?>price2_bottom.svg" alt="">
-            </span>
-        </div>
-
-        <div>
-            新宿区、台東区、目黒区、大田区、渋谷区、中野区、北区、板橋区、
-            葛飾区、品川区、三鷹市、府中市、国立市、福生市、東大和市、武蔵村山市、
-            狛江市　(2020/3/31現在、東京都福祉保健局HPより）荒川区(2020/07～)<br><br>
-
-            対象自治体は随時追加・変更されます。ご自身が対象者かどうかの確認は、
-            お住まいの区市にお問い合わせください。
-        </div>
-
-        <div>
-            ご利用の流れ
-            <span class="price2_bottom">
-                <img src="<?php echo $img_fol_price; ?>price2_bottom.svg" alt="">
-            </span>
-        </div>
-
-        <div>
-            お住まいの区市町村から、交付された“対象者確認書”をメール添付にて送付ください。
-
-            宛先：@@@@mail.jp　件名：対象者確認書（氏名）
-        </div>
-
-        <div>
-
-            HURU-HURUに未登録の方は、こちらから登録をお願いします。
-        </div>
-
-        <div>
-            東京都ベビーシッター利用支援事業フォームへ、ご回答をお願いいたします。
-        </div>
-
-
-
-        <div>
-            <div>
-                本事業については下記東京都ホームページに掲載の
-                利用約款および利用パンフレットも必ずご確認ください。
+            <div class="price3_top">
+                <img src="<?php echo $img_fol_price; ?>price3_top.png" alt="">
             </div>
-            <div>東京都専用ホームページ</div>
+
+            <div class="price3_h">
+                <span class="price3_h_img1">
+                    <img src="<?php echo $img_fol; ?>half_orange.png" alt="">
+                </span>
+                利用可能時間
+            </div>
+
+            <div class="price3_text">
+                <div class="price3_text_b">
+                    月曜日から土曜日までの午前7時～午後10時まで
+                </div>
+
+                <br>
+
+                <div class="price3_text_b">
+                    〈 保育短時間認定 〉
+                </div>
+
+                <div class="price3_text_n">
+                    1日8時間まで かつ 月160時間まで
+                </div>
+
+                <br>
+
+                <div class="price3_text_b">
+                    〈 保育標準時間認定〉
+                </div>
+
+                <div class="price3_text_n">
+                    1日11時間まで かつ 月220時間まで
+                </div>
+
+                <br>
+
+                <div class="price3_text_s">
+                    ※きょうだいの保育や保育所への送迎、家事等のサービスは含みません。<br>
+                    ※保護者が休暇の日（体調不良を含む）は助成対象外となります。<br>
+                    ※お子さまが病気になった場合は、助成対象外となります。
+                </div>
+            </div>
+
+            <div class="price3_h">
+                <span class="price3_h_img2">
+                    <img src="<?php echo $img_fol; ?>smile.png" alt="">
+                </span>
+                対象自治体
+            </div>
+
+            <div class="price3_text">
+                新宿区、台東区、目黒区、大田区、渋谷区、中野区、北区、板橋区、
+                葛飾区、品川区、三鷹市、府中市、国立市、福生市、東大和市、武蔵村山市、
+                狛江市　(2020/3/31現在、東京都福祉保健局HPより）荒川区(2020/07～)<br><br>
+
+                対象自治体は随時追加・変更されます。ご自身が対象者かどうかの確認は、
+                お住まいの区市にお問い合わせください。
+            </div>
+
+            <div class="price3_h">
+                <span class="price3_h_img3">
+                    <img src="<?php echo $img_fol; ?>half_green_fruit.png" alt="">
+                </span>
+                ご利用の流れ
+            </div>
+
+            <div class="price3_flow">
+                <div class="price3_flow_num">
+                    <img src="<?php echo $img_fol_price; ?>price3_num1.svg" alt="">
+                </div>
+                <div>
+                    お住まいの区市町村から、交付された“対象者確認書”をメール添付にて送付ください。<br><br>
+                    <div class="price3_text_b">
+                        宛先：@@@@mail.jp　件名：対象者確認書（氏名）
+                    </div>
+                </div>
+            </div>
+
+            <div class="price3_flow">
+                <div class="price3_flow_num">
+                    <img src="<?php echo $img_fol_price; ?>price3_num2.svg" alt="">
+                </div>
+                <div>
+                    HURU-HURUに未登録の方は、<a href="">こちら</a>から登録をお願いします。
+                </div>
+            </div>
+
+            <div class="price3_flow">
+                <div class="price3_flow_num">
+                    <img src="<?php echo $img_fol_price; ?>price3_num3.svg" alt="">
+                </div>
+                <div>
+                    東京都ベビーシッター利用支援事業フォームへ、ご回答をお願いいたします。
+                </div>
+            </div>
+
+
+
+            <div class="price3_under_banner">
+                <div class="price3_under_banner1">
+                    本事業については下記東京都ホームページに掲載の<br>
+                    利用約款および利用パンフレットも必ずご確認ください。
+                </div>
+                <div class="price3_under_banner2">
+                    東京都専用ホームページへ
+                    <a href=""></a>
+                </div>
+            </div>
         </div>
+
     </div>
 
 

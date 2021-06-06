@@ -1,0 +1,87 @@
+/********************************
+シッター募集トップ
+*********************************/
+
+.entry_mv {
+    position: relative;
+    top: 20px;
+    left: 0;
+    margin-bottom: 80px;
+}
+
+.entry_mv_text {
+    position: absolute;
+    bottom: 50%;
+    right: 2vw;
+    color: #fff;
+}
+
+.entry .content1_text {
+    text-align: center;
+    margin-bottom: 80px;
+    line-height: 2.5;
+}
+
+.entry .content1_img {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.entry .content1_flex {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.entry .content1_item {
+    width: 400px;
+    margin: 0 60px;
+}
+
+.entry .content1_item_title {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.entry .content1_item_text {
+    margin-bottom: 20px;
+}
+
+/********************************
+託児所での実践研修の実施
+*********************************/
+
+.entry .content2 {
+    background-color: #ECF6E4;
+    text-align: center;
+    padding: 40px 10px;
+}
+
+.entry .content2_title {
+    font-size: 30px;
+    color: #F0A900;
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.entry .content2_img {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.entry .content2_text {
+    margin-bottom: 40px;
+    line-height: 2.5;
+}
+
+.entry_training_img {
+    width: 200px;
+}
+
+.entry .content2_flex {
+    display: flex;
+    justify-content: center;
+}

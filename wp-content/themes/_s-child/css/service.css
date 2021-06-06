@@ -384,8 +384,11 @@ input[name="slideshow"] {
 }
 
 .service_content5 table {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
+    /* border-collapse: collapse; */
+    border-collapse: separate;
+    border-spacing: 5vw 20px;
 }
 
 .service_content5 td {
