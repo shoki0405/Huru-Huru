@@ -7,9 +7,10 @@ header {
     text-align: center;
     .header_inner {
         max-width: 1920px;
+    }
+    .flex {
         display: flex;
-        justify-content: center;
-        /* justify-items: center; */
+        justify-content: space-evenly;
         align-items: center;
     }
     .header_logo {
@@ -25,13 +26,12 @@ header {
     }
     .nv_item {
         margin: 0 0.5vw;
-    }
-    @media screen and (max-width: 1356px) {
-        font-size: 0.9rem;
-        .header_nv {
+        // font-size: 0.8rem;
+        @media screen and (max-width: 1000px) {
             display: none;
         }
     }
+
     /********************************
     ハンバーガーボタン
     *********************************/
@@ -45,7 +45,7 @@ header {
         display: none;
         top: 30px;
         left: 3vw;
-        @media screen and (max-width: 1356px) {
+        @media screen and (max-width: 1000px) {
             display: inline-block;
         }
         span {

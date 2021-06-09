@@ -17,51 +17,51 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
         <div class="title">サービスについて</div>
 
         <div class="flex">
-            <div class="service_content1_item">
-                <div class="service_content1_img">
-                    <img src="<?php echo $img_fol_service; ?>service_content1_1.png" alt="">
+            <div class="item">
+                <div class="catch">
+                    <img src="<?php echo $img_fol_service; ?>content1_1.png" alt="">
                 </div>
-                <div class="service_content1_heading">
+                <!-- <div class="service_content1_heading">
                     <img src="<?php echo $img_fol_service; ?>service_content1_num1.svg" alt="">
                     24時間対応
                 </div>
                 <div class="service_content1_fruit1">
                     <img src="<?php echo $img_fol; ?>grape.png" alt="">
-                </div>
-                <div class="service_content1_des">
+                </div> -->
+                <div class="des">
                     夜間に預けたい時、出産や入院時、会合や会食、他にも急遽預けなければいけなくなってしまった時…<br>
                     出来る限り対応させていただきます。早朝、夜間のお預かりなどお客様のニーズにお応えいたします。
                 </div>
             </div>
-            <div class="service_content1_item">
-                <div class="service_content1_img">
-                    <img src="<?php echo $img_fol_service; ?>service_content1_2.png" alt="">
+            <div class="item">
+                <div class="catch">
+                    <img src="<?php echo $img_fol_service; ?>content1_2.png" alt="">
                 </div>
-                <div class="service_content1_heading">
+                <!-- <div class="service_content1_heading">
                     <img src="<?php echo $img_fol_service; ?>service_content1_num2.svg" alt="">
                     充実したスタッフの育成・研修
                 </div>
                 <div class="service_content1_fruit2">
                     <img src="<?php echo $img_fol; ?>half_orange_green.png" alt="">
-                </div>
-                <div class="service_content1_des">
+                </div> -->
+                <div class="des">
                     HURU-HURUは、資格の有無だけでなく誠実な人柄、お子様の変化に気づき、状況に合わせて対応ができるシッターの育成を目指しています。<br>
                     そのため、併設の託児所内にて多くのお子様と触れ合い、おむつ交換、遊び等、学ぶ場を提供しております。<br>
                     また、シッターとしての礼儀やマナーについても研修を行いお客様が安心してご利用頂けるよう努めています。
                 </div>
             </div>
-            <div class="service_content1_item">
-                <div class="service_content1_img">
-                    <img src="<?php echo $img_fol_service; ?>service_content1_3.png" alt="">
+            <div class="item">
+                <div class="catch">
+                    <img src="<?php echo $img_fol_service; ?>content1_3.png" alt="">
                 </div>
-                <div class="service_content1_heading">
+                <!-- <div class="service_content1_heading">
                     <img src="<?php echo $img_fol_service; ?>service_content1_num3.svg" alt="">
                     託児所併設
                 </div>
                 <div class="service_content1_fruit3">
                     <img src="<?php echo $img_fol; ?>strawberry.png" alt="">
-                </div>
-                <div class="service_content1_des">
+                </div> -->
+                <div class="des">
                     ベビーシッターサービスのほかに託児所も併設しています。お友達と一緒に過ごすことで、家庭ではできない経験を得ることができます。<br>
                     お客様のご要望に応じ、シッターサービスと併せてご利用いただけます。<br><br>
 

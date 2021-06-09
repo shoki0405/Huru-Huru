@@ -100,6 +100,7 @@ $img_fol_front_sp = get_stylesheet_directory_uri() . "/img/front_sp/";
             </div>
             <div class="front_news_btn btn-swipe">
                 詳しく見る<i class="fas fa-arrow-right"></i>
+                <a href="<?php echo esc_url(home_url('/news')); ?>" class="a"></a>
             </div>
         </div>
 
@@ -120,7 +121,7 @@ $img_fol_front_sp = get_stylesheet_directory_uri() . "/img/front_sp/";
                     <div class="front_features_item">
                         <div class="front_features_img">
                             <div class="front_features_catch">
-                                <img src="<?php echo $img_fol_front; ?>front_features1.png" alt="">
+                                <img src="<?php echo $img_fol_front; ?>features1.png" alt="">
                             </div>
                             <div class="front_features_item_imgl">
                                 <img src="<?php echo $img_fol; ?>grape.png" alt="">
@@ -139,7 +140,7 @@ $img_fol_front_sp = get_stylesheet_directory_uri() . "/img/front_sp/";
                     <div class="front_features_item">
                         <div class="front_features_img">
                             <div class="front_features_catch">
-                                <img src="<?php echo $img_fol_front; ?>front_features2.png" alt="">
+                                <img src="<?php echo $img_fol_front; ?>features2.png" alt="">
                             </div>
                             <div class="front_features_item_imgc">
                                 <img src="<?php echo $img_fol; ?>strawberry.png" alt="">
@@ -163,7 +164,7 @@ $img_fol_front_sp = get_stylesheet_directory_uri() . "/img/front_sp/";
 
                         <div class="front_features_img">
                             <div class="front_features_catch">
-                                <img src="<?php echo $img_fol_front; ?>front_features3.png" alt="">
+                                <img src="<?php echo $img_fol_front; ?>features3.png" alt="">
                             </div>
                             <div class="front_features_item_imgr1">
                                 <img src="<?php echo $img_fol; ?>orange.png" alt="">

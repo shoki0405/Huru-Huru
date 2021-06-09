@@ -26,7 +26,10 @@
     <div id="page" class="site">
         <header id="masthead" class="site-header">
             <div class="header_inner">
-                <div class="header_nv nv_left">
+                <div class="flex">
+
+
+
                     <div class="nv_item">
                         サービス内容
                         <a href="<?php echo esc_url(home_url('/service')); ?>" class="a"></a>
@@ -43,15 +46,15 @@
                         NEWS
                         <a href="<?php echo esc_url(home_url('/news')); ?>" class="a"></a>
                     </div>
-                </div>
-                <div class="header_logo">
-                    <div class="header_logo_sub">託児所併設で安心のシッターサービス</div>
-                    <div class="header_logo_main">
-                        Huru-Huru
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+
+                    <div class="header_logo">
+                        <div class="header_logo_sub">託児所併設で安心のシッターサービス</div>
+                        <div class="header_logo_main">
+                            Huru-Huru
+                            <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                        </div>
                     </div>
-                </div>
-                <div class="header_nv nv_right">
+
                     <div class="nv_item">
                         法人向けシッター派遣
                         <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
@@ -64,6 +67,9 @@
                         ご質問・お問い合わせ
                         <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
                     </div>
+
+
+
                 </div>
             </div>
 
