@@ -67,4 +67,76 @@
                 </div>
             </div>
 
+            <div class="btn-ham" id="btn-ham">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div id="ham">
+                <div class="title">Huru-Huru</div>
+                <div class="list">
+                    <div class="item">
+                        HOME
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                    </div>
+                    <div class="item">
+                        サービス内容
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                    </div>
+                    <div class="item">
+                        Huru-Huruとは
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                    </div>
+                    <div class="item">
+                        ご利用料金
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                    </div>
+                    <div class="item">
+                        法事向けシッター派遣
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                    </div>
+                    <div class="item">
+                        NEWS
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                    </div>
+                    <div class="item">
+                        <div class="reservation_b">
+                            ご予約(初めての方)
+                            <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="reservation_k">
+                            ご予約(会員様)
+                            <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        シッター募集
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                    </div>
+                    <div class="item">
+                        よくあるご質問とお問い合わせ
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                    </div>
+                </div>
+                <div class="privacy">
+                    プライバシーポリシー
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                </div>
+            </div>
+
+
         </header><!-- #masthead -->
+
+
+
+        <div class="sp_bottom_menu">
+            <div class="flex">
+                <div class="flex_item"></div>
+                <div class="flex_item"></div>
+                <div class="flex_item"></div>
+                <div class="flex_item"></div>
+            </div>
+        </div>

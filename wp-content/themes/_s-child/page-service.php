@@ -4,23 +4,25 @@ get_header();
 get_template_part("template/right_menu");
 $img_fol = get_stylesheet_directory_uri() . "/img/";
 $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
+$img_fol_service = get_stylesheet_directory_uri() . "/img/service/";
 $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
 ?>
 <div class="service">
-    <div class="page_img">
-        <img src="<?php echo $img_fol_other; ?>service.png" alt="">
+    <div class="mv">
+        <img class="pc" src="<?php echo $img_fol_service; ?>mv.png" alt="">
+        <img class="sp" src="<?php echo $img_fol_service; ?>mv_sp.png" alt="">
     </div>
 
-    <div class="service_content1">
-        <div class="service_content1_title">サービスについて</div>
+    <div class="content1">
+        <div class="title">サービスについて</div>
 
-        <div class="service_content1_flex">
+        <div class="flex">
             <div class="service_content1_item">
                 <div class="service_content1_img">
-                    <img src="<?php echo $img_fol_other; ?>service_content1_1.png" alt="">
+                    <img src="<?php echo $img_fol_service; ?>service_content1_1.png" alt="">
                 </div>
                 <div class="service_content1_heading">
-                    <img src="<?php echo $img_fol_other; ?>service_content1_num1.svg" alt="">
+                    <img src="<?php echo $img_fol_service; ?>service_content1_num1.svg" alt="">
                     24時間対応
                 </div>
                 <div class="service_content1_fruit1">
@@ -33,10 +35,10 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
             </div>
             <div class="service_content1_item">
                 <div class="service_content1_img">
-                    <img src="<?php echo $img_fol_other; ?>service_content1_2.png" alt="">
+                    <img src="<?php echo $img_fol_service; ?>service_content1_2.png" alt="">
                 </div>
                 <div class="service_content1_heading">
-                    <img src="<?php echo $img_fol_other; ?>service_content1_num2.svg" alt="">
+                    <img src="<?php echo $img_fol_service; ?>service_content1_num2.svg" alt="">
                     充実したスタッフの育成・研修
                 </div>
                 <div class="service_content1_fruit2">
@@ -50,10 +52,10 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
             </div>
             <div class="service_content1_item">
                 <div class="service_content1_img">
-                    <img src="<?php echo $img_fol_other; ?>service_content1_3.png" alt="">
+                    <img src="<?php echo $img_fol_service; ?>service_content1_3.png" alt="">
                 </div>
                 <div class="service_content1_heading">
-                    <img src="<?php echo $img_fol_other; ?>service_content1_num3.svg" alt="">
+                    <img src="<?php echo $img_fol_service; ?>service_content1_num3.svg" alt="">
                     託児所併設
                 </div>
                 <div class="service_content1_fruit3">
@@ -71,13 +73,13 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
 
 
     <div class="dot_back">
-        <div class="service_content2">
-            <div class="service_content2_title">シッティング内容</div>
+        <div class="content2">
+            <div class="title">シッティング内容</div>
 
-            <div class="service_content2_flex">
+            <div class="flex">
                 <div class="service_content2_item1">
                     <div class="service_content2_item1_img">
-                        <img src="<?php echo $img_fol_other; ?>service_content2_1.png" alt="">
+                        <img src="<?php echo $img_fol_service; ?>service_content2_1.png" alt="">
                     </div>
                     <div class="service_content2_item_title">できること</div>
                     <div class="service_content2_list">
@@ -101,7 +103,7 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
                 </div>
                 <div class="service_content2_item2">
                     <div class="service_content2_item2_img">
-                        <img src="<?php echo $img_fol_other; ?>service_content2_2.png" alt="">
+                        <img src="<?php echo $img_fol_service; ?>service_content2_2.png" alt="">
                     </div>
                     <div class="service_content2_item_title">できないこと</div>
                     <div class="service_content2_list_item"><span>●</span>沐浴・シャワー</div>
@@ -118,7 +120,7 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
 
 
 
-        <div class="service_content3">
+        <div class="content3">
             <div class="service_content3_back">
                 <img src="<?php echo $img_fol_front; ?>front_features_back.png" alt="">
             </div>
@@ -128,8 +130,8 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
             </div>
 
 
-            <div class="service_content3_content">
-                <div class="service_cotent3_title">便利な使い方</div>
+            <div class="content">
+                <div class="title">便利な使い方</div>
                 <div class="slideshow">
                     <input type="radio" name="slideshow" id="switch1" checked>
                     <!-- <input type="radio" name="slideshow" id="switch2">
@@ -138,9 +140,9 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
                     <input type="radio" name="slideshow" id="switch5"> -->
                     <div class="slideContents">
                         <section id="slide1">
-                            <div class="service_content3_flex">
+                            <div class="flex">
                                 <div class="service_content3_item">
-                                    <div><img src="<?php echo $img_fol_other; ?>service_content3_list1.png" alt=""></div>
+                                    <div><img src="<?php echo $img_fol_service; ?>service_content3_list1.png" alt=""></div>
                                     <div class="item_label">
                                         <div class="item_label_item">朝の準備が大変！</div>
                                         <div class="item_label_item">急いで子供を保育園に！</div>
@@ -150,7 +152,7 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
                                     </div>
                                 </div>
                                 <div class="service_content3_item">
-                                    <div><img src="<?php echo $img_fol_other; ?>service_content3_list2.png" alt=""></div>
+                                    <div><img src="<?php echo $img_fol_service; ?>service_content3_list2.png" alt=""></div>
                                     <div class="item_label">
                                         <div class="item_label_item">仕事で習い事に連れて行けない</div>
                                     </div>
@@ -161,7 +163,7 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
                                     </div>
                                 </div>
                                 <div class="service_content3_item">
-                                    <div><img src="<?php echo $img_fol_other; ?>service_content3_list3.png" alt=""></div>
+                                    <div><img src="<?php echo $img_fol_service; ?>service_content3_list3.png" alt=""></div>
                                     <div class="item_label">
                                         <div class="item_label_item">残業したいけど</div>
                                         <div class="item_label_item">保育園のお迎えが…</div>
@@ -187,7 +189,7 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
                     </div>
                     <p class="arrow prev">
                         <!-- <i class="ico"></i> -->
-                        <img class="ico" src="<?php echo $img_fol_other; ?>service_prev.svg" alt="">
+                        <img class="ico" src="<?php echo $img_fol_service; ?>service_prev.svg" alt="">
                         <label for="switch1"></label>
                         <!-- <label for="switch2"></label>
                         <label for="switch3"></label>
@@ -196,7 +198,7 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
                     </p>
                     <p class="arrow next">
                         <!-- <i class="ico"></i> -->
-                        <img class="ico" src="<?php echo $img_fol_other; ?>service_next.svg" alt="">
+                        <img class="ico" src="<?php echo $img_fol_service; ?>service_next.svg" alt="">
                         <label for="switch1"></label>
                         <!-- <label for="switch2"></label>
                         <label for="switch3"></label>
@@ -211,7 +213,7 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
 
     </div>
 
-    <div class="front_flow front_content service_content4">
+    <div class="front_flow front_content content4">
         <div class="front_heading">
             <img class="front_flow_title" src="<?php echo $img_fol_front; ?>front_flow_title.svg" alt="">
         </div>
@@ -250,22 +252,22 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
     </div>
 
     <div class="dot_back">
-        <div class="service_content5">
-            <div class="service_content5_title">ご利用いただく皆様へ</div>
+        <div class="content5">
+            <div class="title">ご利用いただく皆様へ</div>
             <div class="service_content5_sub_title">HURU-HURUをより良くご利用いただくため、ルールをご確認ください。</div>
 
             <table>
                 <tr>
                     <td>
                         <div class="t_img">
-                            <img src="<?php echo $img_fol_other; ?>service_content5_1.svg" alt="">
+                            <img src="<?php echo $img_fol_service; ?>service_content5_1.svg" alt="">
                         </div>
                         <div class="t_title">お客様情報は正確に</div>
                         <div>お客様のご希望に沿ったシッターを手配するため、お申し込みの際はお客様情報は正確に入力お願いいたします。</div>
                     </td>
                     <td>
                         <div class="t_img">
-                            <img src="<?php echo $img_fol_other; ?>service_content5_2.svg" alt="">
+                            <img src="<?php echo $img_fol_service; ?>service_content5_2.svg" alt="">
                         </div>
                         <div class="t_title">ご依頼内容は明確に</div>
                         <div>
@@ -276,7 +278,7 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
                 <tr>
                     <td>
                         <div class="t_img">
-                            <img src="<?php echo $img_fol_other; ?>service_content5_3.svg" alt="">
+                            <img src="<?php echo $img_fol_service; ?>service_content5_3.svg" alt="">
                         </div>
                         <div class="t_title">貴重品管理</div>
                         <div>
@@ -286,7 +288,7 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
                     </td>
                     <td>
                         <div class="t_img">
-                            <img src="<?php echo $img_fol_other; ?>service_content5_4.svg" alt="">
+                            <img src="<?php echo $img_fol_service; ?>service_content5_4.svg" alt="">
                         </div>
                         <div class="t_title">シッターに対するフィードバック</div>
                         <div>

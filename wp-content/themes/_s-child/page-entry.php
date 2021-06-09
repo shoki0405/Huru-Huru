@@ -8,9 +8,9 @@ $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
 <div class="entry">
     <div class="entry_mv">
         <img src="<?php echo $img_fol_entry; ?>mv.png" alt="">
-        <div class="entry_mv_text">
-            <div>子育てを応援したい。</div>
-            <div>
+        <div class="entry_mv_content">
+            <div class="entry_mv_title">子育てを応援したい。</div>
+            <div class="entry_mv_text">
                 お子様に愛情をもって接することができ、<br>
                 仕事に責任をもって取り組める<br>
                 シッターさん募集
@@ -90,7 +90,11 @@ $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
 
         <div class="content2_flex">
             <div class="content2_item entry_training">
-                <div>主な研修内容</div>
+
+                <div class="entry_training_back">
+                    <img src="<?php echo $img_fol_entry; ?>entry_training.png" alt="">
+                </div>
+                <div class="entry_training_title">主な研修内容</div>
                 <div>
                     <ul>
                         <li>マナー</li>
@@ -108,17 +112,28 @@ $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
                 <div class="entry_training_img">
                     <img src="<?php echo $img_fol_entry; ?>img5.svg" alt="">
                 </div>
+
+
             </div>
-            <div class="content2_item">
-                <div>採用の流れ</div>
-                <div>
-                    <div class="entry_flow">申し込み</div>
-                    <div class="entry_flow">履歴書送付</div>
-                    <div class="entry_flow">面接</div>
-                    <div class="entry_flow">託児所実地試験</div>
-                    <div class="entry_flow">登録可否の決定</div>
-                    <div class="entry_flow">当社との契約の締結</div>
-                    <div class="entry_flow">事前研修</div>
+            <div class="content2_item entry_flow">
+                <div class="entry_flow_back">
+                    <img src="<?php echo $img_fol_entry; ?>flow.png" alt="">
+                </div>
+                <div class="entry_flow_title">採用の流れ</div>
+                <div class="entry_flow_list">
+                    <div class="entry_flow_item">申し込み</div>
+                    <div class="entry_flow_arrow">▼</div>
+                    <div class="entry_flow_item">履歴書送付</div>
+                    <div class="entry_flow_arrow">▼</div>
+                    <div class="entry_flow_item">面接</div>
+                    <div class="entry_flow_arrow">▼</div>
+                    <div class="entry_flow_item">託児所実地試験</div>
+                    <div class="entry_flow_arrow">▼</div>
+                    <div class="entry_flow_item">登録可否の決定</div>
+                    <div class="entry_flow_arrow">▼</div>
+                    <div class="entry_flow_item">当社との契約の締結</div>
+                    <div class="entry_flow_arrow">▼</div>
+                    <div class="entry_flow_item">事前研修</div>
                 </div>
             </div>
 
@@ -131,42 +146,42 @@ $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
 
 
     <div class="content3">
-        <div>
-            「働いてよかった！」
+        <div class="content3_title">
+            「働いてよかった！」<br>
             ベビーシッターの声
         </div>
-        <div>
-            <div>
-                <div>
+        <div class="content3_flex">
+            <div class="content3_item">
+                <div class="content3_img">
                     <img src="" alt="">
                 </div>
-                <div>30代<br>ああさん</div>
-                <div>キャッチコピー</div>
-                <div>
+                <div class="content3_name">30代<br>ああさん</div>
+                <div class="content3_catch">キャッチコピー</div>
+                <div class="content3_text">
                     コピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピー
                     コピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピー
                     コピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピー
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="content3_item">
+                <div class="content3_img">
                     <img src="" alt="">
                 </div>
-                <div>30代<br>ああさん</div>
-                <div>キャッチコピー</div>
-                <div>
+                <div class="content3_name">30代<br>ああさん</div>
+                <div class="content3_catch">キャッチコピー</div>
+                <div class="content3_text">
                     コピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピー
                     コピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピー
                     コピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピー
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="content3_item">
+                <div class="content3_img">
                     <img src="" alt="">
                 </div>
-                <div>30代<br>ああさん</div>
-                <div>キャッチコピー</div>
-                <div>
+                <div class="content3_name">30代<br>ああさん</div>
+                <div class="content3_catch">キャッチコピー</div>
+                <div class="content3_text">
                     コピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピー
                     コピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピー
                     コピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピーコピー
@@ -181,13 +196,15 @@ $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
 
 
     <div class="content4">
+        <div class="content4_img1">
+            <img src="<?php echo $img_fol; ?>smile.png" alt="">
+        </div>
 
+        <div class="content4_title">採用条件</div>
 
-        <div>採用条件</div>
+        <div class="content4_text">以下のいずれかを満たす方</div>
 
-        <div>以下のいずれかを満たす方</div>
-
-        <table>
+        <table class="t1">
 
             <tr>
                 <th>1.以下の場所での勤務経験のある方(3年以上)</th>
@@ -203,9 +220,14 @@ $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
 
         </table>
 
-        <div>募集内容</div>
+        <div class="content4_title">
+            <div class="content4_img2">
+                <img src="<?php echo $img_fol; ?>cut.png" alt="">
+            </div>
+            募集内容
+        </div>
 
-        <table>
+        <table class="t2">
             <tr>
                 <th>時給</th>
                 <td>1,200円～</td>
@@ -228,6 +250,11 @@ $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
 
 
 
+    <div class="entry_form">
+
+        <div class="entry_form_title">登録応募フォーム</div>
+
+    </div>
 
 
 

@@ -1,1 +1,0 @@
-$('.a').parent().css('position','relative');

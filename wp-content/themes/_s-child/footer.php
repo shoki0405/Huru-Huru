@@ -18,7 +18,8 @@ $img_folder_footer = get_stylesheet_directory_uri() . "/img/footer/";
             </div>
         </div>
         <div class="front_guide_entry">
-            <img src="<?php echo $img_folder_footer; ?>footer_banner.png" alt="">
+            <img class="pc" src="<?php echo $img_folder_footer; ?>entry_banner.png" alt="">
+            <img class="sp" src="<?php echo $img_folder_footer; ?>entry_banner_sp.png" alt="">
             <a href="" class="a"></a>
         </div>
     </div>

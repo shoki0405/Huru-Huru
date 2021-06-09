@@ -1,0 +1,195 @@
+@use "variables" as var;
+html,
+body {
+    font-size: 15px;
+    /* font-family: 'Noto Sans JP', sans-serif; */
+    font-family: 'Noto Sans JP', '游ゴシック Medium', YuGothic, YuGothic M, 'Hiragino Kaku Gothic ProN',
+        'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
+    overflow-x: hidden;
+}
+@media screen and (max-width: 480px) {
+    html,
+    body {
+        font-size: 12px;
+        max-width: 100vw;
+    }
+}
+body {
+    margin: 0 auto;
+    color: #606060;
+    letter-spacing: 3px;
+    line-height: 2;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    object-fit: cover;
+}
+
+a {
+    color: var.$orange;
+}
+
+/********************************
+共通
+*********************************/
+
+/* 要素いっぱいに広げたいaタグ */
+
+.a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.page_img {
+    position: relative;
+    top: -45px;
+    z-index: -1;
+}
+/********************************
+pc sp ひょうじひひょうじ 改行
+*********************************/
+.pc {
+    display: block;
+}
+.sp {
+    display: none;
+}
+@media screen and (max-width: 480px) {
+    .pc {
+        display: none;
+    }
+    .sp {
+        display: block;
+    }
+}
+
+.kaigyo {
+    display: inline;
+}
+
+@media screen and (max-width: 480px) {
+    .kaigyo {
+        display: block;
+    }
+}
+
+/********************************
+詳しく見るボタン へこむやつ
+*********************************/
+.btn-push i {
+    position: relative;
+    right: -40px;
+}
+.btn-push {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: inherit;
+    color: var.$orange;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    width: 250px;
+    text-align: center;
+    background: var.$white;
+    border: none;
+    border-radius: 50px;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var.$orange;
+        border-radius: inherit;
+        transform: translate3d(0, 0.75em, -1em);
+        transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+    }
+    &:hover {
+        background: var.$white;
+        transform: translate(0, 0.25em);
+        &::before {
+            transform: translate3d(0, 0.5em, -1em);
+        }
+    }
+    &:active {
+        background: var.$white;
+        transform: translate(0em, 0.75em);
+        &::before {
+            transform: translate3d(0, 0, -1em);
+        }
+    }
+}
+
+/********************************
+ボタン　スワイプ
+*********************************/
+.btn-swipe i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-swipe {
+    border-radius: 50px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    max-width: 300px;
+    padding: 15px 20px;
+    margin: 20px auto 40px;
+    text-transform: uppercase;
+    border: 1px solid currentColor;
+    color: var.$orange;
+    background-color: var.$white;
+    transition: 0.5s ease-in-out;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.btn-swipe:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var.$orange;
+    transform: translateX(-100%);
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+}
+.btn-swipe:hover {
+    color: var.$white;
+    background: none;
+    // background-color: var.$orange;
+}
+.btn-swipe:hover:before {
+    transform: translateX(0);
+}

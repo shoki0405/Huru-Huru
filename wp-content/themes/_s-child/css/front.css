@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /********************************
 共通
 *********************************/
@@ -50,7 +51,7 @@
     left: 19%;
     color: #fff;
     font-size: 1.4vw;
-    transform: rotate( -10deg);
+    transform: rotate(-10deg);
     width: 22vw;
 }
 
@@ -88,7 +89,7 @@
 }
 
 .mv_btn {
-    position: absolute!important;
+    position: absolute !important;
     top: 38vw;
     right: 9vw;
     width: 12vw;
@@ -241,7 +242,7 @@ NEWS
     top: 0vw;
     right: 14vw;
     width: 4vw;
-    transform: rotateZ( 10deg);
+    transform: rotateZ(10deg);
 }
 
 .front_features_list {
@@ -332,7 +333,7 @@ NEWS
     left: 15vw;
     position: relative;
     width: 60px;
-    transform: rotateZ( 45deg);
+    transform: rotateZ(45deg);
 }
 
 .front_features_item_imgc {
@@ -347,7 +348,7 @@ NEWS
     width: 60px;
     top: -115%;
     left: 1vw;
-    transform: rotateZ( 10deg);
+    transform: rotateZ(10deg);
 }
 
 .front_features_item_imgr2 {
@@ -569,3 +570,5 @@ NEWS
 .front_guide_content_des {
     margin: 20px auto 40px;
 }
+
+/*# sourceMappingURL=front.css.map */

@@ -1,87 +1,274 @@
-/********************************
-シッター募集トップ
-*********************************/
-
-.entry_mv {
-    position: relative;
-    top: 20px;
-    left: 0;
-    margin-bottom: 80px;
+@charset "UTF-8";
+.entry {
+  /********************************
+  シッター募集トップ
+  *********************************/
+  /********************************
+  託児所での実践研修の実施
+  *********************************/
+  /********************************
+  ベビーシッターの声
+  *********************************/
+  /********************************
+  採用条件
+  *********************************/
+  /********************************
+  登録応募フォーム
+  *********************************/
 }
-
-.entry_mv_text {
-    position: absolute;
-    bottom: 50%;
-    right: 2vw;
-    color: #fff;
+.entry .entry_mv {
+  position: relative;
+  top: 20px;
+  left: 0;
+  margin-bottom: 80px;
 }
-
+.entry .entry_mv_content {
+  position: absolute;
+  bottom: 20%;
+  right: 10vw;
+  color: #fff;
+  text-align: right;
+}
+.entry .entry_mv_title {
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.entry .entry_mv_text {
+  font-size: 20px;
+}
 .entry .content1_text {
-    text-align: center;
-    margin-bottom: 80px;
-    line-height: 2.5;
+  text-align: center;
+  margin-bottom: 80px;
+  line-height: 2.5;
 }
-
 .entry .content1_img {
-    max-width: 600px;
-    margin: 0 auto;
-    margin-bottom: 80px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 80px;
 }
-
 .entry .content1_flex {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 }
-
 .entry .content1_item {
-    width: 400px;
-    margin: 0 60px;
+  width: 400px;
+  margin: 0 60px;
 }
-
 .entry .content1_item_title {
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
-
 .entry .content1_item_text {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-
-/********************************
-託児所での実践研修の実施
-*********************************/
-
 .entry .content2 {
-    background-color: #ECF6E4;
-    text-align: center;
-    padding: 40px 10px;
+  background-color: #ecf6e4;
+  text-align: center;
+  padding: 80px 10px;
+  position: relative;
+  z-index: -1;
 }
-
 .entry .content2_title {
-    font-size: 30px;
-    color: #F0A900;
-    margin-bottom: 40px;
-    letter-spacing: 5px;
-    font-weight: bold;
+  font-size: 30px;
+  color: #f0a900;
+  margin-bottom: 40px;
+  letter-spacing: 5px;
+  font-weight: bold;
 }
-
 .entry .content2_img {
-    max-width: 600px;
-    margin: 0 auto;
-    margin-bottom: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 40px;
 }
-
 .entry .content2_text {
-    margin-bottom: 40px;
-    line-height: 2.5;
+  margin-bottom: 40px;
+  line-height: 2.5;
 }
-
-.entry_training_img {
-    width: 200px;
-}
-
 .entry .content2_flex {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+.entry .content2_item {
+  position: relative;
+  margin: 0 40px;
+}
+.entry .entry_training {
+  text-align: left;
+  padding: 0 40px;
+  max-height: 480px;
+}
+.entry .entry_training_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.entry .entry_training ul {
+  color: #fff;
+}
+.entry .entry_training li {
+  line-height: 2.5;
+}
+.entry .entry_training_title {
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 20px;
+}
+.entry .entry_training_img {
+  position: absolute;
+  bottom: -100px;
+  width: 350px;
+}
+.entry .entry_flow {
+  padding: 20px 60px 40px;
+}
+.entry .entry_flow_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.entry .entry_flow_title {
+  color: #f0a900;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.entry .entry_flow_item {
+  position: relative;
+  background-color: #f0a900;
+  color: #fff;
+  width: 220px;
+  padding: 5px 10px;
+  /* margin: 10px auto; */
+  border-radius: 50px;
+}
+.entry .entry_flow_arrow {
+  /* font-size: 18px; */
+  color: #9ed279;
+  text-align: center;
+}
+.entry .content3 {
+  padding: 80px 10px;
+}
+.entry .content3_title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.entry .content3_flex {
+  display: flex;
+  justify-content: center;
+}
+.entry .content3_item {
+  max-width: 400px;
+  position: relative;
+}
+.entry .content3_img {
+  background-color: #606060;
+  border-radius: 100%;
+  margin-bottom: 40px;
+}
+.entry .content3_name {
+  background-color: #f0a900;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+}
+.entry .content3_catch {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.entry .content3_text {
+  margin-bottom: 40px;
+}
+.entry .content4 {
+  padding: 80px 10px;
+  background-color: #f8edd8;
+  position: relative;
+}
+.entry .content4_title {
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 1000px;
+  position: relative;
+}
+.entry .content4_text {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.entry .content4 th {
+  color: #fff;
+  background-color: #f0a900;
+  width: 380px;
+}
+.entry .content4 th,
+.entry .content4 td {
+  padding: 10px 20px;
+  text-align: left;
+}
+.entry .content4 .t1 {
+  margin: 0 auto;
+  margin-bottom: 80px;
+  width: 100%;
+  max-width: 950px;
+  border-collapse: separate;
+  border-spacing: 10px 10px;
+}
+.entry .content4 .t1 td {
+  background-color: #fff;
+}
+.entry .content4 .t2 {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 800px;
+  border-collapse: separate;
+  border-spacing: 10px 10px;
+}
+.entry .content4 .t2 th {
+  text-align: center;
+}
+.entry .content4_img1 {
+  position: absolute;
+  width: 60px;
+  top: -10px;
+  left: 75vw;
+}
+.entry .content4_img2 {
+  position: absolute;
+  width: 50px;
+  left: 5vw;
+}
+.entry .entry_form {
+  padding: 40px;
+}
+.entry .entry_form_title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  max-width: 1000px;
+}
+
+/*# sourceMappingURL=entry.css.map */

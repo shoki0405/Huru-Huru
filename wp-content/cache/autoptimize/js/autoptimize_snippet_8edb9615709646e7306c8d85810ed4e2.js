@@ -1,0 +1,1 @@
+$('.a').parent().css('position','relative');$(function(){$('.btn-ham').on('click',function(){$(this).toggleClass('active');$('#ham').toggleClass('active');return false;});});

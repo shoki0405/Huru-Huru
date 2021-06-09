@@ -4,6 +4,7 @@ get_header();
 get_template_part("template/right_menu");
 $img_fol = get_stylesheet_directory_uri() . "/img/";
 $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
+$img_fol_front_sp = get_stylesheet_directory_uri() . "/img/front_sp/";
 ?>
 
 
@@ -24,8 +25,10 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
         </div>
 
         <div class="mv_backimg">
-            <img src="<?php echo $img_fol_front; ?>front_mv_back.png" alt="">
+            <img class="pc" src="<?php echo $img_fol_front; ?>mv.png" alt="">
+            <img class="sp" src="<?php echo $img_fol_front_sp; ?>mv.png" alt="">
         </div>
+
         <div class="mv_itemimg1">
             <img src="<?php echo $img_fol; ?>half_orange_two.png" alt="">
         </div>
@@ -37,11 +40,12 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
 
     <div class="mv_under front_content">
         <div class="mv_under_img">
-            <img src="<?php echo $img_fol_front; ?>mv_under_tokyo.png" alt="">
+            <img class="pc" src="<?php echo $img_fol_front; ?>tokyobaby_banner.png" alt="">
+            <img class="sp" src="<?php echo $img_fol_front_sp; ?>tokyobaby_banner.png" alt="">
             <a href="" class="a"></a>
         </div>
         <div class="front_heading">
-            ハートフルなシッターサービスを
+            ハートフルな<span class="kaigyo">シッターサービスを</span>
             <div class="front_mvunder_itemimg1">
                 <img src="<?php echo $img_fol; ?>grape.png" alt="">
             </div>
@@ -58,7 +62,8 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
             HURU-HURUはそんなパパ、ママの少しでもお力になりたいと考えております。
         </div>
         <div class="mv_under_img">
-            <img src="<?php echo $img_fol_front; ?>mv_under_kizz.svg" alt="">
+            <img class="pc" src="<?php echo $img_fol_front; ?>kizz.svg" alt="">
+            <img class="sp" src="<?php echo $img_fol_front_sp; ?>kizz.png" alt="">
             <a href="https://www.kizz-hana-hana.jp/" class="a" target="_blank"></a>
         </div>
     </div>
@@ -67,10 +72,10 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
         <div class="front_news front_content">
             <div class="front_heading">
                 NEWS
-                <div class="front_news_itemimg1">
+                <div class="pc front_news_itemimg1">
                     <img src="<?php echo $img_fol; ?>half_orange.png" alt="">
                 </div>
-                <div class="front_news_itemimg2">
+                <div class="pc front_news_itemimg2">
                     <img src="<?php echo $img_fol; ?>orange.png" alt="">
                 </div>
             </div>
@@ -93,7 +98,9 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
                 <?php endwhile;
                 endif; ?>
             </div>
-            <div class="front_news_btn">詳しく見る<i class="fas fa-arrow-right"></i></div>
+            <div class="front_news_btn btn-swipe">
+                詳しく見る<i class="fas fa-arrow-right"></i>
+            </div>
         </div>
 
 
@@ -112,7 +119,9 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
                 <div class="front_features_list">
                     <div class="front_features_item">
                         <div class="front_features_img">
-                            <img src="<?php echo $img_fol_front; ?>front_features1.png" alt="">
+                            <div class="front_features_catch">
+                                <img src="<?php echo $img_fol_front; ?>front_features1.png" alt="">
+                            </div>
                             <div class="front_features_item_imgl">
                                 <img src="<?php echo $img_fol; ?>grape.png" alt="">
                             </div>
@@ -121,7 +130,7 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
                         <div class="front_features_text1"><span>24時間対応</span></div>
                         <div class="front_features_text2">早朝や夜間、お客様のニーズに合わせお応えいたします。</div>
                         <div class="front_features_btn_frame">
-                            <div class="front_features_btn">
+                            <div class="front_features_btn btn-push">
                                 詳しく見る<i class="fas fa-arrow-right"></i>
                                 <a href="<?php echo esc_url(home_url('/service')); ?>" class="a"></a>
                             </div>
@@ -129,7 +138,9 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
                     </div>
                     <div class="front_features_item">
                         <div class="front_features_img">
-                            <img src="<?php echo $img_fol_front; ?>front_features2.png" alt="">
+                            <div class="front_features_catch">
+                                <img src="<?php echo $img_fol_front; ?>front_features2.png" alt="">
+                            </div>
                             <div class="front_features_item_imgc">
                                 <img src="<?php echo $img_fol; ?>strawberry.png" alt="">
                             </div>
@@ -142,7 +153,7 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
                             オプションの組み合わせ等、ご相談承ります。
                         </div>
                         <div class="front_features_btn_frame">
-                            <div class="front_features_btn">
+                            <div class="front_features_btn btn-push">
                                 詳しく見る<i class="fas fa-arrow-right"></i>
                                 <a href="<?php echo esc_url(home_url('/service')); ?>" class="a"></a>
                             </div>
@@ -151,7 +162,9 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
                     <div class="front_features_item">
 
                         <div class="front_features_img">
-                            <img src="<?php echo $img_fol_front; ?>front_features3.png" alt="">
+                            <div class="front_features_catch">
+                                <img src="<?php echo $img_fol_front; ?>front_features3.png" alt="">
+                            </div>
                             <div class="front_features_item_imgr1">
                                 <img src="<?php echo $img_fol; ?>orange.png" alt="">
                             </div>
@@ -165,7 +178,7 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
                             「仕事で時間が作れない」「子供を思い切り遊ばせたい」「家庭以外の社会性を学んでほしい」「リフレッシュしたい」等、いろんな場面でご利用ください。
                         </div>
                         <div class="front_features_btn_frame">
-                            <div class="front_features_btn">
+                            <div class="front_features_btn btn-push">
                                 詳しく見る<i class="fas fa-arrow-right"></i>
                                 <a href="<?php echo esc_url(home_url('/service')); ?>" class="a"></a>
                             </div>
@@ -177,7 +190,7 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
         </div>
 
 
-        <!-- <div class="front_member front_content">
+        <div class="front_member front_content">
             <div class="front_member_itemimg1">
                 <img src="<?php echo $img_fol; ?>green_fruit.png" alt="">
             </div>
@@ -235,7 +248,7 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
                     </div>
                 </div>
             </div>
-        </div>-->
+        </div>
     </div>
 
 
@@ -255,7 +268,7 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
                     お申し込み後、手配の状況を含めてこちらからメールにてご連絡いたします。
                 </div>
             </div>
-            <div class="front_flow_item_arrow"><img src="<?php echo $img_fol_front; ?>front_flow_arrow.svg" alt=""></div>
+            <div class="front_flow_item_arrow pc"><img src="<?php echo $img_fol_front; ?>front_flow_arrow.svg" alt=""></div>
             <div class="front_flow_item">
                 <div class="front_flow_number"><img src="<?php echo $img_fol_front; ?>front_flow_number2.svg" alt=""></div>
                 <div class="front_flow_img"><img src="<?php echo $img_fol_front; ?>front_flow2.svg" alt=""></div>
@@ -265,7 +278,7 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
                     依頼日前日にもご予約内容の確認をさせていただきます。
                 </div>
             </div>
-            <div class="front_flow_item_arrow"><img src="<?php echo $img_fol_front; ?>front_flow_arrow.svg" alt=""></div>
+            <div class="front_flow_item_arrow pc"><img src="<?php echo $img_fol_front; ?>front_flow_arrow.svg" alt=""></div>
             <div class="front_flow_item">
                 <div class="front_flow_number"><img src="<?php echo $img_fol_front; ?>front_flow_number3.svg" alt=""></div>
                 <div class="front_flow_img"><img src="<?php echo $img_fol_front; ?>front_flow3.svg" alt=""></div>
@@ -291,7 +304,8 @@ $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
         </div>
         <div class="front_area_content">
             <div class="front_area_img">
-                <img src="<?php echo $img_fol_front; ?>front_area.png" alt="">
+                <img class="pc" src="<?php echo $img_fol_front; ?>area.png" alt="">
+                <img class="sp" src="<?php echo $img_fol_front_sp; ?>area.png" alt="">
             </div>
         </div>
     </div>
