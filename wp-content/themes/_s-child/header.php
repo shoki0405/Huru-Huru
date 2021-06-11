@@ -2,8 +2,9 @@
 <html <?php language_attributes(); ?>>
 
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
 
     <?php wp_head(); ?>
@@ -19,6 +20,26 @@
     <style>
         .dot_back {
             background-size: 300px 300px;
+            background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/content_back.png");
+        }
+
+        .back_cloud_top {
+            width: 100%;
+            height: 12vw;
+            margin: 0 auto;
+            text-align: center;
+            background-size: 300px 300px;
+            background-color: #fff;
+            background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/content_back.png");
+        }
+
+        .back_cloud_bottom {
+            width: 100%;
+            height: 15vw;
+            margin: 0 auto;
+            text-align: center;
+            background-size: 300px 300px;
+            background-color: #fff;
             background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/content_back.png");
         }
     </style>
@@ -48,7 +69,7 @@
                     </div>
 
                     <div class="header_logo">
-                        <div class="header_logo_sub">託児所併設で安心のシッターサービス</div>
+                        <div class="header_logo_sub pc">託児所併設で安心のシッターサービス</div>
                         <div class="header_logo_main">
                             Huru-Huru
                             <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
@@ -88,15 +109,15 @@
                     </div>
                     <div class="item">
                         サービス内容
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                        <a href="<?php echo esc_url(home_url('/service')); ?>" class="a"></a>
                     </div>
                     <div class="item">
                         Huru-Huruとは
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                        <a href="<?php echo esc_url(home_url('/overview')); ?>" class="a"></a>
                     </div>
                     <div class="item">
                         ご利用料金
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                        <a href="<?php echo esc_url(home_url('/price')); ?>" class="a"></a>
                     </div>
                     <div class="item">
                         法事向けシッター派遣
@@ -104,7 +125,7 @@
                     </div>
                     <div class="item">
                         NEWS
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                        <a href="<?php echo esc_url(home_url('/news')); ?>" class="a"></a>
                     </div>
                     <div class="item">
                         <div class="reservation_b">
@@ -120,7 +141,7 @@
                     </div>
                     <div class="item">
                         シッター募集
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                        <a href="<?php echo esc_url(home_url('/entry')); ?>" class="a"></a>
                     </div>
                     <div class="item">
                         よくあるご質問とお問い合わせ

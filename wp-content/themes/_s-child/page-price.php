@@ -9,7 +9,7 @@ $img_fol_price = get_stylesheet_directory_uri() . "/img/price/";
 ?>
 
 <div class="price">
-    <div>
+    <div class="mv_page">
         <img src="<?php echo $img_fol_price; ?>mv.png" alt="">
     </div>
     <div class="price1">

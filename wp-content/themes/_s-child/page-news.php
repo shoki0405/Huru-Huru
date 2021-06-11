@@ -3,19 +3,20 @@ get_header();
 
 get_template_part("template/right_menu");
 $img_fol = get_stylesheet_directory_uri() . "/img/";
-$img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
+$img_fol_news = get_stylesheet_directory_uri() . "/img/news/";
 ?>
 
 <div class="news">
 
-    <div class="page_img">
-        <img src="<?php echo $img_fol_other; ?>news.png" alt="">
+    <div class="mv_page">
+        <img class="pc" src="<?php echo $img_fol_news; ?>news.png" alt="">
+        <img class="sp" src="<?php echo $img_fol_news; ?>news_sp.png" alt="">
     </div>
 
     <div class="news_title">NEWS</div>
 
     <!-- 記事一覧 -->
-    <div class="news_posts">
+    <div class="list">
         <?php
         $args = array(
             "posts_per_page" => 5,
@@ -26,24 +27,24 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
         if ($the_query->have_posts()) :
             while ($the_query->have_posts()) : $the_query->the_post();
         ?>
-                <div class="news_post">
+                <div class="content">
                     <!-- サムネイル -->
                     <!-- <div class="news_img">
                         <?php echo get_the_post_thumbnail(); ?>
                     </div> -->
 
                     <!-- 投稿日 -->
-                    <div class="news_post_date">
+                    <div class="date">
                         <?php echo get_the_date("Y/m/d"); ?>
                     </div>
 
                     <!-- タイトル -->
-                    <div class="news_post_title">
+                    <div class="title">
                         <?php the_title(); ?>
                     </div>
 
                     <!-- 抜粋 -->
-                    <div class="news_post_description">
+                    <div class="des">
                         <?php the_excerpt(); ?>
                     </div>
                     <!-- 記事のリンク -->
@@ -51,21 +52,21 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
 
                 </div>
 
-                <img src="<?php echo $img_fol_other; ?>news_border.svg" alt="">
-
+                <img class="pc" src="<?php echo $img_fol_news; ?>border.png" alt="">
+                <img class="sp" src="<?php echo $img_fol_news; ?>border_sp.png" alt="">
         <?php endwhile;
         endif; ?>
     </div>
 
     <!-- ページャ -->
-    <div class="news_pagination">
+    <div class="pagination">
         <?php
         $paginate_args = array(
             "total"        => $the_query->max_num_pages,
             "mid_size"     => 0,
             "end_size"     => 0,
-            "prev_text"    => "<span class='news_btn_prev'>PREV</span>",
-            "next_text"    => "<span class='news_btn_next'>NEXT</span>",
+            "prev_text"    => "<span class='btn-prev'>PREV</span>",
+            "next_text"    => "<span class='btn-next'>NEXT</span>",
         );
         echo paginate_links($paginate_args);
         ?>

@@ -7,7 +7,7 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
 ?>
 
 <div class="overview">
-    <div class="page_img">
+    <div class="mv_page">
         <img src="<?php echo $img_fol_other; ?>overview.png" alt="">
     </div>
 

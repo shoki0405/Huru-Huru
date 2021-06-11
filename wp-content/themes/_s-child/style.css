@@ -58,7 +58,7 @@ a {
   height: 100%;
 }
 
-.page_img {
+.mv_page {
   position: relative;
   top: -45px;
   z-index: -1;
@@ -70,29 +70,57 @@ pc sp ひょうじひひょうじ 改行
 .pc {
   display: block;
 }
-
-.sp {
-  display: none;
-}
-
 @media screen and (max-width: 480px) {
   .pc {
     display: none;
   }
+}
 
+.pc_765 {
+  display: block;
+}
+@media screen and (max-width: 765px) {
+  .pc_765 {
+    display: none;
+  }
+}
+
+.tb_765 {
+  display: none;
+}
+@media screen and (max-width: 765px) {
+  .tb_765 {
+    display: block;
+  }
+}
+
+.sp {
+  display: none;
+}
+@media screen and (max-width: 480px) {
   .sp {
     display: block;
   }
 }
+
+.kaigyo_765 {
+  display: inline;
+}
+@media screen and (max-width: 765px) {
+  .kaigyo_765 {
+    display: block;
+  }
+}
+
 .kaigyo {
   display: inline;
 }
-
 @media screen and (max-width: 480px) {
   .kaigyo {
     display: block;
   }
 }
+
 /********************************
 詳しく見るボタン へこむやつ
 *********************************/
@@ -162,13 +190,13 @@ pc sp ひょうじひひょうじ 改行
 }
 
 .btn-swipe {
+  margin: 0 auto;
   border-radius: 50px;
   position: relative;
   display: block;
   overflow: hidden;
   max-width: 300px;
   padding: 15px 20px;
-  margin: 20px auto 40px;
   text-transform: uppercase;
   border: 1px solid currentColor;
   color: #f0a900;
@@ -176,6 +204,11 @@ pc sp ひょうじひひょうじ 改行
   transition: 0.5s ease-in-out;
   font-size: 1.2rem;
   cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .btn-swipe {
+    max-width: 220px;
+  }
 }
 
 .btn-swipe:before {
@@ -203,7 +236,36 @@ pc sp ひょうじひひょうじ 改行
 /********************************
 共通
 *********************************/
-.front_heading {
+.front_content {
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.front {
+  /********************************
+  メインビジュアル
+  *********************************/
+  /********************************
+  メインビジュアル 下
+  *********************************/
+  /********************************
+  NEWS
+  *********************************/
+  /********************************
+  特徴
+  *********************************/
+  /********************************
+  在籍シッター
+  *********************************/
+  /********************************
+  ご利用の流れ
+  *********************************/
+  /********************************
+  対応エリア
+  *********************************/
+}
+.front .heading {
   font-size: 2rem;
   font-weight: bold;
   margin: 0 auto;
@@ -212,53 +274,67 @@ pc sp ひょうじひひょうじ 改行
   max-width: 800px;
   position: relative;
 }
-
-.front_heading_sub {
+@media screen and (max-width: 765px) {
+  .front .heading {
+    letter-spacing: 3px;
+  }
+}
+.front .heading_sub {
   font-size: 1.2rem;
   font-weight: normal;
 }
-
-.front_content {
-  padding: 60px 20px 0;
-  text-align: center;
-  position: relative;
-}
-
-/********************************
-メインビジュアル
-*********************************/
-.mv {
+.front .mv {
   position: relative;
   width: 100%;
   max-width: 2000px;
   height: 57vw;
 }
-@media screen and (max-width: 480px) {
-  .mv {
+@media screen and (max-width: 765px) {
+  .front .mv {
     height: 161vw;
   }
 }
-
-.mv_text {
+.front .mv_text {
   position: absolute;
-  top: 140px;
-  left: 19%;
+  top: 10vw;
+  left: 20vw;
   color: #fff;
-  font-size: 1.4vw;
+  font-size: 1.4rem;
   transform: rotate(-10deg);
-  width: 22vw;
+  width: 317px;
 }
-
-.mv_text_orange {
+@media screen and (max-width: 1356px) {
+  .front .mv_text {
+    font-size: 1.2rem;
+    top: 8vw;
+    left: 10vw;
+  }
+}
+@media screen and (max-width: 765px) {
+  .front .mv_text {
+    top: 25vw;
+    font-size: 1rem;
+  }
+}
+.front .mv_text_orange {
   background-color: #f0a900;
   margin-bottom: 10px;
   display: inline-block;
   padding: 0px 10px;
-  font-size: 1.8vw;
+  font-size: 2rem;
   font-weight: bold;
 }
-
-.mv_backimg {
+@media screen and (max-width: 1356px) {
+  .front .mv_text_orange {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 765px) {
+  .front .mv_text_orange {
+    font-size: 1.4rem;
+  }
+}
+.front .mv_backimg {
   position: absolute;
   top: -20px;
   left: 0;
@@ -266,70 +342,49 @@ pc sp ひょうじひひょうじ 改行
   height: 100%;
   z-index: -1;
 }
-
-.mv_itemimg1,
-.mv_itemimg2 {
-  width: 5vw;
-  position: absolute;
-}
-
-.mv_itemimg1 {
-  bottom: 10vw;
-  left: 10vw;
-}
-
-.mv_itemimg2 {
-  top: 2vw;
-  right: 7vw;
-}
-
-.mv_btn {
-  position: absolute !important;
-  top: 38vw;
-  right: 9vw;
-  width: 12vw;
-}
-
-/********************************
-メインビジュアル 下
-*********************************/
-.mv_under {
+.front .mv_under {
   text-align: center;
 }
-
-.mv_under_img {
+.front .mv_under_img {
   max-width: 500px;
   margin: 0 auto;
   margin-bottom: 40px;
 }
-
-.mv_under_text {
+.front .mv_under_text {
   margin-bottom: 40px;
 }
 @media screen and (max-width: 480px) {
-  .mv_under_text {
+  .front .mv_under_text {
     text-align: left;
   }
 }
-
-.front_mvunder_itemimg1 {
+.front .front_mvunder_itemimg1 {
   position: absolute;
   top: 30px;
   right: 0vw;
   width: 60px;
 }
-
-.front_mvunder_itemimg2 {
+@media screen and (max-width: 480px) {
+  .front .front_mvunder_itemimg1 {
+    top: -16px;
+    right: 1vw;
+    width: 40px;
+  }
+}
+.front .front_mvunder_itemimg2 {
   position: absolute;
   top: -40px;
   left: 0vw;
   width: 60px;
 }
-
-/********************************
-NEWS
-*********************************/
-.front_news_posts {
+@media screen and (max-width: 480px) {
+  .front .front_mvunder_itemimg2 {
+    top: -10px;
+    left: 5vw;
+    width: 40px;
+  }
+}
+.front .front_news_posts {
   max-width: 1000px;
   background-color: #fff;
   margin: 0 auto;
@@ -337,35 +392,29 @@ NEWS
   padding: 40px 40px 20px;
   margin-bottom: 40px;
 }
-
-.front_news_itemimg1,
-.front_news_itemimg2 {
+.front .front_news_itemimg1,
+.front .front_news_itemimg2 {
   position: absolute;
 }
-
-.front_news_itemimg1 {
+.front .front_news_itemimg1 {
   top: -50px;
   left: -2vw;
   width: 50px;
 }
-
-.front_news_itemimg2 {
+.front .front_news_itemimg2 {
   top: -20px;
   right: -3vw;
   width: 70px;
 }
-
-.front_news_post {
+.front .front_news_post {
   text-align: left;
   border-bottom: dotted 2px #606060;
   margin-bottom: 20px;
 }
-
-.front_news_title {
+.front .front_news_title {
   margin-bottom: 10px;
 }
-
-.front_news_date {
+.front .front_news_date {
   border-radius: 50px;
   display: inline-block;
   padding: 0 10px;
@@ -373,37 +422,24 @@ NEWS
   background-color: #f0a900;
   margin-bottom: 10px;
 }
-
-/********************************
-特徴
-*********************************/
-.front_features {
-  height: 1200px;
+.front .front_features {
+  position: relative;
+  /********************************
+  特徴：画像のアニメーション
+  *********************************/
 }
-
-.front_features_back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+.front .front_features .content {
+  margin: 0 auto;
+  background-color: #f5ebd4;
+  text-align: center;
+  position: relative;
 }
-
-.front_features_content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  width: 75%;
-}
-@media screen and (max-width: 1356px) {
-  .front_features_content {
-    width: 90%;
+@media screen and (max-width: 765px) {
+  .front .front_features .content {
+    padding: 40px 0;
   }
 }
-
-.front_features_heading {
+.front .front_features .heading {
   color: #f0a900;
   font-size: 2rem;
   font-weight: bold;
@@ -413,45 +449,66 @@ NEWS
   max-width: 800px;
   position: relative;
 }
-
-.front_features_itemimg1 {
+.front .front_features .itemimg1 {
   position: absolute;
   top: 3vw;
   left: 21vw;
-  width: 6vw;
+  width: 80px;
+  z-index: 1;
 }
-
-.front_features_itemimg2 {
+@media screen and (max-width: 480px) {
+  .front .front_features .itemimg1 {
+    top: 2vw;
+    left: 5vw;
+    width: 60px;
+  }
+}
+.front .front_features .itemimg2 {
   position: absolute;
   top: 0vw;
   right: 14vw;
-  width: 4vw;
+  width: 70px;
   transform: rotateZ(10deg);
+  z-index: 1;
 }
-
-.front_features_list {
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-.front_features_item {
-  margin: 0 1.6%;
-  width: 30%;
-  height: 650px;
-  float: left;
-  position: relative;
-  text-align: left;
-}
-@media screen and (max-width: 950px) {
-  .front_features_item {
-    float: none;
-    width: 95%;
-    height: auto;
-    padding: 40px;
+@media screen and (max-width: 480px) {
+  .front .front_features .itemimg2 {
+    top: 5vw;
+    right: 8vw;
+    width: 40px;
   }
 }
-
-.front_features_title {
+.front .front_features .list {
+  margin: 0 auto;
+}
+.front .front_features .item {
+  margin: 0 20px;
+  width: 28%;
+  max-width: 350px;
+  height: 650px;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+}
+@media screen and (max-width: 900px) {
+  .front .front_features .item {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+    padding: 0 20px 170px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 765px) {
+  .front .front_features .item {
+    width: 100%;
+    height: auto;
+    padding: 0 20px 120px;
+    margin: 0 auto;
+  }
+}
+.front .front_features .title {
   color: #fff;
   background-color: #f0a900;
   position: relative;
@@ -462,316 +519,277 @@ NEWS
   display: inline-block;
   font-size: 1.2rem;
 }
-
-.front_features_text1 {
+.front .front_features .text1 {
   margin: 20px auto;
   text-align: left;
 }
-
-.front_features_text1 span {
+.front .front_features .text1 span {
   background: linear-gradient(transparent 60%, #ff6 60%);
 }
-
-.front_features_text2 {
+.front .front_features .text2 {
   margin: 20px auto;
   text-align: left;
 }
-
-.front_features_btn_frame {
+.front .front_features .btn_frame {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
-
-.front_features_item_imgl {
-  top: -45px;
-  left: 15vw;
+@media screen and (max-width: 900px) {
+  .front .front_features .btn_frame {
+    bottom: 80px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .front .front_features .btn_frame {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    left: 0;
+    bottom: -20px;
+    transform: translateX(0);
+  }
+}
+.front .front_features .imgl {
+  top: -20%;
+  left: 74%;
   position: relative;
   width: 60px;
   transform: rotateZ(45deg);
 }
-
-.front_features_item_imgc {
+.front .front_features .imgc {
   position: relative;
   width: 50px;
-  top: -115%;
-  left: 17vw;
+  top: -110%;
+  left: 70%;
 }
-
-.front_features_item_imgr1 {
+.front .front_features .imgr1 {
   position: relative;
   width: 60px;
-  top: -115%;
-  left: 1vw;
+  top: -110%;
+  left: 7%;
   transform: rotateZ(10deg);
 }
-
-.front_features_item_imgr2 {
+.front .front_features .imgr2 {
   position: relative;
   width: 45px;
   top: -45%;
   left: 80%;
 }
-
-/********************************
-特徴：画像のアニメーション
-*********************************/
-.front_features_img {
-  height: 18vw;
+.front .front_features .img {
+  width: 100%;
+  height: 20vw;
   max-height: 250px;
   position: relative;
 }
-
-.front_features_catch {
+@media screen and (max-width: 900px) {
+  .front .front_features .img {
+    height: 48vw;
+    max-height: 100%;
+  }
+}
+@media screen and (max-width: 765px) {
+  .front .front_features .img {
+    height: 60vw;
+  }
+}
+.front .front_features .catch {
   width: 100%;
   height: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
-
-.front_features_catch > img {
+.front .front_features .catch > img {
   width: 100%;
   transition-duration: 0.5s;
 }
-
-.front_features_catch > img:hover {
+.front .front_features .catch > img:hover {
   transform: scale(1.2) rotate(9deg);
   transition-duration: 0.5s;
 }
-
-/********************************
-在籍シッター
-*********************************/
-.front_member {
+.front .front_member {
   padding-bottom: 80px;
 }
-
-.front_member_itemimg1 {
+.front .front_member .itemimg1 {
   position: absolute;
   top: 4vw;
   left: 28vw;
   width: 80px;
 }
-
-.front_member_itemimg2 {
+@media screen and (max-width: 765px) {
+  .front .front_member .itemimg1 {
+    top: 10px;
+    left: 10%;
+    width: 60px;
+  }
+}
+.front .front_member .itemimg2 {
   position: absolute;
   top: 3vw;
   right: 28vw;
   width: 75px;
 }
-
-.front_member_frame {
+@media screen and (max-width: 765px) {
+  .front .front_member .itemimg2 {
+    top: 10px;
+    right: 10%;
+    width: 50px;
+  }
+}
+.front .front_member .list_frame {
   background-color: #fff;
   max-width: 1400px;
   margin: 0 auto;
   border-radius: 50px;
   padding: 3vw;
 }
-
-.front_member_description {
+.front .front_member .des {
   margin: 0 auto;
   margin-bottom: 40px;
   max-width: 802px;
 }
-
-.front_member_list {
-  display: flex;
-  justify-content: center;
+.front .front_member .item {
+  margin: 0 10px;
+  display: inline-block;
+  width: 17%;
+  min-width: 210px;
 }
-
-.front_member_item {
-  margin: 0 1vw;
-}
-
-.front_member_img {
-  background-color: #606060;
-  border-radius: 100%;
-  width: 9vw;
-  height: 9vw;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 480px) {
-  .front_member_list {
-    display: block;
+@media screen and (max-width: 765px) {
+  .front .front_member .item {
+    width: 30%;
   }
 }
-/********************************
-ご利用の流れ
-*********************************/
-.front_flow {
+@media screen and (max-width: 480px) {
+  .front .front_member .item {
+    width: 100%;
+  }
+}
+.front .front_member .front_member_img {
+  background-color: #606060;
+  border-radius: 100%;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+}
+.front .front_flow {
   margin-bottom: 60px;
 }
-
-.front_flow_title {
+.front .front_flow .title {
   height: 75px;
   object-fit: contain;
 }
-
-.front_flow_list {
+.front .front_flow .list {
   display: flex;
   justify-content: center;
   max-width: 1300px;
   margin: 0 auto;
 }
-
-.front_flow_item {
+@media screen and (max-width: 765px) {
+  .front .front_flow .list {
+    display: block;
+  }
+}
+.front .front_flow .item {
   width: 300px;
   position: relative;
 }
-
-.front_flow_item_arrow {
+@media screen and (max-width: 765px) {
+  .front .front_flow .item {
+    width: 100%;
+  }
+}
+.front .front_flow .item_arrow {
   width: 30px;
   top: -100px;
   position: relative;
   margin: 0 1vw;
 }
-
-.front_flow_item_arrow img {
+@media screen and (max-width: 765px) {
+  .front .front_flow .item_arrow {
+    width: 100%;
+    height: 30px;
+    top: 0;
+    margin: 40px auto;
+  }
+}
+.front .front_flow .item_arrow img {
   object-fit: contain;
 }
-
-.front_flow_number {
+.front .front_flow .front_flow_number {
   width: 40px;
 }
-
-.front_flow_img {
+@media screen and (max-width: 765px) {
+  .front .front_flow .front_flow_number {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+.front .front_flow .front_flow_img {
   height: 220px;
 }
-
-.front_flow_img img {
+.front .front_flow .front_flow_img img {
   object-fit: contain;
 }
-
-.front_flow_h {
+.front .front_flow .front_flow_h {
   padding: 10px 0;
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
-
-.front_flow_des {
+.front .front_flow .front_flow_des {
   text-align: left;
 }
-
 @media screen and (max-width: 480px) {
-  .front_flow_list {
+  .front .front_flow .front_flow_list {
     display: block;
   }
 }
-/********************************
-対応エリア
-*********************************/
-.front_area {
+.front .front_area {
   background-color: #f5ebd4;
   padding-bottom: 60px;
 }
-
-.front_area_content {
+.front .front_area .content {
   max-width: 1300px;
   margin: 0 auto;
   border-radius: 50px;
   background-color: #fff;
   padding: 60px 20px;
 }
-
-.front_area_img {
+.front .front_area .img {
   width: 40%;
   margin: 0 auto;
 }
-
-.front_area_itemimg2 {
+@media screen and (max-width: 765px) {
+  .front .front_area .img {
+    width: 60%;
+  }
+}
+.front .front_area .itemimg2 {
   position: absolute;
   top: 0vw;
   left: 80px;
   width: 65px;
 }
-
-.front_area_itemimg1 {
+@media screen and (max-width: 765px) {
+  .front .front_area .itemimg2 {
+    width: 50px;
+    left: 1vw;
+  }
+}
+.front .front_area .itemimg1 {
   position: absolute;
   top: 0vw;
   right: 80px;
   width: 40px;
 }
-
-/********************************
-その他
-*********************************/
-.front_guide {
-  width: 100%;
-  padding-bottom: 40px;
-}
-
-.front_guide_content {
-  background-color: #fff;
-  max-width: 900px;
-  padding: 40px;
-  margin: 0 auto;
-  margin-bottom: 40px;
-  border: solid 1px #cacaca;
-}
-
-.front_btn_orange {
-  background-color: #f0a900;
-  border-radius: 50px;
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-}
-
-.front_guide_list {
-  display: flex;
-  justify-content: center;
-}
-
-.front_guide_item {
-  width: 30%;
-  height: 100%;
-  margin: 0 auto;
-}
-@media screen and (max-width: 480px) {
-  .front_guide_item {
-    width: 100%;
+@media screen and (max-width: 765px) {
+  .front .front_area .itemimg1 {
+    width: 30px;
+    right: 1vw;
   }
 }
 
-.front_guide_tel {
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-bottom: dotted 1px #606060;
-}
-
-.front_guide_tel span img {
-  width: 25px;
-}
-
-.front_guide_tel_des {
-  font-size: 12px;
-}
-
-.front_guide_entry {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.front_guide_content_title {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.front_guide_content_des {
-  margin: 20px auto 40px;
-}
-
-@media screen and (max-width: 480px) {
-  .front_guide_list {
-    display: block;
-  }
-}
-/********************************
-レスポンシブ
-*********************************/
 .entry {
   /********************************
   シッター募集トップ
@@ -1078,14 +1096,14 @@ header .header_nv {
 header .nv_item {
   margin: 0 0.5vw;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1356px) {
   header .nv_item {
     display: none;
   }
 }
 header #btn-ham {
-  width: 50px;
-  height: 44px;
+  width: 35px;
+  height: 25px;
   cursor: pointer;
   z-index: 9999;
   transition: all 0.5s;
@@ -1097,7 +1115,7 @@ header #btn-ham {
   ハンバーガーボタン アクティブアニメーション
   *********************************/
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1356px) {
   header #btn-ham {
     display: inline-block;
   }
@@ -1116,7 +1134,7 @@ header #btn-ham span:nth-of-type(1) {
   top: 0;
 }
 header #btn-ham span:nth-of-type(2) {
-  top: 20px;
+  top: 10px;
 }
 header #btn-ham span:nth-of-type(3) {
   bottom: 0;
@@ -1129,14 +1147,14 @@ header #btn-ham.active span {
 }
 header #btn-ham.active span:nth-of-type(1) {
   -webkit-transform: translateY(20px) rotate(-45deg);
-  transform: translateY(20px) rotate(-45deg);
+  transform: translateY(10px) rotate(-45deg);
 }
 header #btn-ham.active span:nth-of-type(2) {
   opacity: 0;
 }
 header #btn-ham.active span:nth-of-type(3) {
   -webkit-transform: translateY(-20px) rotate(45deg);
-  transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-11px) rotate(45deg);
 }
 header #ham {
   position: fixed;
@@ -1184,73 +1202,86 @@ header #ham .reservation_k {
 footer {
   text-align: center;
   position: relative;
-  min-height: 530px;
-  height: 31vw;
+  background-color: #f5ebd4;
 }
-
-.footer_back {
+footer .img {
+  width: 60px;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+  top: 130px;
+  left: 60%;
 }
-
-.site-footer {
-  position: relative;
+@media screen and (max-width: 1000px) {
+  footer .img {
+    top: 100px;
+    left: 70%;
+  }
 }
-
-.footer_content {
-  position: absolute;
-  bottom: 0;
-  left: 40%;
-  transform: translateX(-30%);
+@media screen and (max-width: 765px) {
+  footer .img {
+    width: 50px;
+    top: 55px;
+    left: 80%;
+  }
 }
-
-.footer_logo {
+footer .content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 1000px) {
+  footer .content {
+    padding-top: 40px;
+  }
+}
+footer .logo {
   color: #f0a900;
   font-size: 2rem;
   margin-bottom: 40px;
 }
-
-.footer_nav1 {
+footer .nav1 {
   display: flex;
   margin-bottom: 40px;
   justify-content: center;
 }
-@media screen and (max-width: 480px) {
-  .footer_nav1 {
+@media screen and (max-width: 1000px) {
+  footer .nav1 {
     display: block;
+    margin-bottom: 20px;
   }
 }
-
-.footer_btns {
-  display: flex;
-  margin-bottom: 40px;
-}
-@media screen and (max-width: 480px) {
-  .footer_btns {
-    display: block;
-  }
-}
-
-.footer_nav2 {
+footer .btns {
   display: flex;
   margin-bottom: 40px;
   justify-content: center;
 }
-@media screen and (max-width: 480px) {
-  .footer_nav2 {
+@media screen and (max-width: 1000px) {
+  footer .btns {
     display: block;
+    margin-bottom: 20px;
   }
 }
-
-.footer_item {
+footer .nav2 {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  footer .nav2 {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+footer .item {
   margin: 0 20px;
 }
-
-.footer_btn_orange {
+@media screen and (max-width: 1000px) {
+  footer .item {
+    margin: 0 auto;
+    width: 280px;
+    margin-bottom: 20px;
+  }
+}
+footer .btn_orange {
   color: #fff;
   background-color: #f0a900;
   border-radius: 50px;
@@ -1259,8 +1290,14 @@ footer {
   width: 200px;
   padding: 10px;
 }
-
-.footer_btn_green {
+@media screen and (max-width: 1000px) {
+  footer .btn_orange {
+    margin: 0 auto;
+    width: 280px;
+    margin-bottom: 20px;
+  }
+}
+footer .btn_green {
   color: #fff;
   background-color: #a1d073;
   border-radius: 50px;
@@ -1269,21 +1306,101 @@ footer {
   width: 200px;
   padding: 10px 20px;
 }
-
-.copyright {
+@media screen and (max-width: 1000px) {
+  footer .btn_green {
+    margin: 0 auto;
+    width: 280px;
+    margin-bottom: 40px;
+  }
+}
+footer .copyright {
   font-size: 12px;
-  margin-bottom: 20px;
+  margin-top: 40px;
 }
 
-.news_posts {
+/********************************
+ガイド
+*********************************/
+.footer_guide {
+  width: 100%;
+  padding-bottom: 40px;
+  padding: 40px 20px;
+}
+.footer_guide .content {
+  background-color: #fff;
+  max-width: 900px;
+  padding: 40px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border: solid 1px #cacaca;
+}
+.footer_guide .list {
+  display: flex;
+  justify-content: center;
+}
+.footer_guide .item {
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 765px) {
+  .footer_guide .item {
+    width: 200px;
+  }
+}
+.footer_guide .front_btn_orange {
+  background-color: #f0a900;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+}
+.footer_guide .tel {
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: dotted 1px #606060;
+}
+.footer_guide .tel span img {
+  width: 25px;
+}
+.footer_guide .tel_des {
+  font-size: 12px;
+}
+.footer_guide .entry {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.footer_guide .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.footer_guide .des {
+  margin: 20px auto 40px;
+}
+@media screen and (max-width: 765px) {
+  .footer_guide .list {
+    display: block;
+  }
+}
+
+.news {
+  /* 固定ページのタイトル部分 */
+}
+.news .list {
   max-width: 1000px;
   margin: 0 auto;
   margin-bottom: 80px;
   padding: 0 80px;
 }
-
-/* 固定ページのタイトル部分 */
-.news_title {
+@media screen and (max-width: 700px) {
+  .news .list {
+    padding: 0 10px;
+  }
+}
+.news .news_title {
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 3px;
@@ -1291,20 +1408,17 @@ footer {
   position: relative;
   top: -60px;
 }
-
-.news_post {
+.news .content {
   margin: 60px auto;
 }
-
-.news_post_title {
+.news .title {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: dotted 1px #606060;
 }
-
-.news_post_date {
+.news .date {
   background-color: #f0a900;
   border-radius: 50px;
   color: #fff;
@@ -1314,42 +1428,32 @@ footer {
   text-align: center;
   padding: 5px 0;
 }
-
-.news_post_description {
-  /* font-size: 12px; */
-}
-
-.news_pagination {
+.news .pagination {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 80px;
 }
-
-.page-numbers {
+.news .page-numbers {
   display: none;
 }
-
-.prev,
-.next {
+.news .prev,
+.news .next {
   display: inline;
 }
-
-.news_btn_prev,
-.news_btn_next {
+.news .btn-prev,
+.news .btn-next {
   width: 300px;
   color: #fff;
   border-radius: 50px;
   padding: 10px 80px;
   font-size: 1.2rem;
 }
-
-.news_btn_prev {
+.news .btn-prev {
   background-color: #f0a900;
   margin-right: 80px;
 }
-
-.news_btn_next {
+.news .btn-next {
   background-color: #a1d073;
   margin-left: 80px;
 }
@@ -1701,6 +1805,7 @@ HURU-HURUとは
 .service .content1 {
   margin: 0 auto;
   margin-bottom: 80px;
+  padding: 0 5vw;
 }
 .service .content1 .title {
   font-size: 2rem;
@@ -1714,11 +1819,30 @@ HURU-HURUとは
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 1000px) {
+  .service .content1 .flex {
+    display: block;
+  }
+}
 .service .content1 .item {
   position: relative;
   margin: 0 10px;
-  width: 33%;
+  width: 100%;
   max-width: 333px;
+}
+@media screen and (max-width: 1000px) {
+  .service .content1 .item {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+.service .content1 .item:nth-of-type(2) {
+  top: -54px;
+}
+@media screen and (max-width: 1000px) {
+  .service .content1 .item:nth-of-type(2) {
+    top: 0;
+  }
 }
 .service .content1 .des span {
   font-size: 12px;
@@ -1743,51 +1867,58 @@ HURU-HURUとは
     display: block;
   }
 }
-.service .content2 .service_content2_item1,
-.service .content2 .service_content2_item2 {
-  background-color: #fff;
-  padding: 20px;
-  margin: 0 40px;
-}
-.service .content2 .service_content2_item1 {
+.service .content2 .item1 {
   width: 50%;
-  position: relative;
 }
-.service .content2 .service_content2_item2 {
-  width: 20%;
-  position: relative;
-}
-.service .content2 .service_content2_item_title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 10px auto;
-}
-.service .content2 .service_content2_list {
-  margin-bottom: 20px;
-}
-.service .content2 .service_content2_item1 .service_content2_list_item {
-  display: inline-block;
-  width: 45%;
-}
-.service .content2 .service_content2_list_item span {
-  color: #f0a900;
-  font-weight: bold;
-}
-.service .content2 .service_content2_item_des {
-  font-size: 12px;
-  margin-bottom: 20px;
-}
-.service .content2 .service_content2_item1_img {
+.service .content2 .item1 .img {
   width: 60px;
   top: -10px;
   position: absolute;
   left: 35%;
 }
-.service .content2 .service_content2_item2_img {
+.service .content2 .item1 .list_item {
+  display: inline-block;
+  width: 45%;
+}
+.service .content2 .item1 .des {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.service .content2 .item2 {
+  width: 20%;
+}
+.service .content2 .item2 .img {
   width: 60px;
   position: absolute;
   top: -15px;
   left: 75%;
+}
+.service .content2 .item1,
+.service .content2 .item2 {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 3vw;
+}
+@media screen and (max-width: 1000px) {
+  .service .content2 .item1,
+.service .content2 .item2 {
+    width: 100%;
+    padding: 0 20px;
+    margin: 20px auto;
+  }
+}
+.service .content2 .item_title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px auto;
+}
+.service .content2 .list {
+  margin-bottom: 20px;
+}
+.service .content2 .list_item span {
+  color: #f0a900;
+  font-weight: bold;
 }
 .service .content3 {
   position: relative;

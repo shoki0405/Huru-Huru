@@ -77,40 +77,40 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
             <div class="title">シッティング内容</div>
 
             <div class="flex">
-                <div class="service_content2_item1">
-                    <div class="service_content2_item1_img">
+                <div class="item1">
+                    <div class="img">
                         <img src="<?php echo $img_fol_service; ?>service_content2_1.png" alt="">
                     </div>
-                    <div class="service_content2_item_title">できること</div>
-                    <div class="service_content2_list">
-                        <div class="service_content2_list_item"><span>●</span>ご自宅でのシッティング</div>
-                        <div class="service_content2_list_item"><span>●</span>早朝、夜間利用</div>
+                    <div class="item_title">できること</div>
+                    <div class="list">
+                        <div class="list_item"><span>●</span>ご自宅でのシッティング</div>
+                        <div class="list_item"><span>●</span>早朝、夜間利用</div>
 
-                        <div class="service_content2_list_item"><span>●</span>外遊び</div>
-                        <div class="service_content2_list_item"><span>●</span>託児所利用</div>
+                        <div class="list_item"><span>●</span>外遊び</div>
+                        <div class="list_item"><span>●</span>託児所利用</div>
 
-                        <div class="service_content2_list_item"><span>●</span>食事介助</div>
-                        <div class="service_content2_list_item"><span>●</span>病児保育</div>
+                        <div class="list_item"><span>●</span>食事介助</div>
+                        <div class="list_item"><span>●</span>病児保育</div>
 
-                        <div class="service_content2_list_item"><span>●</span>買い物</div>
-                        <div class="service_content2_list_item"><span>●</span>投薬(投薬依頼書に基づき)</div>
+                        <div class="list_item"><span>●</span>買い物</div>
+                        <div class="list_item"><span>●</span>投薬(投薬依頼書に基づき)</div>
 
-                        <div class="service_content2_list_item"><span>●</span>送迎</div>
+                        <div class="list_item"><span>●</span>送迎</div>
                     </div>
-                    <div class="service_content2_item_des">
+                    <div class="des">
                         ※買い物に関しましては保育時間内は致しません。保育時間前後にご利用ください。シッティングに支障が出る範囲のものや、お子様の状況によっては難しい場合もございます。ご了承ください。
                     </div>
                 </div>
-                <div class="service_content2_item2">
-                    <div class="service_content2_item2_img">
+                <div class="item2">
+                    <div class="img">
                         <img src="<?php echo $img_fol_service; ?>service_content2_2.png" alt="">
                     </div>
-                    <div class="service_content2_item_title">できないこと</div>
-                    <div class="service_content2_list_item"><span>●</span>沐浴・シャワー</div>
-                    <div class="service_content2_list_item"><span>●</span>調理</div>
-                    <div class="service_content2_list_item"><span>●</span>掃除・洗濯</div>
-                    <div class="service_content2_list_item"><span>●</span>車・自動車の運転</div>
-                    <div class="service_content2_list_item"><span>●</span>37.5度以上の病児保育</div>
+                    <div class="item_title">できないこと</div>
+                    <div class="list_item"><span>●</span>沐浴・シャワー</div>
+                    <div class="list_item"><span>●</span>調理</div>
+                    <div class="list_item"><span>●</span>掃除・洗濯</div>
+                    <div class="list_item"><span>●</span>車・自動車の運転</div>
+                    <div class="list_item"><span>●</span>37.5度以上の病児保育</div>
                 </div>
             </div>
         </div>
@@ -130,7 +130,7 @@ $img_fol_other = get_stylesheet_directory_uri() . "/img/other/";
             </div>
 
 
-            <div class="content">
+            <div class="content" id="service_benri">
                 <div class="title">便利な使い方</div>
                 <div class="slideshow">
                     <input type="radio" name="slideshow" id="switch1" checked>

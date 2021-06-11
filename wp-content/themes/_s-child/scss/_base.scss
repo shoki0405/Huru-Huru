@@ -60,8 +60,7 @@ a {
     width: 100%;
     height: 100%;
 }
-
-.page_img {
+.mv_page {
     position: relative;
     top: -45px;
     z-index: -1;
@@ -71,25 +70,37 @@ pc sp ひょうじひひょうじ 改行
 *********************************/
 .pc {
     display: block;
-}
-.sp {
-    display: none;
-}
-@media screen and (max-width: 480px) {
-    .pc {
+    @media screen and (max-width: 480px) {
         display: none;
     }
-    .sp {
+}
+.pc_765 {
+    display: block;
+    @media screen and (max-width: 765px) {
+        display: none;
+    }
+}
+.tb_765 {
+    display: none;
+    @media screen and (max-width: 765px) {
         display: block;
     }
 }
-
+.sp {
+    display: none;
+    @media screen and (max-width: 480px) {
+        display: block;
+    }
+}
+.kaigyo_765 {
+    display: inline;
+    @media screen and (max-width: 765px) {
+        display: block;
+    }
+}
 .kaigyo {
     display: inline;
-}
-
-@media screen and (max-width: 480px) {
-    .kaigyo {
+    @media screen and (max-width: 480px) {
         display: block;
     }
 }
@@ -162,13 +173,13 @@ pc sp ひょうじひひょうじ 改行
 }
 
 .btn-swipe {
+    margin: 0 auto;
     border-radius: 50px;
     position: relative;
     display: block;
     overflow: hidden;
     max-width: 300px;
     padding: 15px 20px;
-    margin: 20px auto 40px;
     text-transform: uppercase;
     border: 1px solid currentColor;
     color: var.$orange;
@@ -176,6 +187,9 @@ pc sp ひょうじひひょうじ 改行
     transition: 0.5s ease-in-out;
     font-size: 1.2rem;
     cursor: pointer;
+    @media screen and (max-width: 480px) {
+        max-width: 220px;
+    }
 }
 .btn-swipe:before {
     content: '';

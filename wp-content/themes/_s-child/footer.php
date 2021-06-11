@@ -1,56 +1,71 @@
 <?php
-$img_folder_footer = get_stylesheet_directory_uri() . "/img/footer/";
+$img_fol = get_stylesheet_directory_uri() . "/img/";
+$img_fol_footer = get_stylesheet_directory_uri() . "/img/footer/";
 ?>
+
+
 <div class="dot_back">
-    <div class="front_guide front_content">
-        <div class="front_guide_content">
-            <div class="front_guide_content_title">初めての方も安心してご予約ください</div>
-            <div class="front_guide_content_des">Huru Huruは細かなヒアリングをして最適なシッターを派遣します。お気軽にご予約ください。</div>
-            <div class="front_guide_list">
-                <div class="front_guide_item front_btn_orange">
+    <div class="footer_guide">
+        <div class="content">
+            <div class="title">初めての方も安心して<span class="kaigyo">ご予約ください</span></div>
+            <div class="des">Huru Huruは細かなヒアリングをして最適なシッターを派遣します。お気軽にご予約ください。</div>
+            <div class="list">
+                <div class="item front_btn_orange">
                     初めて予約する
                     <a href="" class="a"></a>
                 </div>
-                <div class="front_guide_item">
-                    <div class="front_guide_tel_des">当日分(前日17時以降)の予約</div>
-                    <div class="front_guide_tel"><span><img src="<?php echo $img_folder_footer; ?>footer_guide_phone.png" alt=""></span>03-4400-2292</div>
+                <div class="item">
+                    <div class="tel_des">当日分(前日17時以降)の予約</div>
+                    <div class="tel">
+                        <span>
+                            <img src="<?php echo $img_fol_footer; ?>phone.png" alt="">
+                        </span>
+                        03-4400-2292
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="front_guide_entry">
-            <img class="pc" src="<?php echo $img_folder_footer; ?>entry_banner.png" alt="">
-            <img class="sp" src="<?php echo $img_folder_footer; ?>entry_banner_sp.png" alt="">
+        <div class="entry">
+            <img class="pc" src="<?php echo $img_fol_footer; ?>entry_banner.png" alt="">
+            <img class="sp" src="<?php echo $img_fol_footer; ?>entry_banner_sp.png" alt="">
             <a href="" class="a"></a>
         </div>
     </div>
 </div>
-<footer id="colophon" class="site-footer dot_back">
-    <div class="footer_back">
-        <img src="<?php echo $img_folder_footer; ?>footer_back.png" alt="">
+
+
+
+<footer id="colophon" class="site-footer">
+    <div class="back_cloud_top">
+        <img class="pc_765" src="<?php echo $img_fol; ?>back_cloud_top.png" alt="">
+        <img class="tb_765" src="<?php echo $img_fol; ?>back_cloud_top_sp.png" alt="">
     </div>
-    <div class="footer_content">
-        <div class="footer_logo">HURU-HURU</div>
-        <div class="footer_nav1">
-            <div class="footer_item">HOME<a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a></div>
-            <div class="footer_item">サービス内容<a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a></div>
-            <div class="footer_item">HURU-HURUとは<a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a></div>
-            <div class="footer_item">ご利用料金<a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a></div>
-            <div class="footer_item">法人向けシッター派遣<a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a></div>
-            <div class="footer_item">NEWS<a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a></div>
+    <div class="img">
+        <img src="<?php echo $img_fol; ?>orange.png" alt="">
+    </div>
+    <div class="content">
+        <div class="logo">Huru-Huru</div>
+        <div class="nav1">
+            <div class="item">HOME<a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a></div>
+            <div class="item">サービス内容<a href="<?php echo esc_url(home_url('/service')); ?>" class="a"></a></div>
+            <div class="item">HURU-HURUとは<a href="<?php echo esc_url(home_url('/overview')); ?>" class="a"></a></div>
+            <div class="item">ご利用料金<a href="<?php echo esc_url(home_url('/price')); ?>" class="a"></a></div>
+            <div class="item">法人向けシッター派遣<a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a></div>
+            <div class="item">NEWS<a href="<?php echo esc_url(home_url('/news')); ?>" class="a"></a></div>
         </div>
-        <div class="footer_btns">
-            <div class="footer_btn_orange">
+        <div class="btns">
+            <div class="btn_orange">
                 ご予約(初めての方)
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
             </div>
-            <div class="footer_btn_green">
+            <div class="btn_green">
                 ご予約(会員様)
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
             </div>
         </div>
-        <div class="footer_nav2">
-            <div class="footer_item">シッター募集<a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a></div>
-            <div class="footer_item">よくあるご質問とお問い合わせ<a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a></div>
+        <div class="nav2">
+            <div class="item">シッター募集<a href="<?php echo esc_url(home_url('/entry')); ?>" class="a"></a></div>
+            <div class="item">よくあるご質問とお問い合わせ<a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a></div>
         </div>
         <div class="copyright">©sitters Co.Ltd All Rights Reserved.</div>
     </div>

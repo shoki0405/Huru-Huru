@@ -10,7 +10,7 @@
     .content1 {
         margin: 0 auto;
         margin-bottom: 80px;
-
+        padding: 0 5vw;
         .title {
             font-size: 2rem;
             font-weight: bold;
@@ -22,54 +22,26 @@
         .flex {
             display: flex;
             justify-content: center;
-            // @media screen and (max-width: 1000px) {
-            //     display: block;
-            // }
+            @media screen and (max-width: 1000px) {
+                display: block;
+            }
         }
         .item {
             position: relative;
             margin: 0 10px;
-            width: 33%;
+            width: 100%;
             max-width: 333px;
+            @media screen and (max-width: 1000px) {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+            &:nth-of-type(2) {
+                top: -54px;
+                @media screen and (max-width: 1000px) {
+                    top: 0;
+                }
+            }
         }
-        .catch {
-        }
-        // .service_content1_heading {
-        //     color: #fff;
-        //     background-color: #f0a900;
-        //     padding: 5px 10px;
-        //     font-size: 1.2rem;
-        //     position: relative;
-        //     top: -35px;
-        //     left: 20px;
-        //     text-align: left;
-        //     display: inline-block;
-        // }
-        // .service_content1_heading img {
-        //     position: absolute;
-        //     top: -30px;
-        //     object-fit: contain;
-        //     width: 45px;
-        //     left: -20px;
-        // }
-        // .service_content1_fruit1 {
-        //     position: absolute;
-        //     width: 50px;
-        //     top: 180px;
-        //     left: 280px;
-        // }
-        // .service_content1_fruit2 {
-        //     position: absolute;
-        //     width: 70px;
-        //     top: -50px;
-        //     left: 130px;
-        // }
-        // .service_content1_fruit3 {
-        //     position: absolute;
-        //     width: 45px;
-        //     top: 195px;
-        //     left: 290px;
-        // }
         .des span {
             font-size: 12px;
         }
@@ -97,61 +69,55 @@
                 display: block;
             }
         }
-
-        .service_content2_item1,
-        .service_content2_item2 {
+        .item1 {
+            width: 50%;
+            .img {
+                width: 60px;
+                top: -10px;
+                position: absolute;
+                left: 35%;
+            }
+            .list_item {
+                display: inline-block;
+                width: 45%;
+            }
+            .des {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+        }
+        .item2 {
+            width: 20%;
+            .img {
+                width: 60px;
+                position: absolute;
+                top: -15px;
+                left: 75%;
+            }
+        }
+        .item1,
+        .item2 {
+            position: relative;
             background-color: #fff;
             padding: 20px;
-            margin: 0 40px;
+            margin: 0 3vw;
+            @media screen and (max-width: 1000px) {
+                width: 100%;
+                padding: 0 20px;
+                margin: 20px auto;
+            }
         }
-
-        .service_content2_item1 {
-            width: 50%;
-            position: relative;
-        }
-
-        .service_content2_item2 {
-            width: 20%;
-            position: relative;
-        }
-
-        .service_content2_item_title {
+        .item_title {
             font-size: 1.2rem;
             font-weight: bold;
             margin: 10px auto;
         }
-
-        .service_content2_list {
+        .list {
             margin-bottom: 20px;
         }
-
-        .service_content2_item1 .service_content2_list_item {
-            display: inline-block;
-            width: 45%;
-        }
-
-        .service_content2_list_item span {
+        .list_item span {
             color: #f0a900;
             font-weight: bold;
-        }
-
-        .service_content2_item_des {
-            font-size: 12px;
-            margin-bottom: 20px;
-        }
-
-        .service_content2_item1_img {
-            width: 60px;
-            top: -10px;
-            position: absolute;
-            left: 35%;
-        }
-
-        .service_content2_item2_img {
-            width: 60px;
-            position: absolute;
-            top: -15px;
-            left: 75%;
         }
     }
 
