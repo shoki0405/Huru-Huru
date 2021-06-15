@@ -8,9 +8,6 @@
             padding: 0 10px;
         }
     }
-
-    /* 固定ページのタイトル部分 */
-
     .news_title {
         font-size: 2rem;
         font-weight: bold;
@@ -18,12 +15,13 @@
         text-align: center;
         position: relative;
         top: -60px;
+        @media screen and (max-width: 765px) {
+            top: 0;
+        }
     }
-
     .content {
         margin: 60px auto;
     }
-
     .title {
         font-size: 1.2rem;
         font-weight: bold;
@@ -31,7 +29,6 @@
         padding-bottom: 20px;
         border-bottom: dotted 1px #606060;
     }
-
     .date {
         background-color: #f0a900;
         border-radius: 50px;
@@ -42,23 +39,19 @@
         text-align: center;
         padding: 5px 0;
     }
-
     .pagination {
         max-width: 600px;
         margin: 0 auto;
         text-align: center;
         margin-bottom: 80px;
     }
-
     .page-numbers {
         display: none;
     }
-
     .prev,
     .next {
         display: inline;
     }
-
     .btn-prev,
     .btn-next {
         width: 300px;
@@ -67,12 +60,10 @@
         padding: 10px 80px;
         font-size: 1.2rem;
     }
-
     .btn-prev {
         background-color: #f0a900;
         margin-right: 80px;
     }
-
     .btn-next {
         background-color: #a1d073;
         margin-left: 80px;

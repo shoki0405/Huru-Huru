@@ -369,7 +369,6 @@
                 width: 60px;
             }
         }
-
         .itemimg2 {
             position: absolute;
             top: 3vw;
@@ -381,19 +380,24 @@
                 width: 50px;
             }
         }
-
         .list_frame {
             background-color: var.$white;
             max-width: 1400px;
             margin: 0 auto;
             border-radius: 50px;
             padding: 3vw;
+            @media screen and (max-width: 480px) {
+                border-radius: 30px;
+            }
         }
-
         .des {
             margin: 0 auto;
             margin-bottom: 40px;
             max-width: 802px;
+            @media screen and (max-width: 480px) {
+                margin: 20px auto;
+                text-align: left;
+            }
         }
 
         .list {
@@ -411,6 +415,7 @@
             }
             @media screen and (max-width: 480px) {
                 width: 100%;
+                margin-bottom: 20px;
             }
         }
 
@@ -420,77 +425,6 @@
             width: 160px;
             height: 160px;
             margin: 0 auto;
-        }
-    }
-
-    /********************************
-    ご利用の流れ
-    *********************************/
-
-    .front_flow {
-        margin-bottom: 60px;
-
-        .title {
-            height: 75px;
-            object-fit: contain;
-        }
-        .list {
-            display: flex;
-            justify-content: center;
-            max-width: 1300px;
-            margin: 0 auto;
-            @media screen and (max-width: 765px) {
-                display: block;
-            }
-        }
-        .item {
-            width: 300px;
-            position: relative;
-            @media screen and (max-width: 765px) {
-                width: 100%;
-            }
-        }
-        .item_arrow {
-            width: 30px;
-            top: -100px;
-            position: relative;
-            margin: 0 1vw;
-            @media screen and (max-width: 765px) {
-                width: 100%;
-                height: 30px;
-                top: 0;
-                margin: 40px auto;
-            }
-        }
-        .item_arrow img {
-            object-fit: contain;
-        }
-        .front_flow_number {
-            width: 40px;
-            @media screen and (max-width: 765px) {
-                margin: 0 auto;
-                margin-bottom: 20px;
-            }
-        }
-        .front_flow_img {
-            height: 220px;
-        }
-        .front_flow_img img {
-            object-fit: contain;
-        }
-        .front_flow_h {
-            padding: 10px 0;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .front_flow_des {
-            text-align: left;
-        }
-        @media screen and (max-width: 480px) {
-            .front_flow_list {
-                display: block;
-            }
         }
     }
 

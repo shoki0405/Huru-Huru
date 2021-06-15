@@ -14,7 +14,7 @@ body {
 @media screen and (max-width: 480px) {
   html,
 body {
-    font-size: 12px;
+    font-size: 14px;
     max-width: 100vw;
   }
 }
@@ -62,6 +62,11 @@ a {
   position: relative;
   top: -45px;
   z-index: -1;
+}
+@media screen and (max-width: 765px) {
+  .mv_page {
+    top: 0;
+  }
 }
 
 /********************************
@@ -234,6 +239,86 @@ pc sp ひょうじひひょうじ 改行
 }
 
 /********************************
+ご利用の流れ
+*********************************/
+.flows {
+  margin-bottom: 60px;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+.flows .title {
+  height: 75px;
+  object-fit: contain;
+}
+.flows .list {
+  display: flex;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 765px) {
+  .flows .list {
+    display: block;
+  }
+}
+.flows .item {
+  width: 300px;
+  position: relative;
+}
+@media screen and (max-width: 765px) {
+  .flows .item {
+    width: 100%;
+  }
+}
+.flows .item_arrow {
+  width: 30px;
+  top: -100px;
+  position: relative;
+  margin: 0 1vw;
+}
+@media screen and (max-width: 765px) {
+  .flows .item_arrow {
+    width: 100%;
+    height: 30px;
+    top: 0;
+    margin: 40px auto;
+  }
+}
+.flows .item_arrow img {
+  object-fit: contain;
+}
+.flows .flows_number {
+  width: 40px;
+}
+@media screen and (max-width: 765px) {
+  .flows .flows_number {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+.flows .flows_img {
+  height: 220px;
+}
+.flows .flows_img img {
+  object-fit: contain;
+}
+.flows .flows_h {
+  padding: 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.flows .flows_des {
+  text-align: left;
+}
+@media screen and (max-width: 480px) {
+  .flows .flows_list {
+    display: block;
+  }
+}
+
+/********************************
 共通
 *********************************/
 .front_content {
@@ -257,9 +342,6 @@ pc sp ひょうじひひょうじ 改行
   *********************************/
   /********************************
   在籍シッター
-  *********************************/
-  /********************************
-  ご利用の流れ
   *********************************/
   /********************************
   対応エリア
@@ -644,10 +726,21 @@ pc sp ひょうじひひょうじ 改行
   border-radius: 50px;
   padding: 3vw;
 }
+@media screen and (max-width: 480px) {
+  .front .front_member .list_frame {
+    border-radius: 30px;
+  }
+}
 .front .front_member .des {
   margin: 0 auto;
   margin-bottom: 40px;
   max-width: 802px;
+}
+@media screen and (max-width: 480px) {
+  .front .front_member .des {
+    margin: 20px auto;
+    text-align: left;
+  }
 }
 .front .front_member .item {
   margin: 0 10px;
@@ -663,6 +756,7 @@ pc sp ひょうじひひょうじ 改行
 @media screen and (max-width: 480px) {
   .front .front_member .item {
     width: 100%;
+    margin-bottom: 20px;
   }
 }
 .front .front_member .front_member_img {
@@ -671,79 +765,6 @@ pc sp ひょうじひひょうじ 改行
   width: 160px;
   height: 160px;
   margin: 0 auto;
-}
-.front .front_flow {
-  margin-bottom: 60px;
-}
-.front .front_flow .title {
-  height: 75px;
-  object-fit: contain;
-}
-.front .front_flow .list {
-  display: flex;
-  justify-content: center;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 765px) {
-  .front .front_flow .list {
-    display: block;
-  }
-}
-.front .front_flow .item {
-  width: 300px;
-  position: relative;
-}
-@media screen and (max-width: 765px) {
-  .front .front_flow .item {
-    width: 100%;
-  }
-}
-.front .front_flow .item_arrow {
-  width: 30px;
-  top: -100px;
-  position: relative;
-  margin: 0 1vw;
-}
-@media screen and (max-width: 765px) {
-  .front .front_flow .item_arrow {
-    width: 100%;
-    height: 30px;
-    top: 0;
-    margin: 40px auto;
-  }
-}
-.front .front_flow .item_arrow img {
-  object-fit: contain;
-}
-.front .front_flow .front_flow_number {
-  width: 40px;
-}
-@media screen and (max-width: 765px) {
-  .front .front_flow .front_flow_number {
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-}
-.front .front_flow .front_flow_img {
-  height: 220px;
-}
-.front .front_flow .front_flow_img img {
-  object-fit: contain;
-}
-.front .front_flow .front_flow_h {
-  padding: 10px 0;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.front .front_flow .front_flow_des {
-  text-align: left;
-}
-@media screen and (max-width: 480px) {
-  .front .front_flow .front_flow_list {
-    display: block;
-  }
 }
 .front .front_area {
   background-color: #f5ebd4;
@@ -1386,9 +1407,6 @@ footer .copyright {
   }
 }
 
-.news {
-  /* 固定ページのタイトル部分 */
-}
 .news .list {
   max-width: 1000px;
   margin: 0 auto;
@@ -1407,6 +1425,11 @@ footer .copyright {
   text-align: center;
   position: relative;
   top: -60px;
+}
+@media screen and (max-width: 765px) {
+  .news .news_title {
+    top: 0;
+  }
 }
 .news .content {
   margin: 60px auto;
@@ -1461,41 +1484,58 @@ footer .copyright {
 /********************************
 HURU-HURUとは
 *********************************/
-.overview_content1 {
+.overview .content1 {
   max-width: 1200px;
   text-align: center;
   margin: 0 auto;
+  padding: 0 20px;
 }
-
-.overview_content1_title {
+.overview .content1 .title {
   font-size: 2rem;
   letter-spacing: 3px;
   font-weight: bold;
   margin-bottom: 80px;
 }
-
-.overview_content1_des {
+@media screen and (max-width: 765px) {
+  .overview .content1 .title {
+    margin-bottom: 40px;
+  }
+}
+.overview .content1 .des {
   margin-bottom: 80px;
 }
-
-.overview_content1_img {
+@media screen and (max-width: 765px) {
+  .overview .content1 .des {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+}
+.overview .content1 .img {
   width: 500px;
   margin: 0 auto;
   margin-bottom: 80px;
 }
-
-.overview_content2 {
+@media screen and (max-width: 765px) {
+  .overview .content1 .img {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+}
+.overview .content2 {
   text-align: center;
   padding: 80px;
   margin-bottom: 40px;
 }
-
-.overview_content2_inner {
+@media screen and (max-width: 765px) {
+  .overview .content2 {
+    padding: 40px;
+  }
+}
+.overview .content2 .inner {
   max-width: 1000px;
   margin: 0 auto;
 }
-
-.overview_content2_title {
+.overview .content2 .title {
   font-size: 2rem;
   letter-spacing: 3px;
   font-weight: bold;
@@ -1503,14 +1543,22 @@ HURU-HURUとは
   padding: 10px 0;
   background-color: #fff;
 }
-
-.overview_content2_img {
+@media screen and (max-width: 765px) {
+  .overview .content2 .title {
+    margin-bottom: 40px;
+  }
+}
+.overview .content2 .img {
   max-width: 400px;
   margin: 0 auto;
   margin-bottom: 80px;
 }
-
-.overview_content2_head {
+@media screen and (max-width: 765px) {
+  .overview .content2 .img {
+    margin-bottom: 40px;
+  }
+}
+.overview .content2 .head {
   background-color: #fff;
   text-align: left;
   padding: 5px 15px;
@@ -1518,21 +1566,28 @@ HURU-HURUとは
   font-weight: bold;
   margin-bottom: 20px;
 }
-
-.overview_content2_head img {
+@media screen and (max-width: 765px) {
+  .overview .content2 .head {
+    margin-bottom: 10px;
+  }
+}
+.overview .content2 .head img {
   object-fit: contain;
   width: 20px;
   vertical-align: middle;
 }
-
-.overview_img_half img {
+.overview .content2 .img_half img {
   width: 15px;
 }
-
-.overview_content2_data {
+.overview .content2 .data {
   text-align: left;
   margin-bottom: 20px;
   padding-left: 40px;
+}
+@media screen and (max-width: 480px) {
+  .overview .content2 .data {
+    padding-left: 20px;
+  }
 }
 
 .right_list {
@@ -1582,63 +1637,82 @@ HURU-HURUとは
 /********************************
 ご利用料金
 *********************************/
-.price1 {
+.price .content1 {
   text-align: center;
 }
-
-.price1_tltle {
+.price .content1 .tltle {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 60px;
 }
-
-.price1_price {
+.price .content1 .price_h {
   font-size: 2rem;
   font-weight: bold;
   max-width: 406px;
   margin: 0 auto;
 }
-
-.price1_price span {
-  font-size: 60px;
+@media screen and (max-width: 765px) {
+  .price .content1 .price_h {
+    font-size: 1.8rem;
+    max-width: 290px;
+  }
+}
+.price .content1 .price_h span {
+  font-size: 4rem;
   font-weight: bold;
 }
-
-.price1_price_des {
+@media screen and (max-width: 765px) {
+  .price .content1 .price_h span {
+    font-size: 2.5rem;
+  }
+}
+.price .content1 .des {
   text-align: left;
-  font-size: 12px;
+  font-size: 0.8rem;
   max-width: 406px;
   margin: 0 auto;
   margin-bottom: 40px;
 }
-
-.price1_calc {
+@media screen and (max-width: 765px) {
+  .price .content1 .des {
+    max-width: 290px;
+  }
+}
+.price .content1 .calc {
   margin-bottom: 40px;
 }
-
-.calc1,
-.calc2,
-.calc3 {
+.price .content1 .calc .calc1,
+.price .content1 .calc .calc2,
+.price .content1 .calc .calc3 {
   padding: 10px 20px;
   text-align: center;
   color: #fff;
-  font-size: 24px;
+  font-size: 1.6rem;
 }
-
-.calc1 {
+@media screen and (max-width: 765px) {
+  .price .content1 .calc .calc1,
+.price .content1 .calc .calc2,
+.price .content1 .calc .calc3 {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+.price .content1 .calc .calc1 {
   background-color: #bc98ff;
 }
-
-.calc2 {
+.price .content1 .calc .calc2 {
   background-color: #d593b4;
 }
-
-.calc3 {
+.price .content1 .calc .calc3 {
   background-color: #a1d073;
 }
-
-.calcp {
+.price .content1 .calc .calcp {
   font-size: 2rem;
+}
+@media screen and (max-width: 765px) {
+  .price .content1 .calc .calcp {
+    font-size: 1.2rem;
+  }
 }
 
 /********************************
@@ -1647,8 +1721,8 @@ HURU-HURUとは
 .price2 {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
 }
-
 .price2 table {
   width: 100%;
   margin-bottom: 40px;
@@ -1656,36 +1730,60 @@ HURU-HURUとは
   /* border-collapse: separate; */
   /* border-spacing: 8px 8px; */
 }
-
-.price2_bottom {
+.price2 .bottom_img {
   max-width: 500px;
   margin: 40px auto;
 }
-
+@media screen and (max-width: 765px) {
+  .price2 .bottom_img {
+    margin: 40px;
+  }
+}
 .price2 .td_title {
   text-align: left;
   font-size: 1.2rem;
   font-weight: bold;
   border: none;
+  padding: 0;
 }
-
+.price2 .td_title .t_img1 {
+  width: 35px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.price2 .td_title .t_img2 {
+  width: 35px;
+  transform: scale(1.5);
+  object-fit: contain;
+  vertical-align: middle;
+  position: relative;
+  left: 10%;
+}
+@media screen and (max-width: 765px) {
+  .price2 .td_title .t_img2 {
+    transform: scale(1);
+  }
+}
+.price2 .td_title span {
+  vertical-align: middle;
+}
 .price2 th {
   background-color: #e4e4e4;
   border-bottom: dotted 1px #606060;
 }
-
 .price2 th:nth-child(even) {
   background-color: #deceb9;
 }
-
 .price2 td {
   text-align: center;
   border-bottom: dotted 1px #606060;
   padding: 15px 0;
 }
-
 .price2 td:nth-child(even) {
   background-color: #fbedcd;
+}
+.price2 .li_title {
+  font-weight: bold;
 }
 
 /********************************
@@ -1693,91 +1791,89 @@ HURU-HURUとは
 *********************************/
 .price3 {
   background-color: #ecf5e1;
-  padding: 40px;
+  padding: 40px 0;
 }
-
-.price3_inner {
+.price3 .inner {
   max-width: 1000px;
   margin: 0 auto;
 }
-
-.price3_title {
+.price3 .title {
   background-color: #fff;
   padding: 0 10px;
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 40px;
+  font-weight: bold;
+  margin: 0 20px 40px;
 }
-
-.price3_top {
+.price3 .top_img {
   max-width: 800px;
   margin: 0 auto;
   margin-bottom: 40px;
 }
-
-.price3_h {
+.price3 .heading {
   background-color: #fff;
   padding: 5px 10px;
-  margin-bottom: 20px;
   font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 20px 20px;
 }
-
-.price3_h_img1 img {
+.price3 .heading_img1 img {
   width: 15px;
 }
-
-.price3_h_img2 img {
+.price3 .heading_img2 img {
   width: 20px;
 }
-
-.price3_h_img3 img {
+.price3 .heading_img3 img {
   width: 15px;
 }
-
-.price3_text {
-  margin-bottom: 40px;
+.price3 .text {
+  margin: 0 20px 20px;
 }
-
-.price3_text_b {
+.price3 .text_b {
   font-weight: bold;
 }
-
-.price3_text_s {
+.price3 .text_s {
   font-size: 12px;
 }
-
-.price3_flow {
+.price3 .priceflow {
   display: flex;
   justify-content: left;
   align-items: center;
   margin: 40px auto;
+  margin: 0 20px 20px;
 }
-
-.price3_flow_num {
+@media screen and (max-width: 480px) {
+  .price3 .priceflow {
+    display: block;
+  }
+}
+.price3 .priceflow .priceflow_num {
   margin-right: 20px;
+  text-align: center;
 }
-
-.price3_flow_num img {
+.price3 .priceflow .priceflow_num img {
   width: 50px;
 }
-
-.price3_under_banner {
+.price3 .under_banner {
   background-color: #a4d373;
   color: #fff;
   text-align: center;
   padding: 60px 10px;
+  margin: 0 20px 40px;
+  font-weight: bold;
+}
+@media screen and (max-width: 480px) {
+  .price3 .under_banner {
+    padding: 40px 10px;
+  }
+}
+.price3 .under_banner .under_banner1 {
   margin-bottom: 40px;
 }
-
-.price3_under_banner1 {
-  margin-bottom: 40px;
-}
-
-.price3_under_banner2 {
+.price3 .under_banner .under_banner2 {
   background-color: #fff;
   color: #a4d373;
   font-size: 1.2rem;
-  font-weight: bold;
   display: inline;
   border-radius: 50px;
   padding: 15px 25px;
@@ -1797,11 +1893,6 @@ HURU-HURUとは
   ご利用いただく皆様へ
   *********************************/
 }
-.service .mv {
-  position: relative;
-  top: -45px;
-  z-index: -1;
-}
 .service .content1 {
   margin: 0 auto;
   margin-bottom: 80px;
@@ -1814,6 +1905,12 @@ HURU-HURUとは
   position: relative;
   top: -60px;
   text-align: center;
+}
+@media screen and (max-width: 765px) {
+  .service .content1 .title {
+    top: 0;
+    margin: 60px auto;
+  }
 }
 .service .content1 .flex {
   display: flex;
@@ -1832,8 +1929,13 @@ HURU-HURUとは
 }
 @media screen and (max-width: 1000px) {
   .service .content1 .item {
+    max-width: 50%;
+    margin: 0 auto 60px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .service .content1 .item {
     max-width: 100%;
-    margin: 0 auto;
   }
 }
 .service .content1 .item:nth-of-type(2) {
@@ -1876,9 +1978,19 @@ HURU-HURUとは
   position: absolute;
   left: 35%;
 }
+@media screen and (max-width: 765px) {
+  .service .content2 .item1 .img {
+    left: 75%;
+  }
+}
 .service .content2 .item1 .list_item {
   display: inline-block;
   width: 45%;
+}
+@media screen and (max-width: 765px) {
+  .service .content2 .item1 .list_item {
+    width: 100%;
+  }
 }
 .service .content2 .item1 .des {
   font-size: 12px;
@@ -1904,7 +2016,6 @@ HURU-HURUとは
   .service .content2 .item1,
 .service .content2 .item2 {
     width: 100%;
-    padding: 0 20px;
     margin: 20px auto;
   }
 }
@@ -1927,25 +2038,33 @@ HURU-HURUとは
   便利な使い方 スライド
   *********************************/
 }
-.service .content3 .service_content3_back {
-  z-index: -1;
-}
-.service .content3 .service_content3_back img {
-  object-fit: contain;
-}
 .service .content3 .fruit {
   width: 70px;
   position: absolute;
   left: 20%;
   top: 75px;
 }
+@media screen and (max-width: 765px) {
+  .service .content3 .fruit {
+    left: 10%;
+    top: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .service .content3 .fruit {
+    left: 8%;
+    top: 30px;
+    width: 60px;
+  }
+}
 .service .content3 .content {
-  position: absolute;
-  top: 200px;
-  left: 50%;
   width: 100%;
-  max-width: 1200px;
-  transform: translateX(-50%);
+  background-color: #f5ebd4;
+}
+@media screen and (max-width: 765px) {
+  .service .content3 .content {
+    padding: 40px 0;
+  }
 }
 .service .content3 .title {
   color: #f0a900;
@@ -1953,34 +2072,32 @@ HURU-HURUとは
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 40px;
+  letter-spacing: 5px;
 }
 .service .content3 .flex {
   display: flex;
   justify-content: center;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 765px) {
   .service .content3 .flex {
     display: block;
   }
 }
-.service .content3 .service_content3_item {
+.service .content3 .item {
   width: 33%;
   padding: 20px;
   position: relative;
+  margin: 0 auto;
 }
-.service .content3 .item_label {
-  position: absolute;
-  text-align: left;
-  top: 0%;
+@media screen and (max-width: 765px) {
+  .service .content3 .item {
+    width: 70%;
+  }
 }
-.service .content3 .item_label_item {
-  background-color: #fff;
-  padding: 0 10px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: left;
-  display: inline-block;
-  margin-bottom: 5px;
+@media screen and (max-width: 480px) {
+  .service .content3 .item {
+    width: 100%;
+  }
 }
 .service .content3 .item_des {
   text-align: left;
@@ -1988,11 +2105,13 @@ HURU-HURUとは
 .service .content3 .slideshow {
   position: relative;
   overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.service .content3 input[name=slideshow] {
+.service .content3 .slideshow input[name=slideshow] {
   display: none;
 }
-.service .content3 .slideContents {
+.service .content3 .slideshow .slideContents {
   display: flex;
   position: relative;
   width: 500%;
@@ -2001,71 +2120,105 @@ HURU-HURUとは
   user-select: none;
   transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-.service .content3 .slideContents section {
+@media screen and (max-width: 765px) {
+  .service .content3 .slideshow .slideContents {
+    width: 100%;
+    display: block;
+  }
+}
+.service .content3 .slideshow .slideContents section {
   width: 20%;
 }
-.service .content3 .slideContents section img {
+@media screen and (max-width: 765px) {
+  .service .content3 .slideshow .slideContents section {
+    width: 100%;
+  }
+}
+.service .content3 .slideshow .slideContents section img {
   max-width: 100%;
 }
-.service .content3 .arrow,
-.service .content3 .arrow label,
-.service .content3 .arrow .ico {
+.service .content3 .slideshow .arrow,
+.service .content3 .slideshow .arrow label,
+.service .content3 .slideshow .arrow .ico {
   position: absolute;
 }
-.service .content3 .arrow {
+.service .content3 .slideshow .arrow {
   top: 0;
   margin: 0;
   transition: background 0.3s;
 }
-.service .content3 .prev {
+@media screen and (max-width: 765px) {
+  .service .content3 .slideshow .arrow {
+    display: none;
+  }
+}
+.service .content3 .slideshow .prev {
   left: 0;
 }
-.service .content3 .next {
+.service .content3 .slideshow .next {
   right: 0;
 }
-.service .content3 .arrow,
-.service .content3 .arrow label {
+.service .content3 .slideshow .arrow,
+.service .content3 .slideshow .arrow label {
   top: 120px;
   cursor: pointer;
   width: 80px;
   height: 80px;
 }
-.service .content3 .arrow label {
+.service .content3 .slideshow .arrow label {
   top: 0;
   left: 0;
   z-index: 1;
 }
-.service .content3 .arrow .ico {
+.service .content3 .slideshow .arrow .ico {
   height: 80px;
 }
-.service .content3 #switch1:checked ~ .slideContents {
+.service .content3 .slideshow #switch1:checked ~ .slideContents {
   transform: translateX(0);
 }
-.service .content3 #switch2:checked ~ .slideContents {
+.service .content3 .slideshow #switch2:checked ~ .slideContents {
   transform: translateX(-20%);
 }
-.service .content3 #switch3:checked ~ .slideContents {
+@media screen and (max-width: 765px) {
+  .service .content3 .slideshow #switch2:checked ~ .slideContents {
+    transform: translateX(0);
+  }
+}
+.service .content3 .slideshow #switch3:checked ~ .slideContents {
   transform: translateX(-40%);
 }
-.service .content3 #switch4:checked ~ .slideContents {
+@media screen and (max-width: 765px) {
+  .service .content3 .slideshow #switch3:checked ~ .slideContents {
+    transform: translateX(0);
+  }
+}
+.service .content3 .slideshow #switch4:checked ~ .slideContents {
   transform: translateX(-60%);
 }
-.service .content3 #switch5:checked ~ .slideContents {
+@media screen and (max-width: 765px) {
+  .service .content3 .slideshow #switch4:checked ~ .slideContents {
+    transform: translateX(0);
+  }
+}
+.service .content3 .slideshow #switch5:checked ~ .slideContents {
   transform: translateX(-80%);
 }
-.service .content3 .arrow label {
+@media screen and (max-width: 765px) {
+  .service .content3 .slideshow #switch5:checked ~ .slideContents {
+    transform: translateX(0);
+  }
+}
+.service .content3 .slideshow .arrow label {
   pointer-events: none;
 }
-.service .content3 #switch1:checked ~ .prev label[for=switch5],
-.service .content3 #switch2:checked ~ .prev label[for=switch1],
-.service .content3 #switch3:checked ~ .prev label[for=switch2],
-.service .content3 #switch4:checked ~ .prev label[for=switch3],
-.service .content3 #switch5:checked ~ .prev label[for=switch4],
-.service .content3 #switch1:checked ~ .next label[for=switch2],
-.service .content3 #switch2:checked ~ .next label[for=switch3],
-.service .content3 #switch3:checked ~ .next label[for=switch4],
-.service .content3 #switch4:checked ~ .next label[for=switch5],
-.service .content3 #switch5:checked ~ .next label[for=switch1] {
+.service .content3 .slideshow #switch1:checked ~ .prev label[for=switch4],
+.service .content3 .slideshow #switch2:checked ~ .prev label[for=switch1],
+.service .content3 .slideshow #switch3:checked ~ .prev label[for=switch2],
+.service .content3 .slideshow #switch4:checked ~ .prev label[for=switch3],
+.service .content3 .slideshow #switch1:checked ~ .next label[for=switch2],
+.service .content3 .slideshow #switch2:checked ~ .next label[for=switch3],
+.service .content3 .slideshow #switch3:checked ~ .next label[for=switch4],
+.service .content3 .slideshow #switch4:checked ~ .next label[for=switch1] {
   pointer-events: auto;
 }
 .service .content5 {
@@ -2079,33 +2232,48 @@ HURU-HURUとは
   letter-spacing: 5px;
   text-align: center;
 }
-.service .content5 .service_content5_sub_title {
+.service .content5 .sub_title {
   margin-bottom: 40px;
   text-align: center;
 }
-.service .content5 table {
+.service .content5 .inline_block {
   max-width: 1200px;
   margin: 0 auto;
-  /* border-collapse: collapse; */
-  border-collapse: separate;
-  border-spacing: 5vw 20px;
+  text-align: center;
 }
-.service .content5 td {
-  padding: 40px;
+.service .content5 .inline_block .item {
+  display: inline-block;
+  width: 45%;
+  height: 450px;
+  margin: 10px 2%;
   background-color: #fff;
+  padding: 20px;
+  vertical-align: top;
 }
-.service .content5 .t_img {
-  width: 250px;
-  height: 150px;
+@media screen and (max-width: 765px) {
+  .service .content5 .inline_block .item {
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    height: auto;
+  }
+}
+.service .content5 .inline_block .item .img {
+  height: 200px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
-.service .content5 .t_img img {
+.service .content5 .inline_block .item .img img {
   object-fit: contain;
 }
-.service .content5 .t_title {
-  font-size: 1.2rem;
+.service .content5 .inline_block .item .heading {
+  font-size: 18px;
   font-weight: bold;
-  margin: 10px auto 20px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.service .content5 .inline_block .item .des {
+  text-align: left;
 }
 
 /*# sourceMappingURL=style.css.map */

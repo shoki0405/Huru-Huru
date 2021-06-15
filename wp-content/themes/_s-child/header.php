@@ -42,6 +42,15 @@
             background-color: #fff;
             background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/content_back.png");
         }
+
+        .back_cloud_bottom_white {
+            width: 100%;
+            height: 15vw;
+            margin: 0 auto;
+            text-align: center;
+            background-size: 300px 300px;
+            background-color: #fff;
+        }
     </style>
     <?php wp_body_open(); ?>
     <div id="page" class="site">

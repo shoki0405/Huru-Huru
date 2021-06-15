@@ -204,7 +204,9 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
                 </div>
                 <div class="list">
                     <div class="item">
-                        <div class="front_member_img"><img src="" alt=""></div>
+                        <div class="front_member_img">
+                            <img src="<?php echo $img_fol; ?>zaiseki_kari.png" alt="">
+                        </div>
                         <div class="front_member_text">
                             40代/保育士/幼稚園教諭<br>
                             できるオプション<br>
@@ -212,7 +214,9 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
                         </div>
                     </div>
                     <div class="item">
-                        <div class="front_member_img"><img src="" alt=""></div>
+                        <div class="front_member_img">
+                            <img src="<?php echo $img_fol; ?>zaiseki_kari.png" alt="">
+                        </div>
                         <div class="front_member_text">
                             40代/保育士/幼稚園教諭<br>
                             できるオプション<br>
@@ -220,7 +224,9 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
                         </div>
                     </div>
                     <div class="item">
-                        <div class="front_member_img"><img src="" alt=""></div>
+                        <div class="front_member_img">
+                            <img src="<?php echo $img_fol; ?>zaiseki_kari.png" alt="">
+                        </div>
                         <div class="front_member_text">
                             40代/保育士/幼稚園教諭<br>
                             できるオプション<br>
@@ -228,7 +234,9 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
                         </div>
                     </div>
                     <div class="item">
-                        <div class="front_member_img"><img src="" alt=""></div>
+                        <div class="front_member_img">
+                            <img src="<?php echo $img_fol; ?>zaiseki_kari.png" alt="">
+                        </div>
                         <div class="front_member_text">
                             40代/保育士/幼稚園教諭<br>
                             できるオプション<br>
@@ -236,7 +244,9 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
                         </div>
                     </div>
                     <div class="item">
-                        <div class="front_member_img"><img src="" alt=""></div>
+                        <div class="front_member_img">
+                            <img src="<?php echo $img_fol; ?>zaiseki_kari.png" alt="">
+                        </div>
                         <div class="front_member_text">
                             40代/保育士/幼稚園教諭<br>
                             できるオプション<br>
@@ -249,50 +259,7 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
     </div>
 
 
-
-    <div class="front_flow front_content">
-        <div class="heading">
-            <img class="title" src="<?php echo $img_fol_flow; ?>front_flow_title.svg" alt="">
-        </div>
-        <div class="list">
-            <div class="item">
-                <div class="front_flow_number"><img src="<?php echo $img_fol_flow; ?>front_flow_number1.svg" alt=""></div>
-                <div class="front_flow_img"><img src="<?php echo $img_fol_flow; ?>front_flow1.svg" alt=""></div>
-                <div class="dot_back front_flow_h">ご予約</div>
-                <div class="front_flow_des">
-                    WEBにて申し込みをお願いします。<br>
-                    <a href="">ご予約はこちら</a><br><br>
-                    お申し込み後、手配の状況を含めてこちらからメールにてご連絡いたします。
-                </div>
-            </div>
-            <div class="item_arrow">
-                <img class="pc_765" src="<?php echo $img_fol_flow; ?>front_flow_arrow.png" alt="">
-                <img class="tb_765" src="<?php echo $img_fol_flow; ?>front_flow_arrow_sp.png" alt="">
-            </div>
-            <div class="item">
-                <div class="front_flow_number"><img src="<?php echo $img_fol_flow; ?>front_flow_number2.svg" alt=""></div>
-                <div class="front_flow_img"><img src="<?php echo $img_fol_flow; ?>front_flow2.svg" alt=""></div>
-                <div class="dot_back front_flow_h">手配</div>
-                <div class="front_flow_des">
-                    手配完了後、メールにて担当シッターをお伝えし、サービス内容の詳細をお伺いしていきます。<br><br>
-                    依頼日前日にもご予約内容の確認をさせていただきます。
-                </div>
-            </div>
-            <div class="item_arrow">
-                <img class="pc_765" src="<?php echo $img_fol_flow; ?>front_flow_arrow.png" alt="">
-                <img class="tb_765" src="<?php echo $img_fol_flow; ?>front_flow_arrow_sp.png" alt="">
-            </div>
-            <div class="item">
-                <div class="front_flow_number"><img src="<?php echo $img_fol_flow; ?>front_flow_number3.svg" alt=""></div>
-                <div class="front_flow_img"><img src="<?php echo $img_fol_flow; ?>front_flow3.svg" alt=""></div>
-                <div class="dot_back front_flow_h">シッティング</div>
-                <div class="front_flow_des">
-                    当日10分前にご自宅に伺い引継ぎ後サービスを開始いたします。<br>
-                    お支払いは後日請求書を発行いたします。
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php get_template_part("template/flows"); ?>
 
 
     <div class="front_area front_content">
