@@ -42,7 +42,7 @@ $img_fol_footer = get_stylesheet_directory_uri() . "/img/footer/";
         <img src="<?php echo $img_fol; ?>orange.png" alt="">
     </div>
     <div class="content">
-        <div class="logo">Huru-Huru</div>
+        <div class="logo">HURU-HURU</div>
         <div class="nav1">
             <div class="item">HOME<a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a></div>
             <div class="item">サービス内容<a href="<?php echo esc_url(home_url('/service')); ?>" class="a"></a></div>

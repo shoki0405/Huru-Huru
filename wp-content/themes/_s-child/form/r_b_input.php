@@ -6,7 +6,6 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
 
 
 
-
 ?>
 
 <div class="reservation">
@@ -55,72 +54,36 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
                     ※=必須項目
                 </div>
 
-                <div class="row">
-                    <div class="heading">ご希望日時*</div>
-                    <div class="col">
-                        <div>※24時間表記で記載をお願い致します。</div>
-                        <input type="date" class="rsv_date" name="date_start">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="rsv_time" name="hour_start" placeholder="9">
-                        <span>時</span>
-                        <input type="text" class="rsv_time" name="minutes_start" placeholder="00">
-                        <span>分から</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="heading"></div>
-                    <input type="date" class="rsv_date" name="date_end">
-                    <div class="col">
-                        <input type="text" class="rsv_time" name="hour_end" placeholder="21">
-                        <span>時</span>
-                        <input type="text" class="rsv_time" name="minutes_end" placeholder="00">
-                        <span>分まで</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="heading">延長の可能性*</div>
-                    <div class="col radio">
-                        <input type="radio" name="extension" id="entyo_ari" value="有り">
-                        <label for="entyo_ari" class="radio-label">有り</label>
-                        <input type="radio" name="extension" id="entyo_nasi" value="無し">
-                        <label for="entyo_nasi" class="radio-label">無し</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="heading">保護者氏名*</div>
-                    <input type="text" name="p_name" placeholder="例)鈴木　花子">
-                </div>
-                <div class="row">
-                    <div class="heading">フリガナ*</div>
-                    <input type="text" name="p_hurigana" placeholder="例)スズキ　ハナコ">
-                </div>
-                <div class="row">
-                    <div class="heading">生年月日*</div>
-                    <input type="text" name="p_birth" placeholder="例)1980/4/2">
-                </div>
+
+
+
+                <?php get_template_part("form/r_common"); ?>
+
+
+
+
                 <div class="row">
                     <div class="heading">電話番号*</div>
-                    <input type="tel" name="p_tel" size="12" maxlength="20" placeholder="例)00-0000-0000">
+                    <input type="tel" name="tel" size="12" maxlength="20" placeholder="例)00-0000-0000">
                 </div>
                 <div class="row">
                     <div class="heading">メールアドレス*</div>
-                    <input type="email" name="p_email" placeholder="例)example@example.com">
+                    <input type="email" name="email" placeholder="例)example@example.com" id="email">
                 </div>
 
                 <div class="row">
                     <div class="heading">確認用*</div>
-                    <input type="email" name="p_email_cnf" placeholder="例)example@example.com">
+                    <input type="email" name="email_cnf" placeholder="例)example@example.com" oninput="CheckEmail(this)">
                 </div>
 
                 <div class="row">
                     <div class="heading">郵便番号*</div>
-                    <input type="text" name="p_zip" placeholder="例)101-0000">
+                    <input type="text" name="zip" placeholder="例)101-0000">
                 </div>
 
                 <div class="row">
                     <div class="heading">都道府県*</div>
-                    <select name="p_pref">
+                    <select name="pref">
                         <option value="東京都">東京都</option>
                         <option value="北海道">北海道</option>
                         <option value="青森県">青森県</option>
@@ -173,17 +136,17 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
 
                 <div class="row">
                     <div class="heading">住所*</div>
-                    <input type="text" name="p_address" placeholder="例)中央区銀座7-15-18">
+                    <input type="text" name="address" placeholder="例)中央区銀座7-15-18">
                 </div>
 
                 <div class="row">
                     <div class="heading">建物名</div>
-                    <input type="text" name="p_building">
+                    <input type="text" name="building">
                 </div>
 
                 <div class="row">
                     <div class="heading">最寄駅*</div>
-                    <input type="text" name="p_station" placeholder="例)東京メトロ銀座線　銀座駅">
+                    <input type="text" name="station" placeholder="例)東京メトロ銀座線　銀座駅">
                 </div>
 
             </div>

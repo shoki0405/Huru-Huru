@@ -213,9 +213,9 @@
             vertical-align: middle;
             position: absolute;
         }
-        &:hover {
-            cursor: pointer;
-        }
+    }
+    .accordion:hover {
+        cursor: pointer;
     }
     .content {
         display: none;

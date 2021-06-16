@@ -101,8 +101,8 @@ $img_fol_contact = get_stylesheet_directory_uri() . "/img/contact/";
         <form action="" method="post" class="form">
 
             <div>
-                <input type="radio">
-                <input type="radio">
+                <input type="radio">個人
+                <input type="radio">法人
             </div>
             <div>
                 ※=必須項目
@@ -112,23 +112,23 @@ $img_fol_contact = get_stylesheet_directory_uri() . "/img/contact/";
                 <input type="text" placeholder="">
             </div>
             <div>
-                氏名*
+                会社名*
                 <input type="text" placeholder="">
             </div>
             <div>
-                氏名*
+                メールアドレス*
                 <input type="text" placeholder="">
             </div>
             <div>
-                氏名*
+                電話番号*
                 <input type="text" placeholder="">
             </div>
             <div>
-                氏名*
+                お問い合わせの種類*
                 <input type="text" placeholder="">
             </div>
             <div>
-                氏名*
+                お問い合わせ内容*
                 <textarea name="" id="" cols="30" rows="10"></textarea>
             </div>
 

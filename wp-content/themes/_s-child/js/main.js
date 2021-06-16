@@ -23,3 +23,20 @@ $(function () {
         $(this).next().slideToggle();
     });
 });
+
+/*****************************************************
+ * メールアドレス一致確認
+ ******************************************************/
+function CheckEmail(input) {
+    //IE対応の為変更
+    //var mail = email_2.value; //メールフォームの値を取得
+    var mail = document.getElementById("email").value; //メールフォームの値を取得
+    var mailConfirm = input.value; //メール確認用フォームの値を取得(引数input)
+
+    // 一致確認
+    if (mail != mailConfirm) {
+        input.setCustomValidity('メールアドレスが一致しません'); // エラーメッセージのセット
+    } else {
+        input.setCustomValidity(''); // エラーメッセージのクリア
+    }
+}

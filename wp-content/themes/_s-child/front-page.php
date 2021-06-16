@@ -50,7 +50,7 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
             多忙な毎日の中でほっとリフレッシュできる環境があれば、<br>
             育児をまた頑張ろうという気持ちになれ、<br>
             子供ともさらに良好な関係が気付けるはずです。<br>
-            Huru-Huruはそんなパパ、ママの少しでもお力になりたいと考えております。
+            HURU-HURUはそんなパパ、ママの少しでもお力になりたいと考えております。
         </div>
         <div class="mv_under_img">
             <img class="pc" src="<?php echo $img_fol_front; ?>kizz.svg" alt="">
@@ -108,7 +108,7 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
             <img src="<?php echo $img_fol; ?>orange.png" alt="">
         </div>
         <div class="content">
-            <div class="heading">Huru-Huruの特徴</div>
+            <div class="heading">HURU-HURUの特徴</div>
             <div class="list">
                 <div class="item">
                     <div class="img">

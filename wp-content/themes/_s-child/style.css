@@ -2516,7 +2516,7 @@ HURU-HURUとは
   vertical-align: middle;
   position: absolute;
 }
-.reservation .child:hover {
+.reservation .accordion:hover {
   cursor: pointer;
 }
 .reservation .content {

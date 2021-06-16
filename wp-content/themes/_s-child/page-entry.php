@@ -254,6 +254,8 @@ $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
 
         <div class="entry_form_title">登録応募フォーム</div>
 
+        <?php get_template_part("form/bikou"); ?>
+
     </div>
 
 

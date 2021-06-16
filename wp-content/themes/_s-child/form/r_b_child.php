@@ -5,6 +5,31 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
 
 
 
+// SESSIONに格納
+$_SESSION["data"] = [
+    "start_date"   => $_POST["start_date"],
+    // "start_hour"   => $_POST["start_hour"],
+    // "start_minuts" => $_POST["start_minuts"],
+    // "end_date"     => $_POST["end_date"],
+    // "end_hour"     => $_POST["end_hour"],
+    // "end_minuts"   => $_POST["end_minuts"],
+    // "extension"    => $_POST["extension"],
+    // "name"         => $_POST["name"],
+    // "kana"         => $_POST["kana"],
+    // "birth"        => $_POST["birth"],
+    // "tel"          => $_POST["tel"],
+    // "email"        => $_POST["email"],
+    // "zip"          => $_POST["zip"],
+    // "pref"         => $_POST["pref"],
+    // "address"      => $_POST["address"],
+    // "station"      => $_POST["station"],
+];
+
+if (!empty($_POST["building"])) {
+    $_SESSION["data"] = [
+        "building" => $_POST["building"],
+    ];
+}
 
 
 ?>
@@ -79,19 +104,19 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
                         </div>
                         <div class="row">
                             <div class="heading">氏名*</div>
-                            <input type="text" name="c1_name" placeholder="例)鈴木　花子">
+                            <input type="text" name="name_c1" placeholder="例)鈴木　花子">
                         </div>
                         <div class="row">
                             <div class="heading">フリガナ*</div>
-                            <input type="text" name="c1_hurigana" placeholder="例)スズキ　ハナコ">
+                            <input type="text" name="kana_c1" placeholder="例)スズキ　ハナコ">
                         </div>
                         <div class="row">
                             <div class="heading">生年月日*</div>
-                            <input type="text" name="c1_birth" placeholder="例)1980/4/2">
+                            <input type="text" name="birth_c1" placeholder="例)1980/4/2">
                         </div>
                         <div class="row">
                             <div class="heading">健康状態*</div>
-                            <select name="" id="" name="c1_status">
+                            <select name="" id="" name="status_c1">
                                 <option value=""></option>
                                 <option value=""></option>
                                 <option value=""></option>
@@ -100,15 +125,15 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
                         <div class="row">
                             <div class="heading">アレルギー*</div>
                             <div class="col radio">
-                                <input type="radio" name="c1_allergy" id="c1_al_ari" value="有り">
+                                <input type="radio" name="allergy_c1" id="c1_al_ari" value="有り">
                                 <label for="c1_al_ari" class="radio-label">有り</label>
-                                <input type="radio" name="c1_allergy" id="c1_al_nasi" value="無し">
+                                <input type="radio" name="allergy_c1" id="c1_al_nasi" value="無し">
                                 <label for="c1_al_nasi" class="radio-label">無し</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="heading">アレルギーの種類</div>
-                            <input type="text" name="c1_allergy_name" placeholder="例)1980/4/2">
+                            <input type="text" name="allergy_name_c1" placeholder="例)1980/4/2">
                         </div>
                     </div>
 
@@ -122,19 +147,19 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
                         <div class="content">
                             <div class="row">
                                 <div class="heading">氏名</div>
-                                <input type="text" name="c2_name" placeholder="例)鈴木　花子">
+                                <input type="text" name="name_c2" placeholder="例)鈴木　花子">
                             </div>
                             <div class="row">
                                 <div class="heading">フリガナ</div>
-                                <input type="text" name="c2_hurigana" placeholder="例)スズキ　ハナコ">
+                                <input type="text" name="kana_c2" placeholder="例)スズキ　ハナコ">
                             </div>
                             <div class="row">
                                 <div class="heading">生年月日</div>
-                                <input type="text" name="c2_birth" placeholder="例)1980/4/2">
+                                <input type="text" name="birth_c2" placeholder="例)1980/4/2">
                             </div>
                             <div class="row">
                                 <div class="heading">健康状態</div>
-                                <select name="" id="" name="c2_status">
+                                <select name="" id="" name="status_c2">
                                     <option value=""></option>
                                     <option value=""></option>
                                     <option value=""></option>
@@ -143,15 +168,15 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
                             <div class="row">
                                 <div class="heading">アレルギー*</div>
                                 <div class="col radio">
-                                    <input type="radio" name="c2_allergy" id="c2_al_ari" value="有り">
+                                    <input type="radio" name="allergy_c2" id="c2_al_ari" value="有り">
                                     <label for="c2_al_ari" class="radio-label">有り</label>
-                                    <input type="radio" name="c2_allergy" id="c2_al_nasi" value="無し">
+                                    <input type="radio" name="allergy_c2" id="c2_al_nasi" value="無し">
                                     <label for="c2_al_nasi" class="radio-label">無し</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="heading">アレルギーの種類</div>
-                                <input type="text" name="c2_allergy_name" placeholder="例)1980/4/2">
+                                <input type="text" name="allergy_name_c2" placeholder="例)1980/4/2">
                             </div>
                         </div>
                     </div>
@@ -166,19 +191,19 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
                         <div class="content">
                             <div class="row">
                                 <div class="heading">氏名</div>
-                                <input type="text" name="c3_name" placeholder="例)鈴木　花子">
+                                <input type="text" name="name_c3" placeholder="例)鈴木　花子">
                             </div>
                             <div class="row">
                                 <div class="heading">フリガナ</div>
-                                <input type="text" name="c3_hurigana" placeholder="例)スズキ　ハナコ">
+                                <input type="text" name="kana_c3" placeholder="例)スズキ　ハナコ">
                             </div>
                             <div class="row">
                                 <div class="heading">生年月日</div>
-                                <input type="text" name="c3_birth" placeholder="例)1980/4/2">
+                                <input type="text" name="birth_c3" placeholder="例)1980/4/2">
                             </div>
                             <div class="row">
                                 <div class="heading">健康状態</div>
-                                <select name="" id="" name="c3_status">
+                                <select name="" id="" name="status_c3">
                                     <option value=""></option>
                                     <option value=""></option>
                                     <option value=""></option>
@@ -187,15 +212,15 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
                             <div class="row">
                                 <div class="heading">アレルギー*</div>
                                 <div class="col radio">
-                                    <input type="radio" name="c3_allergy" id="c3_al_ari" value="有り">
+                                    <input type="radio" name="allergy_c3" id="c3_al_ari" value="有り">
                                     <label for="c3_al_ari" class="radio-label">有り</label>
-                                    <input type="radio" name="c3_allergy" id="c3_al_nasi" value="無し">
+                                    <input type="radio" name="allergy_c3" id="c3_al_nasi" value="無し">
                                     <label for="c3_al_nasi" class="radio-label">無し</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="heading">アレルギーの種類</div>
-                                <input type="text" name="c3_allergy_name" placeholder="例)1980/4/2">
+                                <input type="text" name="allergy_name_c3" placeholder="例)1980/4/2">
                             </div>
                         </div>
                     </div>
@@ -209,15 +234,11 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
 
 
 
+                <?php get_template_part("form/bikou"); ?>
 
 
 
-                <div>
-                    <div class="heading">
-                        備考
-                    </div>
-                    <textarea name="" id="" cols="30" rows="10" class="bikou"></textarea>
-                </div>
+
 
             </div>
 

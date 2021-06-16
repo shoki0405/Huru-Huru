@@ -65,7 +65,7 @@
                         <a href="<?php echo esc_url(home_url('/service')); ?>" class="a"></a>
                     </div>
                     <div class="nv_item">
-                        Huru-Huruとは
+                        HURU-HURUとは
                         <a href="<?php echo esc_url(home_url('/overview')); ?>" class="a"></a>
                     </div>
                     <div class="nv_item">
@@ -80,7 +80,7 @@
                     <div class="header_logo">
                         <div class="header_logo_sub pc">託児所併設で安心のシッターサービス</div>
                         <div class="header_logo_main">
-                            Huru-Huru
+                            HURU-HURU
                             <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
             </div>
 
             <div id="ham">
-                <div class="title">Huru-Huru</div>
+                <div class="title">HURU-HURU</div>
                 <div class="list">
                     <div class="item">
                         HOME
@@ -121,7 +121,7 @@
                         <a href="<?php echo esc_url(home_url('/service')); ?>" class="a"></a>
                     </div>
                     <div class="item">
-                        Huru-Huruとは
+                        HURU-HURUとは
                         <a href="<?php echo esc_url(home_url('/overview')); ?>" class="a"></a>
                     </div>
                     <div class="item">
