@@ -17,9 +17,7 @@ $img_fol_footer = get_stylesheet_directory_uri() . "/img/footer/";
                 <div class="item">
                     <div class="tel_des">当日分(前日17時以降)の予約</div>
                     <div class="tel">
-                        <span>
-                            <img src="<?php echo $img_fol_footer; ?>phone.png" alt="">
-                        </span>
+                        <img src="<?php echo $img_fol; ?>phone.png" alt="">
                         03-4400-2292
                     </div>
                 </div>
@@ -56,16 +54,16 @@ $img_fol_footer = get_stylesheet_directory_uri() . "/img/footer/";
         <div class="btns">
             <div class="btn_orange">
                 ご予約(初めての方)
-                <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                <a href="<?php echo esc_url(home_url('/reservation_biggner')); ?>" class="a"></a>
             </div>
             <div class="btn_green">
                 ご予約(会員様)
-                <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                <a href="<?php echo esc_url(home_url('/reservation_member')); ?>" class="a"></a>
             </div>
         </div>
         <div class="nav2">
             <div class="item">シッター募集<a href="<?php echo esc_url(home_url('/entry')); ?>" class="a"></a></div>
-            <div class="item">よくあるご質問とお問い合わせ<a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a></div>
+            <div class="item">よくあるご質問とお問い合わせ<a href="<?php echo esc_url(home_url('/contact')); ?>" class="a"></a></div>
         </div>
         <div class="copyright">©sitters Co.Ltd All Rights Reserved.</div>
     </div>

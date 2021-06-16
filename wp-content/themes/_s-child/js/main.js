@@ -13,3 +13,13 @@ $(function () {
         return false;
     });
 });
+
+/*****************************************************
+ * お子様情報、表示&非表示
+ ******************************************************/
+$(function () {
+    $('.accordion').click(function () {
+        $(this).toggleClass('selected');
+        $(this).next().slideToggle();
+    });
+});

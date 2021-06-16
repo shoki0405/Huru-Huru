@@ -1,0 +1,247 @@
+@use "variables" as var;
+
+.form {
+    margin: 0 auto;
+    text-align: left;
+    .inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .heading {
+        display: inline-block;
+        // font-size: 1.2rem;
+        font-weight: bold;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: 150px;
+        text-align: right;
+        @media screen and (max-width: 850px) {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+    }
+    input[type='text'],
+    input[type='date'],
+    input[type='email'],
+    input[type='tel'],
+    select {
+        margin: 0 auto;
+        padding: 15px;
+        width: calc(100% - 240px);
+        background-color: var.$input_back;
+        border: none;
+        @media screen and (max-width: 850px) {
+            width: 100%;
+        }
+    }
+    .row {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .col {
+        display: inline-block;
+        @media screen and (max-width: 850px) {
+            display: block;
+        }
+    }
+    .hissu {
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+    }
+    .submit_frame {
+        margin: 40px auto;
+        max-width: 300px;
+        .submit {
+            background-color: var.$orange;
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var.$white;
+            margin: 0 auto;
+            border: none;
+            border-radius: 50px;
+            letter-spacing: 5px;
+            width: 100%;
+        }
+    }
+    .radio {
+        margin: 0.5rem;
+        input[type='radio'] {
+            position: absolute;
+            opacity: 0;
+            + .radio-label {
+                &:before {
+                    content: '';
+                    background: var.$white;
+                    border-radius: 100%;
+                    border: 1px solid var.$black;
+                    display: inline-block;
+                    width: 1.4em;
+                    height: 1.4em;
+                    position: relative;
+                    top: -0.2em;
+                    margin-right: 1em;
+                    vertical-align: middle;
+                    cursor: pointer;
+                    text-align: center;
+                    transition: all 250ms ease;
+                }
+            }
+            &:checked {
+                + .radio-label {
+                    &:before {
+                        background-color: var.$orange;
+                        box-shadow: inset 0 0 0 4px var.$white;
+                    }
+                }
+            }
+            &:focus {
+                + .radio-label {
+                    &:before {
+                        outline: none;
+                        border-color: var.$black;
+                    }
+                }
+            }
+            &:disabled {
+                + .radio-label {
+                    &:before {
+                        box-shadow: inset 0 0 0 4px var.$orange;
+                        border-color: darken(var.$orange, 25%);
+                        background: darken(var.$orange, 25%);
+                    }
+                }
+            }
+            + .radio-label {
+                &:empty {
+                    &:before {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.reservation {
+    .mv {
+        margin-bottom: 40px;
+    }
+    .text {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 5px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .des {
+            margin-bottom: 40px;
+            display: inline-block;
+            div {
+                width: 270px;
+                background: linear-gradient(transparent 60%, #ff6 60%);
+            }
+        }
+        .line {
+            display: flex;
+            justify-content: center;
+            padding: 15px 20px;
+            background-color: #00b900;
+            color: var.$white;
+            text-align: left;
+            margin-bottom: 20px;
+            font-weight: bold;
+            align-items: center;
+            img {
+                width: 40px;
+                margin: 0;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+        }
+        .caution {
+            border: solid 2px #f6a917;
+            padding: 15px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: bold;
+            @media screen and (max-width: 1000px) {
+                text-align: left;
+            }
+        }
+    }
+    .hyoki {
+        font-size: 0.8rem;
+    }
+    input[type='text'].rsv_time {
+        width: 100px;
+        margin-left: 20px;
+        @media screen and (max-width: 850px) {
+            width: 30%;
+            margin-left: 0;
+        }
+    }
+    input[type='date'].rsv_date {
+        width: 440px;
+        @media screen and (max-width: 1020px) {
+            width: 280px;
+        }
+        @media screen and (max-width: 850px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    .child {
+        font-weight: bold;
+        margin-bottom: 40px;
+        padding: 10px 20px;
+        position: relative;
+        img {
+            width: 30px;
+            vertical-align: middle;
+        }
+        .puls {
+            width: 30px;
+            height: 30px;
+            right: 20px;
+            vertical-align: middle;
+            position: absolute;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .content {
+        display: none;
+    }
+    textarea.bikou {
+        margin: 0 auto;
+        padding: 15px;
+        background-color: var.$input_back;
+        width: calc(100% - 300px);
+        height: 200px;
+        border: none;
+        @media screen and (max-width: 850px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    .kiyaku {
+        background-color: var.$gray;
+        padding: 40px 20px;
+        .inner {
+            max-width: 1000px;
+        }
+
+        textarea.kiyaku_text {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+}

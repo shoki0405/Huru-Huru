@@ -68,6 +68,20 @@ a {
         top: 0;
     }
 }
+.tel {
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-bottom: dotted 1px var.$black;
+    color: var.$orange;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    img {
+        width: 30px;
+        vertical-align: middle;
+    }
+}
 /********************************
 pc sp ひょうじひひょうじ 改行
 *********************************/

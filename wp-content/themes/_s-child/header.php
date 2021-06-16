@@ -95,7 +95,7 @@
                     </div>
                     <div class="nv_item">
                         ご質問・お問い合わせ
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                        <a href="<?php echo esc_url(home_url('/contact')); ?>" class="a"></a>
                     </div>
 
 
@@ -139,13 +139,13 @@
                     <div class="item">
                         <div class="reservation_b">
                             ご予約(初めての方)
-                            <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                            <a href="<?php echo esc_url(home_url('/reservation_biggner')); ?>" class="a"></a>
                         </div>
                     </div>
                     <div class="item">
                         <div class="reservation_k">
                             ご予約(会員様)
-                            <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                            <a href="<?php echo esc_url(home_url('/reservation_member')); ?>" class="a"></a>
                         </div>
                     </div>
                     <div class="item">
@@ -154,12 +154,12 @@
                     </div>
                     <div class="item">
                         よくあるご質問とお問い合わせ
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                        <a href="<?php echo esc_url(home_url('/contact')); ?>" class="a"></a>
                     </div>
                 </div>
                 <div class="privacy">
                     プライバシーポリシー
-                    <a href="<?php echo esc_url(home_url('/')); ?>" class="a"></a>
+                    <a href="<?php echo esc_url(home_url('/privacypolicy')); ?>" class="a"></a>
                 </div>
             </div>
 

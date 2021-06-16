@@ -6,7 +6,6 @@ $img_fol = get_stylesheet_directory_uri() . "/img/";
 $img_fol_overview = get_stylesheet_directory_uri() . "/img/overview/";
 ?>
 
-<!-- テンプレートパーツの読み込み　もこもこの画像が共通なので読み込む -->
 <div class="post_frame">
 
     <div class="post_title">
