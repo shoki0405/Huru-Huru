@@ -33,6 +33,21 @@
             background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/content_back.png");
         }
 
+        footer .back_cloud_top {
+            background-image: none;
+        }
+
+        .footer_guide+footer .back_cloud_top {
+            width: 100%;
+            height: 12vw;
+            margin: 0 auto;
+            text-align: center;
+            background-size: 300px 300px;
+            background-color: #fff;
+            background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/content_back.png");
+
+        }
+
         .back_cloud_bottom {
             width: 100%;
             height: 15vw;

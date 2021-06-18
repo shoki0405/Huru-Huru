@@ -1,5 +1,7 @@
 @use "variables" as var;
-
+/********************************
+フォーム共通
+*********************************/
 .form {
     margin: 0 auto;
     text-align: left;
@@ -14,8 +16,9 @@
         font-weight: bold;
         margin-right: 20px;
         margin-bottom: 20px;
-        width: 150px;
+        width: 180px;
         text-align: right;
+        vertical-align: top;
         @media screen and (max-width: 850px) {
             display: block;
             width: 100%;
@@ -26,10 +29,11 @@
     input[type='date'],
     input[type='email'],
     input[type='tel'],
-    select {
+    select,
+    textarea {
         margin: 0 auto;
         padding: 15px;
-        width: calc(100% - 240px);
+        width: calc(100% - 270px);
         background-color: var.$input_back;
         border: none;
         @media screen and (max-width: 850px) {
@@ -48,7 +52,10 @@
     }
     .hissu {
         font-size: 0.8rem;
+        margin: 0 auto;
         margin-bottom: 20px;
+        text-align: left;
+        width: 90%;
     }
     .submit_frame {
         margin: 40px auto;
@@ -124,7 +131,83 @@
         }
     }
 }
-
+/********************************
+規約部分
+*********************************/
+.kiyaku {
+    background-color: var.$gray;
+    padding: 40px 20px;
+    .inner {
+        max-width: 1000px;
+    }
+    textarea.kiyaku_text {
+        width: 100%;
+        padding: 10px;
+        background-color: var.$white;
+        border: solid 1px var.$black;
+        margin-bottom: 20px;
+    }
+    .kiyaku_title {
+        font-weight: bold;
+    }
+    .kiyaku_des {
+        margin-bottom: 20px;
+    }
+}
+.kiyaku_s {
+    width: calc(100% - 270px);
+    margin-right: 0;
+    margin-left: auto;
+    textarea.kiyaku_text {
+        width: 100%;
+        padding: 10px;
+        background-color: var.$white;
+        border: solid 1px var.$black;
+    }
+    .kiyaku_title {
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .kiyaku_des {
+        margin-bottom: 20px;
+    }
+}
+.agree {
+    text-align: center;
+    margin: 20px auto;
+    input[type='checkbox']#agree {
+        opacity: 0;
+        & + label {
+            position: relative;
+            &::before {
+                width: 30px;
+                height: 30px;
+                content: ' ';
+                border-radius: 50%;
+                background-color: var.$white;
+                position: absolute;
+                left: -60%;
+                border: solid 1px var.$black;
+            }
+            &::after {
+                width: 20px;
+                height: 20px;
+                content: ' ';
+                border-radius: 50%;
+                background-color: #fff;
+                position: absolute;
+                left: -53%;
+                top: 1px;
+            }
+        }
+        &:checked + label::after {
+            background-color: var.$orange;
+        }
+    }
+}
+/********************************
+予約フォーム
+*********************************/
 .reservation {
     .mv {
         margin-bottom: 40px;
@@ -175,6 +258,52 @@
                 text-align: left;
             }
         }
+        .stepnav {
+            text-align: center;
+            margin: 0 auto 40px;
+            .item {
+                width: 25%;
+                float: left;
+                position: relative;
+                &::after {
+                    content: ' ';
+                    width: 100%;
+                    height: 5px;
+                    background-color: #f0a900;
+                    position: absolute;
+                    top: 14%;
+                    left: 50%;
+                    z-index: -1;
+                }
+                &:last-child::after {
+                    display: none;
+                }
+            }
+            .circle {
+                position: relative;
+                margin: 0 auto;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                background-color: var.$orange;
+                div {
+                    background-color: #fff;
+                    width: 60%;
+                    height: 60%;
+                    vertical-align: middle;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateY(-50%) translateX(-50%);
+                    position: absolute;
+                }
+            }
+            .step {
+                margin: 0 auto 60px;
+                font-weight: bold;
+            }
+        }
     }
     .hyoki {
         font-size: 0.8rem;
@@ -188,7 +317,7 @@
         }
     }
     input[type='date'].rsv_date {
-        width: 440px;
+        width: 410px;
         @media screen and (max-width: 1020px) {
             width: 280px;
         }
@@ -202,6 +331,7 @@
         margin-bottom: 40px;
         padding: 10px 20px;
         position: relative;
+        text-align: left;
         img {
             width: 30px;
             vertical-align: middle;
@@ -220,11 +350,14 @@
     .content {
         display: none;
     }
-    textarea.bikou {
+    .bikou {
+        margin-bottom: 40px;
+    }
+    textarea.bikou_text {
         margin: 0 auto;
         padding: 15px;
         background-color: var.$input_back;
-        width: calc(100% - 300px);
+        width: 100%;
         height: 200px;
         border: none;
         @media screen and (max-width: 850px) {
@@ -232,16 +365,132 @@
             margin-bottom: 20px;
         }
     }
-    .kiyaku {
-        background-color: var.$gray;
-        padding: 40px 20px;
-        .inner {
-            max-width: 1000px;
-        }
 
-        textarea.kiyaku_text {
+    &.confirm {
+        form {
+            text-align: center;
+            .heading {
+                margin-bottom: 0;
+                margin-right: 40px;
+            }
+            .confirm_data {
+                display: inline-block;
+                width: 400px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+/********************************
+よくあるご質問とお問い合わせ
+*********************************/
+.contact {
+    .mv {
+        margin-bottom: 40px;
+    }
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 5px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .qas {
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 40px 20px;
+        .accordion {
             width: 100%;
-            padding: 10px;
+            background: var.$white;
+            border-bottom: solid 2px var.$orange;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            .arrow {
+                font-size: 1.4rem;
+                width: 40px;
+                height: 100%;
+                color: var.$white;
+                background-color: var.$orange;
+                text-align: center;
+                vertical-align: middle;
+            }
+            .cat {
+                font-weight: bold;
+                font-size: 1.2rem;
+                vertical-align: middle;
+                padding-left: 20px;
+            }
+        }
+        .accordion_section {
+            background-color: #fffaef;
+            padding: 40px;
+            margin-bottom: 40px;
+            display: none;
+            .qa_q {
+                border-bottom: dotted 2px var.$orange;
+                padding: 10px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+                img {
+                    width: 30px;
+                    vertical-align: middle;
+                }
+            }
+            .qa_a {
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .contactform {
+        padding: 40px 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        .contact_mail {
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            img {
+                width: 50px;
+                margin-right: 20px;
+                vertical-align: middle;
+            }
+        }
+        .keitai {
+            text-align: center;
+            margin: 40px auto;
+        }
+        .contect_tel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px auto;
+            .contect_tel_title {
+                font-size: 1.2rem;
+                margin: 0 auto;
+                font-weight: bold;
+                img {
+                    vertical-align: middle;
+                    width: 50px;
+                    height: 50px;
+                    object-fit: contain;
+                }
+            }
+            .contect_tel_area {
+                width: 500px;
+                background: #fff;
+                border-radius: 70px;
+                padding: 10px 60px;
+                margin: 40px auto;
+                /* font-size: 1rem; */
+                font-weight: bold;
+                text-align: center;
+                .contect_tel_num {
+                    font-size: 1.8rem;
+                }
+            }
         }
     }
 }

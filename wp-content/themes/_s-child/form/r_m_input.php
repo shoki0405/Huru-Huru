@@ -1,12 +1,6 @@
 <?php
 $img_fol = get_stylesheet_directory_uri() . "/img/";
 $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
-
-
-
-
-
-
 ?>
 
 <div class="reservation">
@@ -61,7 +55,7 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
 
                 <div class="row">
                     <div class="heading">メールアドレス*</div>
-                    <input type="email" name="email" placeholder="例)example@example.com">
+                    <input type="email" name="email" placeholder="例)example@example.com" value="<?= !empty($_SESSION["data"]["email"]) ? $_SESSION["data"]["email"] : "" ?>" id="email" required>
                 </div>
 
 
@@ -77,22 +71,22 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
                         </div>
                         <div class="row">
                             <div class="heading">氏名*</div>
-                            <input type="text" name="name_c1" placeholder="例)鈴木　花子">
+                            <input type="text" name="name_c1" placeholder="例)鈴木　花子" value="<?= !empty($_SESSION["data"]["name_c1"]) ? $_SESSION["data"]["name_c1"] : "" ?>">
                         </div>
                         <div class="row">
                             <div class="heading">フリガナ*</div>
-                            <input type="text" name="kana_c1" placeholder="例)スズキ　ハナコ">
+                            <input type="text" name="kana_c1" placeholder="例)スズキ　ハナコ" value="<?= !empty($_SESSION["data"]["kana_c1"]) ? $_SESSION["data"]["kana_c1"] : "" ?>">
                         </div>
                         <div class="row">
                             <div class="heading">生年月日*</div>
-                            <input type="text" name="birth_c1" placeholder="例)1980/4/2">
+                            <input type="text" name="birth_c1" placeholder="例)1980/4/2" value="<?= !empty($_SESSION["data"]["birth_c1"]) ? $_SESSION["data"]["birth_c1"] : "" ?>">
                         </div>
                         <div class="row">
                             <div class="heading">健康状態*</div>
-                            <select name="" id="" name="status_c1">
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
+                            <select id="" name="status_c1">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
                             </select>
                         </div>
                     </div>
@@ -107,22 +101,22 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
                         <div class="content">
                             <div class="row">
                                 <div class="heading">氏名</div>
-                                <input type="text" name="name_c2" placeholder="例)鈴木　花子">
+                                <input type="text" name="name_c2" placeholder="例)鈴木　花子" value="<?= !empty($_SESSION["data"]["name_c2"]) ? $_SESSION["data"]["name_c2"] : "" ?>">
                             </div>
                             <div class="row">
                                 <div class="heading">フリガナ</div>
-                                <input type="text" name="kana_c2" placeholder="例)スズキ　ハナコ">
+                                <input type="text" name="kana_c2" placeholder="例)スズキ　ハナコ" value="<?= !empty($_SESSION["data"]["kana_c2"]) ? $_SESSION["data"]["kana_c2"] : "" ?>">
                             </div>
                             <div class="row">
                                 <div class="heading">生年月日</div>
-                                <input type="text" name="birth_c2" placeholder="例)1980/4/2">
+                                <input type="text" name="birth_c2" placeholder="例)1980/4/2" value="<?= !empty($_SESSION["data"]["birth_c2"]) ? $_SESSION["data"]["birth_c2"] : "" ?>">
                             </div>
                             <div class="row">
                                 <div class="heading">健康状態</div>
-                                <select name="" id="" name="status_c2">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
+                                <select id="" name="status_c2">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
                                 </select>
                             </div>
                         </div>
@@ -139,22 +133,22 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
                         <div class="content">
                             <div class="row">
                                 <div class="heading">氏名</div>
-                                <input type="text" name="name_c3" placeholder="例)鈴木　花子">
+                                <input type="text" name="name_c3" placeholder="例)鈴木　花子" value="<?= !empty($_SESSION["data"]["name_c3"]) ? $_SESSION["data"]["name_c3"] : "" ?>">
                             </div>
                             <div class="row">
                                 <div class="heading">フリガナ</div>
-                                <input type="text" name="kana_c3" placeholder="例)スズキ　ハナコ">
+                                <input type="text" name="kana_c3" placeholder="例)スズキ　ハナコ" value="<?= !empty($_SESSION["data"]["kana_c3"]) ? $_SESSION["data"]["kana_c3"] : "" ?>">
                             </div>
                             <div class="row">
                                 <div class="heading">生年月日</div>
-                                <input type="text" name="birth_c3" placeholder="例)1980/4/2">
+                                <input type="text" name="birth_c3" placeholder="例)1980/4/2" value="<?= !empty($_SESSION["data"]["birth_c3"]) ? $_SESSION["data"]["birth_c3"] : "" ?>">
                             </div>
                             <div class="row">
                                 <div class="heading">健康状態</div>
-                                <select name="" id="" name="status_c3">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
+                                <select id="" name="status_c3">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
                                 </select>
                             </div>
                         </div>

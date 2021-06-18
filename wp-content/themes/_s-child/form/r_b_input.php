@@ -1,11 +1,6 @@
 <?php
 $img_fol = get_stylesheet_directory_uri() . "/img/";
 $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
-
-
-
-
-
 ?>
 
 <div class="reservation">
@@ -20,8 +15,30 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
             ビジターご予約お申込み<span class="kaigyo">(新規会員登録)</span>
         </div>
 
-        <div>
+        <div class="stepnav">
             <!-- ステップナビゲーション -->
+            <div class="item">
+                <div class="circle"></div>
+                <div class="step">お客様情報入力</div>
+            </div>
+            <div class="item">
+                <div class="circle">
+                    <div></div>
+                </div>
+                <div class="step">お子様情報入力</div>
+            </div>
+            <div class="item">
+                <div class="circle">
+                    <div></div>
+                </div>
+                <div class="step">送信確認</div>
+            </div>
+            <div class="item">
+                <div class="circle">
+                    <div></div>
+                </div>
+                <div class="step">完了</div>
+            </div>
         </div>
 
         <div class="des">
@@ -64,27 +81,27 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
 
                 <div class="row">
                     <div class="heading">電話番号*</div>
-                    <input type="tel" name="tel" size="12" maxlength="20" placeholder="例)00-0000-0000">
+                    <input type="tel" name="tel" size="10" maxlength="20" placeholder="例)00-0000-0000" value="<?= !empty($_SESSION["data"]["tel"]) ? $_SESSION["data"]["tel"] : "" ?>" required>
                 </div>
                 <div class="row">
                     <div class="heading">メールアドレス*</div>
-                    <input type="email" name="email" placeholder="例)example@example.com" id="email">
+                    <input type="email" name="email" placeholder="例)example@example.com" value="<?= !empty($_SESSION["data"]["email"]) ? $_SESSION["data"]["email"] : "" ?>" id="email" required oninput="CheckEmail()">
                 </div>
 
                 <div class="row">
                     <div class="heading">確認用*</div>
-                    <input type="email" name="email_cnf" placeholder="例)example@example.com" oninput="CheckEmail(this)">
+                    <input type="email" name="email_cnf" placeholder="例)example@example.com" value="<?= !empty($_SESSION["data"]["email_cnf"]) ? $_SESSION["data"]["email_cnf"] : "" ?>" id="email_cnf" required oninput="CheckEmail()">
                 </div>
 
                 <div class="row">
                     <div class="heading">郵便番号*</div>
-                    <input type="text" name="zip" placeholder="例)101-0000">
+                    <input type="text" name="zip" placeholder="例)101-0000" value="<?= !empty($_SESSION["data"]["zip"]) ? $_SESSION["data"]["zip"] : "" ?>" required>
                 </div>
 
                 <div class="row">
                     <div class="heading">都道府県*</div>
-                    <select name="pref">
-                        <option value="東京都">東京都</option>
+                    <select name="pref" required>
+                        <option value="東京都" selected>東京都</option>
                         <option value="北海道">北海道</option>
                         <option value="青森県">青森県</option>
                         <option value="岩手県">岩手県</option>
@@ -136,17 +153,17 @@ $img_fol_form = get_stylesheet_directory_uri() . "/img/form/";
 
                 <div class="row">
                     <div class="heading">住所*</div>
-                    <input type="text" name="address" placeholder="例)中央区銀座7-15-18">
+                    <input type="text" name="address" placeholder="例)中央区銀座7-15-18" value="<?= !empty($_SESSION["data"]["address"]) ? $_SESSION["data"]["address"] : "" ?>" required>
                 </div>
 
                 <div class="row">
                     <div class="heading">建物名</div>
-                    <input type="text" name="building">
+                    <input type="text" name="building" value="<?= !empty($_SESSION["data"]["building"]) ? $_SESSION["data"]["building"] : "" ?>">
                 </div>
 
                 <div class="row">
                     <div class="heading">最寄駅*</div>
-                    <input type="text" name="station" placeholder="例)東京メトロ銀座線　銀座駅">
+                    <input type="text" name="station" placeholder="例)東京メトロ銀座線　銀座駅" value="<?= !empty($_SESSION["data"]["station"]) ? $_SESSION["data"]["station"] : "" ?>" required>
                 </div>
 
             </div>

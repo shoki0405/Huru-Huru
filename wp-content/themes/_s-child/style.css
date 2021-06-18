@@ -1359,7 +1359,6 @@ footer .copyright {
 *********************************/
 .footer_guide {
   width: 100%;
-  padding-bottom: 40px;
   padding: 40px 20px;
 }
 .footer_guide .content {
@@ -2304,6 +2303,9 @@ HURU-HURUとは
   text-align: left;
 }
 
+/********************************
+フォーム共通
+*********************************/
 .form {
   margin: 0 auto;
   text-align: left;
@@ -2318,8 +2320,9 @@ HURU-HURUとは
   font-weight: bold;
   margin-right: 20px;
   margin-bottom: 20px;
-  width: 150px;
+  width: 180px;
   text-align: right;
+  vertical-align: top;
 }
 @media screen and (max-width: 850px) {
   .form .heading {
@@ -2332,10 +2335,11 @@ HURU-HURUとは
 .form input[type=date],
 .form input[type=email],
 .form input[type=tel],
-.form select {
+.form select,
+.form textarea {
   margin: 0 auto;
   padding: 15px;
-  width: calc(100% - 240px);
+  width: calc(100% - 270px);
   background-color: #f8f3ec;
   border: none;
 }
@@ -2344,7 +2348,8 @@ HURU-HURUとは
 .form input[type=date],
 .form input[type=email],
 .form input[type=tel],
-.form select {
+.form select,
+.form textarea {
     width: 100%;
   }
 }
@@ -2362,7 +2367,10 @@ HURU-HURUとは
 }
 .form .hissu {
   font-size: 0.8rem;
+  margin: 0 auto;
   margin-bottom: 20px;
+  text-align: left;
+  width: 90%;
 }
 .form .submit_frame {
   margin: 40px auto;
@@ -2420,6 +2428,86 @@ HURU-HURUとは
   margin-right: 0;
 }
 
+/********************************
+規約部分
+*********************************/
+.kiyaku {
+  background-color: #ededed;
+  padding: 40px 20px;
+}
+.kiyaku .inner {
+  max-width: 1000px;
+}
+.kiyaku textarea.kiyaku_text {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: solid 1px #606060;
+  margin-bottom: 20px;
+}
+.kiyaku .kiyaku_title {
+  font-weight: bold;
+}
+.kiyaku .kiyaku_des {
+  margin-bottom: 20px;
+}
+
+.kiyaku_s {
+  width: calc(100% - 270px);
+  margin-right: 0;
+  margin-left: auto;
+}
+.kiyaku_s textarea.kiyaku_text {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: solid 1px #606060;
+}
+.kiyaku_s .kiyaku_title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.kiyaku_s .kiyaku_des {
+  margin-bottom: 20px;
+}
+
+.agree {
+  text-align: center;
+  margin: 20px auto;
+}
+.agree input[type=checkbox]#agree {
+  opacity: 0;
+}
+.agree input[type=checkbox]#agree + label {
+  position: relative;
+}
+.agree input[type=checkbox]#agree + label::before {
+  width: 30px;
+  height: 30px;
+  content: " ";
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: -60%;
+  border: solid 1px #606060;
+}
+.agree input[type=checkbox]#agree + label::after {
+  width: 20px;
+  height: 20px;
+  content: " ";
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: -53%;
+  top: 1px;
+}
+.agree input[type=checkbox]#agree:checked + label::after {
+  background-color: #f0a900;
+}
+
+/********************************
+予約フォーム
+*********************************/
 .reservation .mv {
   margin-bottom: 40px;
 }
@@ -2472,6 +2560,52 @@ HURU-HURUとは
     text-align: left;
   }
 }
+.reservation .text .stepnav {
+  text-align: center;
+  margin: 0 auto 40px;
+}
+.reservation .text .stepnav .item {
+  width: 25%;
+  float: left;
+  position: relative;
+}
+.reservation .text .stepnav .item::after {
+  content: " ";
+  width: 100%;
+  height: 5px;
+  background-color: #f0a900;
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  z-index: -1;
+}
+.reservation .text .stepnav .item:last-child::after {
+  display: none;
+}
+.reservation .text .stepnav .circle {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #f0a900;
+}
+.reservation .text .stepnav .circle div {
+  background-color: #fff;
+  width: 60%;
+  height: 60%;
+  vertical-align: middle;
+  margin: 0 auto;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+}
+.reservation .text .stepnav .step {
+  margin: 0 auto 60px;
+  font-weight: bold;
+}
 .reservation .hyoki {
   font-size: 0.8rem;
 }
@@ -2486,7 +2620,7 @@ HURU-HURUとは
   }
 }
 .reservation input[type=date].rsv_date {
-  width: 440px;
+  width: 410px;
 }
 @media screen and (max-width: 1020px) {
   .reservation input[type=date].rsv_date {
@@ -2504,6 +2638,7 @@ HURU-HURUとは
   margin-bottom: 40px;
   padding: 10px 20px;
   position: relative;
+  text-align: left;
 }
 .reservation .child img {
   width: 30px;
@@ -2522,30 +2657,145 @@ HURU-HURUとは
 .reservation .content {
   display: none;
 }
-.reservation textarea.bikou {
+.reservation .bikou {
+  margin-bottom: 40px;
+}
+.reservation textarea.bikou_text {
   margin: 0 auto;
   padding: 15px;
   background-color: #f8f3ec;
-  width: calc(100% - 300px);
+  width: 100%;
   height: 200px;
   border: none;
 }
 @media screen and (max-width: 850px) {
-  .reservation textarea.bikou {
+  .reservation textarea.bikou_text {
     width: 100%;
     margin-bottom: 20px;
   }
 }
-.reservation .kiyaku {
-  background-color: #ededed;
+.reservation.confirm form {
+  text-align: center;
+}
+.reservation.confirm form .heading {
+  margin-bottom: 0;
+  margin-right: 40px;
+}
+.reservation.confirm form .confirm_data {
+  display: inline-block;
+  width: 400px;
+  text-align: left;
+}
+
+/********************************
+よくあるご質問とお問い合わせ
+*********************************/
+.contact .mv {
+  margin-bottom: 40px;
+}
+.contact .title {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contact .qas {
+  margin: 0 auto;
+  max-width: 1000px;
   padding: 40px 20px;
 }
-.reservation .kiyaku .inner {
-  max-width: 1000px;
-}
-.reservation .kiyaku textarea.kiyaku_text {
+.contact .qas .accordion {
   width: 100%;
+  background: #fff;
+  border-bottom: solid 2px #f0a900;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+.contact .qas .accordion .arrow {
+  font-size: 1.4rem;
+  width: 40px;
+  height: 100%;
+  color: #fff;
+  background-color: #f0a900;
+  text-align: center;
+  vertical-align: middle;
+}
+.contact .qas .accordion .cat {
+  font-weight: bold;
+  font-size: 1.2rem;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+.contact .qas .accordion_section {
+  background-color: #fffaef;
+  padding: 40px;
+  margin-bottom: 40px;
+  display: none;
+}
+.contact .qas .accordion_section .qa_q {
+  border-bottom: dotted 2px #f0a900;
   padding: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.contact .qas .accordion_section .qa_q img {
+  width: 30px;
+  vertical-align: middle;
+}
+.contact .qas .accordion_section .qa_a {
+  margin-bottom: 40px;
+}
+.contact .contactform {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.contact .contactform .contact_mail {
+  padding: 20px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.contact .contactform .contact_mail img {
+  width: 50px;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.contact .contactform .keitai {
+  text-align: center;
+  margin: 40px auto;
+}
+.contact .contactform .contect_tel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+}
+.contact .contactform .contect_tel .contect_tel_title {
+  font-size: 1.2rem;
+  margin: 0 auto;
+  font-weight: bold;
+}
+.contact .contactform .contect_tel .contect_tel_title img {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.contact .contactform .contect_tel .contect_tel_area {
+  width: 500px;
+  background: #fff;
+  border-radius: 70px;
+  padding: 10px 60px;
+  margin: 40px auto;
+  /* font-size: 1rem; */
+  font-weight: bold;
+  text-align: center;
+}
+.contact .contactform .contect_tel .contect_tel_area .contect_tel_num {
+  font-size: 1.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
