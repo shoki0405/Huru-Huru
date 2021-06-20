@@ -3,11 +3,13 @@
 /********************************
 共通
 *********************************/
+
 .front_content {
     padding: 40px 20px;
     text-align: center;
     position: relative;
 }
+
 .front {
     .heading {
         font-size: 2rem;
@@ -21,31 +23,26 @@
             letter-spacing: 3px;
         }
     }
-
     .heading_sub {
         font-size: 1.2rem;
         font-weight: normal;
     }
-
     /********************************
     メインビジュアル
     *********************************/
-
     .mv {
         position: relative;
         width: 100%;
         max-width: 2000px;
-        height: 57vw;
+        height: 60vw;
         @media screen and (max-width: 765px) {
             height: 161vw;
         }
     }
-
     .mv_text {
         position: absolute;
-        top: 10vw;
-        left: 20vw;
-        color: #fff;
+        top: 12vw;
+        left: 60vw;
         font-size: 1.4rem;
         transform: rotate(-10deg);
         width: 317px;
@@ -59,7 +56,6 @@
             font-size: 1rem;
         }
     }
-
     .mv_text_orange {
         background-color: var.$orange;
         margin-bottom: 10px;
@@ -67,6 +63,7 @@
         padding: 0px 10px;
         font-size: 2rem;
         font-weight: bold;
+        color: var.$white;
         @media screen and (max-width: 1356px) {
             font-size: 1.8rem;
         }
@@ -74,7 +71,6 @@
             font-size: 1.4rem;
         }
     }
-
     .mv_backimg {
         position: absolute;
         top: -20px;
@@ -83,28 +79,23 @@
         height: 100%;
         z-index: -1;
     }
-
     /********************************
     メインビジュアル 下
     *********************************/
-
     .mv_under {
         text-align: center;
     }
-
     .mv_under_img {
         max-width: 500px;
         margin: 0 auto;
         margin-bottom: 40px;
     }
-
     .mv_under_text {
         margin-bottom: 40px;
         @media screen and (max-width: 480px) {
             text-align: left;
         }
     }
-
     .front_mvunder_itemimg1 {
         position: absolute;
         top: 30px;
@@ -116,7 +107,6 @@
             width: 40px;
         }
     }
-
     .front_mvunder_itemimg2 {
         position: absolute;
         top: -40px;
@@ -128,11 +118,9 @@
             width: 40px;
         }
     }
-
     /********************************
     NEWS
     *********************************/
-
     .front_news_posts {
         max-width: 1000px;
         background-color: var.$white;
@@ -141,34 +129,28 @@
         padding: 40px 40px 20px;
         margin-bottom: 40px;
     }
-
     .front_news_itemimg1,
     .front_news_itemimg2 {
         position: absolute;
     }
-
     .front_news_itemimg1 {
         top: -50px;
         left: -2vw;
         width: 50px;
     }
-
     .front_news_itemimg2 {
         top: -20px;
         right: -3vw;
         width: 70px;
     }
-
     .front_news_post {
         text-align: left;
         border-bottom: dotted 2px var.$black;
         margin-bottom: 20px;
     }
-
     .front_news_title {
         margin-bottom: 10px;
     }
-
     .front_news_date {
         border-radius: 50px;
         display: inline-block;
@@ -177,13 +159,11 @@
         background-color: var.$orange;
         margin-bottom: 10px;
     }
-
     /********************************
     特徴
     *********************************/
     .front_features {
         position: relative;
-
         .content {
             margin: 0 auto;
             background-color: var.$cream;
@@ -341,21 +321,19 @@
             margin: 0 auto;
             overflow: hidden;
         }
-        .catch > img {
+        .catch>img {
             width: 100%;
             // cursor: pointer;
             transition-duration: 0.5s;
         }
-        .catch > img:hover {
+        .catch>img:hover {
             transform: scale(1.2) rotate(9deg);
             transition-duration: 0.5s;
         }
     }
-
     /********************************
     在籍シッター
     *********************************/
-
     .front_member {
         padding-bottom: 80px;
         .itemimg1 {
@@ -399,12 +377,9 @@
                 text-align: left;
             }
         }
-
         .list {
-            @media screen and (max-width: 480px) {
-            }
+            @media screen and (max-width: 480px) {}
         }
-
         .item {
             margin: 0 10px;
             display: inline-block;
@@ -418,7 +393,6 @@
                 margin-bottom: 20px;
             }
         }
-
         .front_member_img {
             background-color: var.$black;
             border-radius: 100%;
@@ -427,15 +401,12 @@
             margin: 0 auto;
         }
     }
-
     /********************************
     対応エリア
     *********************************/
-
     .front_area {
         background-color: #f5ebd4;
         padding-bottom: 60px;
-
         .content {
             max-width: 1300px;
             margin: 0 auto;
@@ -443,7 +414,6 @@
             background-color: var.$white;
             padding: 60px 20px;
         }
-
         .img {
             width: 40%;
             margin: 0 auto;
@@ -451,7 +421,6 @@
                 width: 60%;
             }
         }
-
         .itemimg2 {
             position: absolute;
             top: 0vw;
@@ -462,7 +431,6 @@
                 left: 1vw;
             }
         }
-
         .itemimg1 {
             position: absolute;
             top: 0vw;

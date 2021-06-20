@@ -4,6 +4,30 @@ get_header();
 get_template_part("template/right_menu");
 $img_fol = get_stylesheet_directory_uri() . "/img/";
 $img_fol_contact = get_stylesheet_directory_uri() . "/img/contact/";
+
+
+
+if (!empty($_POST["submit"])) {
+
+    // SESSIONに格納
+    $data = [
+        "kubun"   => $_POST["start_date"],
+        "fullname"   => $_POST["start_hour"],
+        "conpany" => $_POST["start_minuts"],
+        "emai;"     => $_POST["end_date"],
+        "tel"     => $_POST["end_hour"],
+        "contact_category"   => $_POST["end_minuts"],
+        "contact_content"    => $_POST["extension"],
+    ];
+
+    if (send(3, $data)) {
+        $message = "お問い合わせを受け付けました。";
+    } else {
+        $message = "送信できませんでした。";
+    }
+}
+
+
 ?>
 
 <div class="contact">
@@ -100,9 +124,9 @@ $img_fol_contact = get_stylesheet_directory_uri() . "/img/contact/";
 
 
             <div class="row radio keitai">
-                <input type="radio" name="keitai" id="kozin" value="個人" checked required>
+                <input type="radio" name="kubun" id="kozin" value="個人" checked required>
                 <label for="kozin" class="radio-label">個人</label>
-                <input type="radio" name="keitai" id="hozin" value="法人" required>
+                <input type="radio" name="kubun" id="hozin" value="法人" required>
                 <label for="hozin" class="radio-label">法人</label>
             </div>
 
@@ -118,37 +142,42 @@ $img_fol_contact = get_stylesheet_directory_uri() . "/img/contact/";
                     氏名*
                 </div>
 
-                <input type="text" placeholder="">
+                <input type="text" name="fullname" placeholder="">
             </div>
             <div class="row">
                 <div class="heading">
                     会社名*
                 </div>
-                <input type="text" placeholder="">
+                <input type="text" name="company" placeholder="">
             </div>
             <div class="row">
                 <div class="heading">
                     メールアドレス*
                 </div>
-                <input type="text" placeholder="">
+                <input type="email" name="email" placeholder="">
             </div>
             <div class="row">
                 <div class="heading">
                     電話番号*
                 </div>
-                <input type="text" placeholder="">
+                <input type="tel" name="tel" placeholder="">
             </div>
             <div class="row">
                 <div class="heading">
                     お問い合わせの種類*
                 </div>
-                <input type="text" placeholder="">
+                <select name="contact_category" id="">
+                    <option value="問い合わせの種類1">問い合わせの種類1</option>
+                    <option value="問い合わせの種類2">問い合わせの種類2</option>
+                    <option value="問い合わせの種類3">問い合わせの種類3</option>
+                </select>
+                <input type="text" name="contact_category" placeholder="">
             </div>
             <div class="row">
                 <div class="heading">
                     お問い合わせ内容*
                 </div>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="contact_content" id="" cols="30" rows="10"></textarea>
             </div>
 
 
@@ -162,7 +191,7 @@ $img_fol_contact = get_stylesheet_directory_uri() . "/img/contact/";
 
 
             <div class="submit_frame">
-                <button type="submit" class="submit" name="confirm" value="confirm">
+                <button type="submit" class="submit" name="submit" value="submit">
                     送信
                     <i class="fas fa-arrow-right"></i>
                 </button>
