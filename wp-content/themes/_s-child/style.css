@@ -384,7 +384,7 @@ pc sp ひょうじひひょうじ 改行
   position: relative;
   width: 100%;
   max-width: 2000px;
-  height: 57vw;
+  height: 60vw;
 }
 @media screen and (max-width: 765px) {
   .front .mv {
@@ -393,9 +393,8 @@ pc sp ひょうじひひょうじ 改行
 }
 .front .mv_text {
   position: absolute;
-  top: 10vw;
-  left: 20vw;
-  color: #fff;
+  top: 12vw;
+  left: 60vw;
   font-size: 1.4rem;
   transform: rotate(-10deg);
   width: 317px;
@@ -420,6 +419,7 @@ pc sp ひょうじひひょうじ 改行
   padding: 0px 10px;
   font-size: 2rem;
   font-weight: bold;
+  color: #fff;
 }
 @media screen and (max-width: 1356px) {
   .front .mv_text_orange {
@@ -446,6 +446,14 @@ pc sp ひょうじひひょうじ 改行
   max-width: 500px;
   margin: 0 auto;
   margin-bottom: 40px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.front .mv_under_img:hover img {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  /*ie6、7の透明度指定*/
+  /*ちなみにie8の透明度指定はこれ→ -ms-filter: "alpha(opacity=70)";*/
 }
 .front .mv_under_text {
   margin-bottom: 40px;
@@ -839,9 +847,6 @@ pc sp ひょうじひひょうじ 改行
   /********************************
   採用条件
   *********************************/
-  /********************************
-  登録応募フォーム
-  *********************************/
 }
 .entry .entry_mv {
   position: relative;
@@ -849,45 +854,72 @@ pc sp ひょうじひひょうじ 改行
   left: 0;
   margin-bottom: 80px;
 }
-.entry .entry_mv_content {
+.entry .entry_mv .entry_mv_content {
   position: absolute;
   bottom: 20%;
   right: 10vw;
   color: #fff;
   text-align: right;
 }
-.entry .entry_mv_title {
+@media screen and (max-width: 765px) {
+  .entry .entry_mv .entry_mv_content {
+    left: 5vw;
+    text-align: left;
+  }
+}
+.entry .entry_mv .entry_mv_title {
   font-weight: bold;
   font-size: 40px;
   margin-bottom: 20px;
 }
-.entry .entry_mv_text {
+.entry .entry_mv .entry_mv_text {
   font-size: 20px;
 }
-.entry .content1_text {
+.entry .content1 {
+  padding: 0 20px;
+}
+.entry .content1 .content1_text {
   text-align: center;
   margin-bottom: 80px;
   line-height: 2.5;
 }
-.entry .content1_img {
+@media screen and (max-width: 765px) {
+  .entry .content1 .content1_text {
+    text-align: left;
+  }
+}
+.entry .content1 .content1_img {
   max-width: 600px;
   margin: 0 auto;
   margin-bottom: 80px;
 }
-.entry .content1_flex {
+.entry .content1 .content1_flex {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
 }
-.entry .content1_item {
+@media screen and (max-width: 765px) {
+  .entry .content1 .content1_flex {
+    display: block;
+    margin: 0 auto;
+  }
+}
+.entry .content1 .content1_item {
   width: 400px;
   margin: 0 60px;
 }
-.entry .content1_item_title {
+@media screen and (max-width: 765px) {
+  .entry .content1 .content1_item {
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+.entry .content1 .content1_item_title {
   font-weight: bold;
   margin-bottom: 20px;
 }
-.entry .content1_item_text {
+.entry .content1 .content1_item_text {
   margin-bottom: 20px;
 }
 .entry .content2 {
@@ -917,9 +949,21 @@ pc sp ひょうじひひょうじ 改行
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 765px) {
+  .entry .content2_flex {
+    display: block;
+  }
+}
 .entry .content2_item {
   position: relative;
   margin: 0 40px;
+}
+@media screen and (max-width: 765px) {
+  .entry .content2_item {
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 40px;
+  }
 }
 .entry .entry_training {
   text-align: left;
@@ -955,6 +999,11 @@ pc sp ひょうじひひょうじ 改行
   bottom: -100px;
   width: 350px;
 }
+@media screen and (max-width: 765px) {
+  .entry .entry_training_img {
+    display: none;
+  }
+}
 .entry .entry_flow {
   padding: 20px 60px 40px;
 }
@@ -978,7 +1027,7 @@ pc sp ひょうじひひょうじ 改行
   color: #fff;
   width: 220px;
   padding: 5px 10px;
-  /* margin: 10px auto; */
+  margin: 0 auto;
   border-radius: 50px;
 }
 .entry .entry_flow_arrow {
@@ -999,9 +1048,22 @@ pc sp ひょうじひひょうじ 改行
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 765px) {
+  .entry .content3_flex {
+    display: block;
+  }
+}
 .entry .content3_item {
-  max-width: 400px;
+  max-width: 350px;
   position: relative;
+  margin: 0 40px;
+}
+@media screen and (max-width: 765px) {
+  .entry .content3_item {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
 }
 .entry .content3_img {
   background-color: #606060;
@@ -1013,8 +1075,12 @@ pc sp ひょうじひひょうじ 改行
   color: #fff;
   border-radius: 50%;
   position: absolute;
-  top: 50px;
-  left: 10px;
+  top: 38%;
+  width: 100px;
+  left: 0%;
+  height: 100px;
+  padding-top: 15px;
+  text-align: center;
 }
 .entry .content3_catch {
   font-size: 1.2rem;
@@ -1085,17 +1151,6 @@ pc sp ひょうじひひょうじ 改行
   position: absolute;
   width: 50px;
   left: 5vw;
-}
-.entry .entry_form {
-  padding: 40px;
-}
-.entry .entry_form_title {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 40px;
-  max-width: 1000px;
 }
 
 header {
@@ -1398,9 +1453,14 @@ footer .copyright {
 .footer_guide .tel_des {
   font-size: 12px;
 }
-.footer_guide .entry {
+.footer_guide .entry_banner {
   max-width: 900px;
   margin: 0 auto;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.footer_guide .entry_banner:hover img {
+  opacity: 0.7;
 }
 .footer_guide .title {
   font-size: 1.2rem;
@@ -1605,14 +1665,30 @@ HURU-HURUとは
   top: 540px;
   z-index: 9997;
 }
+@media screen and (max-width: 765px) {
+  .right_list {
+    display: none;
+  }
+}
 
 .right_item {
   width: 100px;
 }
 
-@media screen and (max-width: 480px) {
-  .right_list {
-    display: none;
+.right_list {
+  animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(180px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+  }
+  40%, 100% {
+    opacity: 1;
   }
 }
 .post_frame {
@@ -2353,6 +2429,23 @@ HURU-HURUとは
     width: 100%;
   }
 }
+.form textarea {
+  height: 150px;
+}
+.form input[type=file] {
+  display: none;
+}
+.form #fake_text_box {
+  font-size: 0.8rem;
+  margin: 20px auto;
+}
+.form .file_btn {
+  font-size: 1.2rem;
+  background: #606060;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 80px;
+}
 .form .row {
   margin: 0 auto;
   margin-bottom: 20px;
@@ -2704,6 +2797,20 @@ HURU-HURUとは
   margin: 0 auto;
   max-width: 1000px;
   padding: 40px 20px;
+  position: relative;
+}
+.contact .qas .fruit1 {
+  width: 60px;
+  height: 60px;
+  top: -40px;
+  right: -50px;
+  position: absolute;
+  object-fit: contain;
+}
+.contact .qas .fruit2 {
+  width: 40px;
+  position: absolute;
+  object-fit: contain;
 }
 .contact .qas .accordion {
   width: 100%;
@@ -2796,6 +2903,39 @@ HURU-HURUとは
 }
 .contact .contactform .contect_tel .contect_tel_area .contect_tel_num {
   font-size: 1.8rem;
+}
+
+/********************************
+シッター募集
+*********************************/
+.entry_form {
+  padding: 40px;
+}
+.entry_form .entry_form_title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  max-width: 400px;
+  position: relative;
+}
+.entry_form .entry_form_title img {
+  position: absolute;
+  object-fit: contain;
+}
+.entry_form .entry_form_title .ster1 {
+  width: 40px;
+  left: 0;
+  top: 20px;
+}
+.entry_form .entry_form_title .ster2 {
+  width: 50px;
+  right: 0;
+  top: -15px;
+}
+.entry_form .filerow {
+  margin: 80px auto;
 }
 
 /*# sourceMappingURL=style.css.map */

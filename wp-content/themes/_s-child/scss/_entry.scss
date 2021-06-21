@@ -7,48 +7,68 @@
         top: 20px;
         left: 0;
         margin-bottom: 80px;
+        .entry_mv_content {
+            position: absolute;
+            bottom: 20%;
+            right: 10vw;
+            color: #fff;
+            text-align: right;
+            @media screen and (max-width: 765px) {
+                left: 5vw;
+                text-align: left;
+            }
+        }
+        .entry_mv_title {
+            font-weight: bold;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .entry_mv_text {
+            font-size: 20px;
+        }
     }
-    .entry_mv_content {
-        position: absolute;
-        bottom: 20%;
-        right: 10vw;
-        color: #fff;
-        text-align: right;
+    .content1 {
+        padding: 0 20px;
+        .content1_text {
+            text-align: center;
+            margin-bottom: 80px;
+            line-height: 2.5;
+            @media screen and (max-width: 765px) {
+                text-align: left;
+            }
+        }
+        .content1_img {
+            max-width: 600px;
+            margin: 0 auto;
+            margin-bottom: 80px;
+        }
+        .content1_flex {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            @media screen and (max-width: 765px) {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .content1_item {
+            width: 400px;
+            margin: 0 60px;
+            @media screen and (max-width: 765px) {
+                margin: 0 auto;
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+        .content1_item_title {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .content1_item_text {
+            margin-bottom: 20px;
+        }
     }
-    .entry_mv_title {
-        font-weight: bold;
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
-    .entry_mv_text {
-        font-size: 20px;
-    }
-    .content1_text {
-        text-align: center;
-        margin-bottom: 80px;
-        line-height: 2.5;
-    }
-    .content1_img {
-        max-width: 600px;
-        margin: 0 auto;
-        margin-bottom: 80px;
-    }
-    .content1_flex {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 40px;
-    }
-    .content1_item {
-        width: 400px;
-        margin: 0 60px;
-    }
-    .content1_item_title {
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-    .content1_item_text {
-        margin-bottom: 20px;
-    }
+
     /********************************
 託児所での実践研修の実施
 *********************************/
@@ -78,10 +98,18 @@
     .content2_flex {
         display: flex;
         justify-content: center;
+        @media screen and (max-width: 765px) {
+            display: block;
+        }
     }
     .content2_item {
         position: relative;
         margin: 0 40px;
+        @media screen and (max-width: 765px) {
+            margin: 0 auto;
+            width: 90%;
+            margin-bottom: 40px;
+        }
     }
     .entry_training {
         text-align: left;
@@ -116,6 +144,9 @@
         position: absolute;
         bottom: -100px;
         width: 350px;
+        @media screen and (max-width: 765px) {
+            display: none;
+        }
     }
     .entry_flow {
         padding: 20px 60px 40px;
@@ -140,7 +171,7 @@
         color: #fff;
         width: 220px;
         padding: 5px 10px;
-        /* margin: 10px auto; */
+        margin: 0 auto;
         border-radius: 50px;
     }
     .entry_flow_arrow {
@@ -163,11 +194,19 @@
     .content3_flex {
         display: flex;
         justify-content: center;
+        @media screen and (max-width: 765px) {
+            display: block;
+        }
     }
     .content3_item {
-        max-width: 400px;
+        max-width: 350px;
         position: relative;
         margin: 0 40px;
+        @media screen and (max-width: 765px) {
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
     }
     .content3_img {
         background-color: #606060;
@@ -184,6 +223,7 @@
         left: 0%;
         height: 100px;
         padding-top: 15px;
+        text-align: center;
     }
     .content3_catch {
         font-size: 1.2rem;
@@ -257,19 +297,5 @@
         position: absolute;
         width: 50px;
         left: 5vw;
-    }
-    /********************************
-登録応募フォーム
-*********************************/
-    .entry_form {
-        padding: 40px;
-    }
-    .entry_form_title {
-        font-size: 2rem;
-        font-weight: bold;
-        text-align: center;
-        margin: 0 auto;
-        margin-bottom: 40px;
-        max-width: 1000px;
     }
 }

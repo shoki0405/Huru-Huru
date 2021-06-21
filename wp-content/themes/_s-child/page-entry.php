@@ -1,13 +1,48 @@
 <?php
-get_header();
-get_template_part("template/right_menu_entry");
+require_once("form/form.php");
+
 $img_fol = get_stylesheet_directory_uri() . "/img/";
 $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
+
+
+$data = [];
+
+if (!empty($_POST["submit"])) {
+
+    // SESSIONに格納
+    $data = [
+        "fullname"   => $_POST["fullname"],
+        "email"     => $_POST["email"],
+        "tel"     => $_POST["tel"],
+        "zip"   => $_POST["zip"],
+        "pref"    => $_POST["pref"],
+        "address"    => $_POST["address"],
+        "history"    => $_POST["history"],
+    ];
+
+    $data["building"] = !empty($_POST["building"]) ? $_POST["building"] : "";
+    $data["career"] = !empty($_POST["career"]) ? $_POST["career"] : "";
+    $data["bikou"] = !empty($_POST["bikou"]) ? $_POST["bikou"] : "";
+
+    if (send(ENTRY, $data)) {
+        $success_message = "お問い合わせを受け付けました。";
+        $_POST = [];
+    } else {
+        $error_message = "送信できませんでした。";
+    }
+}
+
+get_header();
+get_template_part("template/right_menu_entry");
+
+
+
 ?>
 
 <div class="entry">
     <div class="entry_mv">
-        <img src="<?php echo $img_fol_entry; ?>mv.png" alt="">
+        <img class="pc_765" src="<?php echo $img_fol_entry; ?>mv.png" alt="">
+        <img class="tb_765" src="<?php echo $img_fol_entry; ?>mv_sp.png" alt="">
         <div class="entry_mv_content">
             <div class="entry_mv_title">子育てを応援したい。</div>
             <div class="entry_mv_text">
@@ -31,7 +66,8 @@ $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
         </div>
 
         <div class="content1_img">
-            <img src="<?php echo $img_fol_entry; ?>img1.svg" alt="">
+            <img class="pc_765" src="<?php echo $img_fol_entry; ?>img1.svg" alt="">
+            <img class="tb_765" src="<?php echo $img_fol_entry; ?>img1.png" alt="">
         </div>
 
         <div class="content1_text">
@@ -250,13 +286,27 @@ $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
 
 
 
-    <div class="entry_form">
+    <div class="entry_form" id="entryform">
 
-        <div class="entry_form_title">登録応募フォーム</div>
+        <div class="entry_form_title">
+            <img class="ster1" src="<?php echo $img_fol_entry; ?>ster1.png" alt="">
+            <img class="ster2" src="<?php echo $img_fol_entry; ?>ster2.png" alt="">
+            登録応募フォーム
+        </div>
 
         <div class="">
-            <form action="" class="form" method="post">
+            <form action="#entryform" class="form" method="post">
                 <div class="inner">
+
+                    <?php if (!empty($success_message)) {
+                        echo "<div class='success_message'>";
+                        echo $success_message;
+                        echo "</div>";
+                    } elseif (!empty($error_message)) {
+                        echo "<div class='error_message'>";
+                        echo $error_message;
+                        echo "</div>";
+                    } ?>
 
 
                     <div class="hissu">
@@ -267,21 +317,21 @@ $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
 
                     <div class="row">
                         <div class="heading">氏名*</div>
-                        <input type="text" name="fullname" placeholder="例)鈴木　花子" value="<?= !empty($_SESSION["data"]["fullname"]) ? $_SESSION["data"]["fullname"] : "" ?>" required>
+                        <input type="text" name="fullname" placeholder="例)鈴木　花子" value="<?= !empty($_POST["fullname"]) ? $_POST["fullname"] : "" ?>" required>
                     </div>
 
                     <div class="row">
                         <div class="heading">電話番号*</div>
-                        <input type="tel" name="tel" size="10" maxlength="20" placeholder="例)00-0000-0000" value="<?= !empty($_SESSION["data"]["tel"]) ? $_SESSION["data"]["tel"] : "" ?>" required>
+                        <input type="tel" name="tel" size="10" maxlength="20" placeholder="例)00-0000-0000" value="<?= !empty($_POST["tel"]) ? $_POST["tel"] : "" ?>" required>
                     </div>
                     <div class="row">
                         <div class="heading">メールアドレス*</div>
-                        <input type="email" name="email" placeholder="例)example@example.com" value="<?= !empty($_SESSION["data"]["email"]) ? $_SESSION["data"]["email"] : "" ?>" id="email" required oninput="CheckEmail()">
+                        <input type="email" name="email" placeholder="例)example@example.com" value="<?= !empty($_POST["email"]) ? $_POST["email"] : "" ?>" id="email" required>
                     </div>
 
                     <div class="row">
                         <div class="heading">郵便番号*</div>
-                        <input type="text" name="zip" placeholder="例)101-0000" value="<?= !empty($_SESSION["data"]["zip"]) ? $_SESSION["data"]["zip"] : "" ?>" required>
+                        <input type="text" name="zip" placeholder="例)101-0000" value="<?= !empty($_POST["zip"]) ? $_POST["zip"] : "" ?>" required>
                     </div>
 
                     <div class="row">
@@ -339,31 +389,44 @@ $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
 
                     <div class="row">
                         <div class="heading">住所*</div>
-                        <input type="text" name="address" placeholder="例)中央区銀座7-15-18" value="<?= !empty($_SESSION["data"]["address"]) ? $_SESSION["data"]["address"] : "" ?>" required>
+                        <input type="text" name="address" placeholder="例)中央区銀座7-15-18" value="<?= !empty($_POST["address"]) ? $_POST["address"] : "" ?>" required>
                     </div>
 
                     <div class="row">
                         <div class="heading">建物名</div>
-                        <input type="text" name="building" value="<?= !empty($_SESSION["data"]["building"]) ? $_SESSION["data"]["building"] : "" ?>">
+                        <input type="text" name="building" value="<?= !empty($_POST["building"]) ? $_POST["building"] : "" ?>">
                     </div>
 
                     <div class="row">
-                        <div class="heading">職務経歴</div>
-                        <textarea name="history" id="" cols="30" rows="10"></textarea>
+                        <div class="heading">職務経歴*</div>
+                        <textarea name="history" id="" cols="30" rows="10" required>
+<?= !empty($_POST["history"]) ? $_POST["history"] : "●●●年〜●●●年　＋＋＋＋
+●●●年〜●●●年　＋＋＋＋
+●●●年〜●●●年　＋＋＋＋" ?>
+                        </textarea>
                     </div>
 
                     <div class="row">
                         <div class="heading">保有資格</div>
-                        <textarea name="career" id="" cols="30" rows="10"></textarea>
+                        <textarea name="career" id="" cols="30" rows="10">
+<?= !empty($_POST["career"]) ? $_POST["career"] : "" ?></textarea>
                     </div>
 
-                    <?php get_template_part("form/bikou"); ?>
-
                     <div class="row">
+                        <div class="heading">
+                            備考
+                        </div>
+                        <textarea name="bikou" id="" cols="30" rows="10" class="bikou_text">
+<?= !empty($_POST["bikou"]) ? $_POST["bikou"] : "" ?></textarea>
+                    </div>
+
+                    <div class="row filerow">
                         <div class="heading">本人写真添付*</div>
                         <div class="col">
-                            <label for="picture" class="picture_label">選択</label>
-                            <input type="file" name="picture" id="picture" value="選択">
+                            <label for="file" class="file_btn">選択
+                                <input type="file" id="file" onchange="$('#fake_text_box').html($(this).val())">
+                            </label>
+                            <div id="fake_text_box">ファイルを選択してください。</div>
                         </div>
                     </div>
 
@@ -372,7 +435,7 @@ $img_fol_entry = get_stylesheet_directory_uri() . "/img/entry/";
                 </div>
 
                 <div class="submit_frame">
-                    <button type="submit" class="submit" name="child" value="child">
+                    <button type="submit" class="submit" name="submit" value="submit">
                         送信する
                         <i class="fas fa-arrow-right"></i>
                     </button>

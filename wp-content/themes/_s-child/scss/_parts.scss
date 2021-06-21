@@ -3,14 +3,26 @@
     right: 0;
     top: 540px;
     z-index: 9997;
+    @media screen and (max-width: 765px) {
+        display: none;
+    }
 }
-
 .right_item {
     width: 100px;
 }
-
-@media screen and (max-width: 480px) {
-    .right_list {
-        display: none;
+.right_list {
+    animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+}
+@keyframes slideIn {
+    0% {
+        transform: translateX(180px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+    }
+    40%,
+    100% {
+        opacity: 1;
     }
 }

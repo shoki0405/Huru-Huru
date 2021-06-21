@@ -40,6 +40,23 @@
             width: 100%;
         }
     }
+    textarea {
+        height: 150px;
+    }
+    input[type='file'] {
+        display: none;
+    }
+    #fake_text_box {
+        font-size: 0.8rem;
+        margin: 20px auto;
+    }
+    .file_btn {
+        font-size: 1.2rem;
+        background: #606060;
+        color: #fff;
+        border-radius: 50px;
+        padding: 10px 80px;
+    }
     .row {
         margin: 0 auto;
         margin-bottom: 20px;
@@ -400,6 +417,20 @@
         margin: 0 auto;
         max-width: 1000px;
         padding: 40px 20px;
+        position: relative;
+        .fruit1 {
+            width: 60px;
+            height: 60px;
+            top: -40px;
+            right: -50px;
+            position: absolute;
+            object-fit: contain;
+        }
+        .fruit2 {
+            width: 40px;
+            position: absolute;
+            object-fit: contain;
+        }
         .accordion {
             width: 100%;
             background: var.$white;
@@ -492,5 +523,37 @@
                 }
             }
         }
+    }
+}
+/********************************
+シッター募集
+*********************************/
+.entry_form {
+    padding: 40px;
+    .entry_form_title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        max-width: 400px;
+        position: relative;
+        img {
+            position: absolute;
+            object-fit: contain;
+        }
+        .ster1 {
+            width: 40px;
+            left: 0;
+            top: 20px;
+        }
+        .ster2 {
+            width: 50px;
+            right: 0;
+            top: -15px;
+        }
+    }
+    .filerow {
+        margin: 80px auto;
     }
 }

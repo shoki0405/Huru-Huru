@@ -143,9 +143,16 @@ footer {
     .tel_des {
         font-size: 12px;
     }
-    .entry {
+    .entry_banner {
         max-width: 900px;
         margin: 0 auto;
+        background-color: var.$white;
+        transition: 0.3s;
+        &:hover {
+            img {
+                opacity: 0.7;
+            }
+        }
     }
     .title {
         font-size: 1.2rem;

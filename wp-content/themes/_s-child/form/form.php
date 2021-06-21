@@ -195,8 +195,11 @@ function body($type, $data)
 
         return $body;
     } elseif ($type === 3) {
-        $body = "
-        " . $data["name"] . "様
+
+
+
+        $body = <<<EOD
+        {$data["fullname"]}様
 
         この度はHURU-HURUにお問い合わせいただきありがとうございます。
         下記の内容で承りました。
@@ -204,13 +207,13 @@ function body($type, $data)
         ※本メールはお客様に送られる自動返信メールです。
 
         ---
-        問い合わせ者区分：（個人 or 法人）
-        会社名：
-        お名前：
-        メールアドレス：
-        電話番号：
-        お問い合わせの種類：
-        お問い合わせ内容：
+        問い合わせ者区分：{$data["kubun"]}
+        会社名：{$data["company"]}
+        お名前：{$data["fullname"]}
+        メールアドレス：{$data["email"]}
+        電話番号：{$data["tel"]}
+        お問い合わせの種類：{$data["contact_category"]}
+        お問い合わせ内容：{$data["contact_content"]}
 
         ---
 
@@ -220,27 +223,30 @@ function body($type, $data)
         --
         HURU-HURU
         HP：https://www.huruhuru.jp
-        ";
+        EOD;
+
+
+
         return $body;
     } elseif ($type === 4) {
-        $body = "
-        " . $data["name"] . "様
+        $body = <<<EOD
+        {$data["fullname"]}様
         この度はHURU-HURUのシッター登録にご応募いただきありがとうございます。
         下記の内容で承りました。
 
         ※本メールはお客様に送られる自動返信メールです。
 
         ---
-        氏名：
-        メールアドレス：
-        電話番号：
-        郵便番号：
-        都道府県：
-        住所：
-        建物名：
-        職務経歴：
-        保有資格： 
-        備考：
+        氏名：{$data["fullname"]}
+        メールアドレス：{$data["email"]}
+        電話番号：{$data["tel"]}
+        郵便番号：{$data["zip"]}
+        都道府県：{$data["pref"]}
+        住所：{$data["address"]}
+        建物名：{$data["building"]}
+        職務経歴：{$data["history"]}
+        保有資格： {$data["career"]}
+        備考：{$data["bikou"]}
 
         ---
 
@@ -250,7 +256,7 @@ function body($type, $data)
         --
         HURU-HURU
         HP：https://www.huruhuru.jp
-        ";
+        EOD;
         return $body;
     }
 }

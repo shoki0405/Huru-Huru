@@ -22,7 +22,7 @@ $img_fol_footer = get_stylesheet_directory_uri() . "/img/footer/";
             </div>
         </div>
     </div>
-    <div class="entry">
+    <div class="entry_banner">
         <img class="pc" src="<?php echo $img_fol_footer; ?>entry_banner.png" alt="">
         <img class="sp" src="<?php echo $img_fol_footer; ?>entry_banner_sp.png" alt="">
         <a href="" class="a"></a>

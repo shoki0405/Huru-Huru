@@ -1,33 +1,34 @@
 <?php
-get_header();
-
-get_template_part("template/right_menu");
+require_once("form/form.php");
 $img_fol = get_stylesheet_directory_uri() . "/img/";
 $img_fol_contact = get_stylesheet_directory_uri() . "/img/contact/";
 
-
+$data = [];
 
 if (!empty($_POST["submit"])) {
 
     // SESSIONに格納
     $data = [
-        "kubun"   => $_POST["start_date"],
-        "fullname"   => $_POST["start_hour"],
-        "conpany" => $_POST["start_minuts"],
-        "emai;"     => $_POST["end_date"],
-        "tel"     => $_POST["end_hour"],
-        "contact_category"   => $_POST["end_minuts"],
-        "contact_content"    => $_POST["extension"],
+        "kubun"   => $_POST["kubun"],
+        "fullname"   => $_POST["fullname"],
+        "email"     => $_POST["email"],
+        "tel"     => $_POST["tel"],
+        "contact_category"   => $_POST["contact_category"],
+        "contact_content"    => $_POST["contact_content"],
     ];
 
-    if (send(3, $data)) {
-        $message = "お問い合わせを受け付けました。";
+    $data["company"] = !empty($_POST["company"]) ? $_POST["company"] : "";
+
+    if (send(CONTACT, $data)) {
+        $success_message = "お問い合わせを受け付けました。";
+        $_POST = [];
     } else {
-        $message = "送信できませんでした。";
+        $error_message = "送信できませんでした。";
     }
 }
 
-
+get_header();
+get_template_part("template/right_menu");
 ?>
 
 <div class="contact">
@@ -45,6 +46,10 @@ if (!empty($_POST["submit"])) {
 
     <div class="dot_back">
         <div class="qas">
+
+            <img class="fruit1" src="<?php echo $img_fol; ?>half_orange_green.png" alt="">
+            <img class="fruit2" src="<?php echo $img_fol; ?>grape.png" alt="">
+
             <div class="accordion">
                 <div class="arrow">
                     <i class="fas fa-chevron-up"></i>
@@ -107,7 +112,7 @@ if (!empty($_POST["submit"])) {
         </div>
     </div>
 
-    <div class="contactform">
+    <div class="contactform" id="contactform">
         <div class="title">
             お問い合わせ
         </div>
@@ -117,10 +122,17 @@ if (!empty($_POST["submit"])) {
             <span>メールから</span>
         </div>
 
-        <form action="" method="post" class="form">
+        <form action="#contactform" method="post" class="form">
 
-
-
+            <?php if (!empty($success_message)) {
+                echo "<div class='success_message'>";
+                echo $success_message;
+                echo "</div>";
+            } elseif (!empty($error_message)) {
+                echo "<div class='error_message'>";
+                echo $error_message;
+                echo "</div>";
+            } ?>
 
 
             <div class="row radio keitai">
@@ -142,42 +154,41 @@ if (!empty($_POST["submit"])) {
                     氏名*
                 </div>
 
-                <input type="text" name="fullname" placeholder="">
+                <input type="text" name="fullname" value="<?= !empty($_POST["fullname"]) ? $_POST["fullname"] : "" ?>" placeholder="" required>
             </div>
             <div class="row">
                 <div class="heading">
                     会社名*
                 </div>
-                <input type="text" name="company" placeholder="">
+                <input type="text" name="company" value="<?= !empty($_POST["company"]) ? $_POST["company"] : "" ?>" placeholder="" required>
             </div>
             <div class="row">
                 <div class="heading">
                     メールアドレス*
                 </div>
-                <input type="email" name="email" placeholder="">
+                <input type="email" name="email" value="<?= !empty($_POST["email"]) ? $_POST["email"] : "" ?>" placeholder="" required>
             </div>
             <div class="row">
                 <div class="heading">
                     電話番号*
                 </div>
-                <input type="tel" name="tel" placeholder="">
+                <input type="tel" name="tel" value="<?= !empty($_POST["tel"]) ? $_POST["tel"] : "" ?>" placeholder="" required>
             </div>
             <div class="row">
                 <div class="heading">
                     お問い合わせの種類*
                 </div>
-                <select name="contact_category" id="">
+                <select name="contact_category" id="" required>
                     <option value="問い合わせの種類1">問い合わせの種類1</option>
                     <option value="問い合わせの種類2">問い合わせの種類2</option>
                     <option value="問い合わせの種類3">問い合わせの種類3</option>
                 </select>
-                <input type="text" name="contact_category" placeholder="">
             </div>
             <div class="row">
                 <div class="heading">
                     お問い合わせ内容*
                 </div>
-                <textarea name="contact_content" id="" cols="30" rows="10"></textarea>
+                <textarea name="contact_content" id="" cols="30" rows="10" required><?= !empty($_POST["contact_content"]) ? $_POST["contact_content"] : "" ?></textarea>
             </div>
 
 
