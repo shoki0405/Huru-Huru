@@ -11,6 +11,7 @@ define("YOYAKU_B", 1);
 define("YOYAKU_M", 2);
 define("CONTACT", 3);
 define("ENTRY", 4);
+define("TMP", "./wp-content/themes/_s-child/form/tmp/");
 
 function view_require($url)
 {
@@ -20,11 +21,22 @@ function view_require($url)
     get_footer("s");
 }
 
-function send($type, $data)
+function send($type, $data, $file = null)
 {
-    $header = "From: " . $data["email"] . "Reply-To: " . $data["email"];
+
+    //日本語の使用宣言
+    mb_language("ja");
+    mb_internal_encoding("UTF-8");
+
+    // ヘッダー
+    $header = "MIME-Version: 1.0\n";
+    $header = "Content-Type: multipart/mixed;boundary=\"__BOUNDARY__\"\n";
+    $header .= "From: {$data["email"]}\n";
+    $header .= "Reply-To: {$data["email"]}\n";
+
     $subject = subject($type);
-    $body = body($type, $data);
+    $body = body($type, $data, $file);
+
     return mb_send_mail($data["email"], $subject, $body, $header);
 }
 
@@ -39,7 +51,7 @@ function subject($type)
     }
 }
 
-function body($type, $data)
+function body($type, $data, $file = null)
 {
 
     if ($type === 1) {
@@ -229,7 +241,12 @@ function body($type, $data)
 
         return $body;
     } elseif ($type === 4) {
-        $body = <<<EOD
+
+
+        $body = "--__BOUNDARY__\n";
+        $body .= "Content-Type: text/plain; charset=\"ISO-2022-JP\"\n\n";
+
+        $body .= <<<EOD
         {$data["fullname"]}様
         この度はHURU-HURUのシッター登録にご応募いただきありがとうございます。
         下記の内容で承りました。
@@ -248,6 +265,7 @@ function body($type, $data)
         保有資格： {$data["career"]}
         備考：{$data["bikou"]}
 
+        画像：{$file['name']}(添付の画像ファイル)
         ---
 
         内容を確認し、担当者よりご連絡致しますので、
@@ -255,8 +273,17 @@ function body($type, $data)
 
         --
         HURU-HURU
-        HP：https://www.huruhuru.jp
+        HP：https://www.huruhuru.jp\n
         EOD;
+
+        $body .= "--__BOUNDARY__\n";
+        $body .= "Content-Type: application/octet-stream; name=\"{$file['name']}\"\n";
+        $body .= "Content-Disposition: attachment; filename=\"{$file['name']}\"\n";
+        $body .= "Content-Transfer-Encoding: base64\n";
+        $body .= "\n";
+        $body .= chunk_split(base64_encode(file_get_contents(TMP . $file['name'])));
+        $body .= "--__BOUNDARY__\n";
+
         return $body;
     }
 }

@@ -2,6 +2,7 @@
 get_header();
 
 get_template_part("template/right_menu");
+get_template_part("template/bottom_menu");
 $img_fol = get_stylesheet_directory_uri() . "/img/";
 $img_fol_front = get_stylesheet_directory_uri() . "/img/front/";
 $img_fol_front_sp = get_stylesheet_directory_uri() . "/img/front_sp/";
@@ -53,6 +54,7 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
             HURU-HURUはそんなパパ、ママの少しでもお力になりたいと考えております。
         </div>
         <div class="mv_under_img">
+            <div class="hanahana_text">24時間対応託児所花花はこちらから</div>
             <img class="pc" src="<?php echo $img_fol_front; ?>kizz.svg" alt="">
             <img class="sp" src="<?php echo $img_fol_front_sp; ?>kizz.png" alt="">
             <a href="https://www.kizz-hana-hana.jp/" class="a" target="_blank"></a>
@@ -278,6 +280,16 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
                 <img class="sp" src="<?php echo $img_fol_front_sp; ?>area.png" alt="">
             </div>
         </div>
+    </div>
+
+    <div class="pc_765 snss">
+        <div class="twitter">
+            <a href=""></a>
+        </div>
+        <div class="insta">
+            <a href=""></a>
+        </div>
+        <img src="<?php echo $img_fol_front; ?>sns.svg" alt="">
     </div>
 
 

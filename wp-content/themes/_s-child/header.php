@@ -67,7 +67,8 @@
             background-color: #fff;
         }
     </style>
-    <?php wp_body_open(); ?>
+    <?php //wp_body_open(); 
+    ?>
     <div id="page" class="site">
         <header id="masthead" class="site-header">
             <div class="header_inner">
@@ -183,11 +184,7 @@
 
 
 
-        <div class="sp_bottom_menu">
-            <div class="flex">
-                <div class="flex_item"></div>
-                <div class="flex_item"></div>
-                <div class="flex_item"></div>
-                <div class="flex_item"></div>
-            </div>
+
+        <div class="header_padding">
+
         </div>

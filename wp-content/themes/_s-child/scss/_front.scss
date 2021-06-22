@@ -48,11 +48,10 @@
         width: 317px;
         @media screen and (max-width: 1356px) {
             font-size: 1.2rem;
-            top: 8vw;
-            left: 10vw;
         }
         @media screen and (max-width: 765px) {
-            top: 25vw;
+            top: 100vw;
+            left: 10vw;
             font-size: 1rem;
         }
     }
@@ -96,6 +95,14 @@
                 opacity: 0.7;
                 filter: alpha(opacity=70); /*ie6、7の透明度指定*/
                 /*ちなみにie8の透明度指定はこれ→ -ms-filter: "alpha(opacity=70)";*/
+            }
+        }
+        .hanahana_text {
+            color: #b378b6;
+            font-size: 1.2rem;
+            font-weight: bold;
+            & + img {
+                height: 160px;
             }
         }
     }
@@ -450,6 +457,37 @@
                 width: 30px;
                 right: 1vw;
             }
+        }
+    }
+    /********************************
+    SNS
+    *********************************/
+    .snss {
+        margin: 40px auto;
+        max-width: 900px;
+        position: relative;
+        .twitter {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 27%;
+            left: 18%;
+            // border: solid 1px #f00;
+        }
+        .insta {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 40%;
+            left: 41%;
+            // border: solid 1px #f00;
+        }
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     }
 }

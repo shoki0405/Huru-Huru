@@ -121,6 +121,12 @@ pc sp ひょうじひひょうじ 改行
         display: block;
     }
 }
+.kaigyo_pc_765 {
+    display: block;
+    @media screen and (max-width: 765px) {
+        display: inline;
+    }
+}
 
 /********************************
 詳しく見るボタン へこむやつ

@@ -24,11 +24,19 @@ if (!empty($_POST["submit"])) {
     $data["career"] = !empty($_POST["career"]) ? $_POST["career"] : "";
     $data["bikou"] = !empty($_POST["bikou"]) ? $_POST["bikou"] : "";
 
-    if (send(ENTRY, $data)) {
+    // ファイル有ればアップロード
+    if (!empty($_FILES["picture"])) {
+        if (!move_uploaded_file($_FILES["picture"]['tmp_name'], TMP . $_FILES["picture"]['name'])) {
+            $error_message = "画像を送信できませんでした。再度ご確認の上もう一度お試しください。";
+            exit;
+        }
+    }
+
+    if (send(ENTRY, $data, $_FILES["picture"])) {
         $success_message = "お問い合わせを受け付けました。";
         $_POST = [];
     } else {
-        $error_message = "送信できませんでした。";
+        $error_message = "送信に失敗しました。再度ご確認の上もう一度お試しください。";
     }
 }
 
@@ -44,11 +52,13 @@ get_template_part("template/right_menu_entry");
         <img class="pc_765" src="<?php echo $img_fol_entry; ?>mv.png" alt="">
         <img class="tb_765" src="<?php echo $img_fol_entry; ?>mv_sp.png" alt="">
         <div class="entry_mv_content">
-            <div class="entry_mv_title">子育てを応援したい。</div>
+            <div class="entry_mv_title">子育てを<span class="kaigyo">応援したい。</span></div>
             <div class="entry_mv_text">
                 お子様に愛情をもって接することができ、<br>
-                仕事に責任をもって取り組める<br>
-                シッターさん募集
+                <span class="kaigyo">
+                    仕事に責任をもって取り組める<br>
+                    シッターさん募集
+                </span>
             </div>
         </div>
     </div>
@@ -59,10 +69,10 @@ get_template_part("template/right_menu_entry");
     <div class="content1">
 
         <div class="content1_text">
-            保育経験、資格のある方、HURU-HURUで一緒に働きませんか？<br>
-            併設の託児所内にてお子様について学ぶことができます。<br>
-            お客様、お子さまによってサービスが変わってきます。<br>
-            安心してご利用いただけるよう一緒に良いサービスを考えていきましょう。<br>
+            <span class="kaigyo">保育経験、資格のある方、</span>HURU-HURUで一緒に働きませんか？<br>
+            <span class="kaigyo_pc_765">併設の託児所内にてお子様について学ぶことができます。</span>
+            <span class="kaigyo_pc_765">お客様、お子さまによってサービスが変わってきます。</span>
+            安心してご利用いただけるよう一緒に良いサービスを考えていきましょう。
         </div>
 
         <div class="content1_img">
@@ -71,12 +81,12 @@ get_template_part("template/right_menu_entry");
         </div>
 
         <div class="content1_text">
-            HURU-HURUは、資格の有無だけでなく誠実な人柄、お子様の変化に気づき、<br>
-            状況に合わせて対応ができるシッターの育成を目指しています。<br>
-            そのため、併設の託児所内にて多くのお子様と触れ合い、おむつ交換、遊び等、<br>
+            <span class="kaigyo_pc_765">HURU-HURUは、資格の有無だけでなく誠実な人柄、お子様の変化に気づき、</span>
+            <span class="kaigyo_pc_765">状況に合わせて対応ができるシッターの育成を目指しています。</span><br>
+            <span class="kaigyo_pc_765">そのため、併設の託児所内にて多くのお子様と触れ合い、おむつ交換、遊び等、</span>
             学ぶ場を提供しております。<br>
-            また、シッターとしての礼儀やマナーについても研修を行い<br>
-            お客様が安心してご利用頂けるよう努めています。<br>
+            <span class="kaigyo_pc_765">また、シッターとしての礼儀やマナーについても研修を行い</span>
+            お客様が安心してご利用頂けるよう努めています。
         </div>
 
         <div class="content1_flex">
@@ -113,14 +123,14 @@ get_template_part("template/right_menu_entry");
 
     <div class="content2">
 
-        <div class="content2_title">託児所での実践研修の実施</div>
+        <div class="content2_title">託児所での<span class="kaigyo">実践研修の実施</span></div>
 
         <div class="content2_img">
             <img src="<?php echo $img_fol_entry; ?>img4.png" alt="">
         </div>
 
         <div class="content2_text">
-            併設の託児所内にて実際に、いろんな年齢のお子様と触れ合い、<br>
+            <span class="kaigyo_pc_765">併設の託児所内にて実際に、いろんな年齢のお子様と触れ合い、</span>
             オムツ交換や食事介助、遊びなど現場を想定して行っています。
         </div>
 
@@ -240,21 +250,30 @@ get_template_part("template/right_menu_entry");
 
         <div class="content4_text">以下のいずれかを満たす方</div>
 
-        <table class="t1">
+        <div class="t1">
+            <div class="flex">
+                <div class="item1">1.以下の場所での勤務経験のある方(3年以上)</div>
+                <div class="item2">
+                    <span class="kaigyo">・保育園</span>
+                    <span class="kaigyo">・託児所</span>
+                    <span class="kaigyo">・幼稚園</span>
+                    <span class="kaigyo">・小学校</span>
+                    <span class="kaigyo">・病院</span>
 
-            <tr>
-                <th>1.以下の場所での勤務経験のある方(3年以上)</th>
-                <td>・保育園　・託児所　・幼稚園　・小学校　・病院</td>
-            </tr>
-            <tr>
-                <th>2.以下の資格を保有している方</th>
-                <td>
-                    ・保育士　・看護師　・保健師<br>
-                    ・ベビーシッター　・幼稚園教諭
-                </td>
-            </tr>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="item1">2.以下の資格を保有している方</div>
+                <div class="item2">
+                    <span class="kaigyo">・保育士</span>
+                    <span class="kaigyo">・看護師</span>
+                    ・保健師<br>
+                    <span class="kaigyo">・ベビーシッター</span>
+                    <span class="kaigyo">・幼稚園教諭</span>
+                </div>
+            </div>
+        </div>
 
-        </table>
 
         <div class="content4_title">
             <div class="content4_img2">
@@ -263,24 +282,25 @@ get_template_part("template/right_menu_entry");
             募集内容
         </div>
 
-        <table class="t2">
-            <tr>
-                <th>時給</th>
-                <td>1,200円～</td>
-            </tr>
-            <tr>
-                <th>勤務時間</th>
-                <td>24時間対応(ご希望に応じて)</td>
-            </tr>
-            <tr>
-                <th>勤務地</th>
-                <td>東京23区内</td>
-            </tr>
-            <tr>
-                <th>交通費</th>
-                <td>交通費支給(上限有)</td>
-            </tr>
-        </table>
+
+        <div class="t2">
+            <div class="flex">
+                <div class="item1">時給</div>
+                <div class="item2">1,200円～</div>
+            </div>
+            <div class="flex">
+                <div class="item1">勤務時間</div>
+                <div class="item2">24時間対応(ご希望に応じて)</div>
+            </div>
+            <div class="flex">
+                <div class="item1">勤務地</div>
+                <div class="item2">東京23区内</div>
+            </div>
+            <div class="flex">
+                <div class="item1">交通費</div>
+                <div class="item2">交通費支給(上限有)</div>
+            </div>
+        </div>
 
     </div>
 
@@ -295,7 +315,7 @@ get_template_part("template/right_menu_entry");
         </div>
 
         <div class="">
-            <form action="#entryform" class="form" method="post">
+            <form action="#entryform" class="form" method="post" enctype="multipart/form-data">
                 <div class="inner">
 
                     <?php if (!empty($success_message)) {
@@ -423,9 +443,11 @@ get_template_part("template/right_menu_entry");
                     <div class="row filerow">
                         <div class="heading">本人写真添付*</div>
                         <div class="col">
-                            <label for="file" class="file_btn">選択
-                                <input type="file" id="file" onchange="$('#fake_text_box').html($(this).val())">
-                            </label>
+                            <div class="btn_frame">
+                                <label for="file" class="file_btn">選択
+                                    <input type="file" id="file" name="picture" accept="image/jpeg, image/png" onchange="$('#fake_text_box').html($(this).val())">
+                                </label>
+                            </div>
                             <div id="fake_text_box">ファイルを選択してください。</div>
                         </div>
                     </div>
@@ -447,5 +469,5 @@ get_template_part("template/right_menu_entry");
     </div>
 </div>
 <?php
-get_footer();
+get_footer("s");
 ?>

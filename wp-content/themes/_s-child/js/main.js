@@ -71,3 +71,23 @@ function Checkchild3() {
         birth.setCustomValidity('');
     }
 }
+
+/*****************************************************
+ * header 下スクロールで非表示、上スクロールで表示
+ ******************************************************/
+$(function () {
+    var pos = 0;
+    // var header = $('header');
+    var header = $('#masthead');
+
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() < pos) {
+            //上スクロール時の処理
+            header.removeClass('hide');
+        } else {
+            //下スクロール時の処理
+            header.addClass('hide');
+        }
+        pos = $(this).scrollTop();
+    });
+});

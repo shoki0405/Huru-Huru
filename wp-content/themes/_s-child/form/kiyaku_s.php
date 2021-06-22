@@ -1,5 +1,5 @@
 <?php require_once("form.php"); ?>
-<div class="kiyaku_s">
+<div class="kiyaku_s row">
 
     <div class="kiyaku_title">個人情報の取り扱いについて</div>
 

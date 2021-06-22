@@ -26,3 +26,17 @@
         opacity: 1;
     }
 }
+
+.bottom_menu {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    z-index: 9995;
+    .flex {
+        display: flex;
+        justify-content: center;
+    }
+    @media screen and (max-width: 765px) {
+        display: block;
+    }
+}

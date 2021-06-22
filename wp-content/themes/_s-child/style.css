@@ -141,6 +141,15 @@ pc sp ひょうじひひょうじ 改行
   }
 }
 
+.kaigyo_pc_765 {
+  display: block;
+}
+@media screen and (max-width: 765px) {
+  .kaigyo_pc_765 {
+    display: inline;
+  }
+}
+
 /********************************
 詳しく見るボタン へこむやつ
 *********************************/
@@ -361,6 +370,9 @@ pc sp ひょうじひひょうじ 改行
   /********************************
   対応エリア
   *********************************/
+  /********************************
+  SNS
+  *********************************/
 }
 .front .heading {
   font-size: 2rem;
@@ -402,13 +414,12 @@ pc sp ひょうじひひょうじ 改行
 @media screen and (max-width: 1356px) {
   .front .mv_text {
     font-size: 1.2rem;
-    top: 8vw;
-    left: 10vw;
   }
 }
 @media screen and (max-width: 765px) {
   .front .mv_text {
-    top: 25vw;
+    top: 100vw;
+    left: 10vw;
     font-size: 1rem;
   }
 }
@@ -454,6 +465,14 @@ pc sp ひょうじひひょうじ 改行
   filter: alpha(opacity=70);
   /*ie6、7の透明度指定*/
   /*ちなみにie8の透明度指定はこれ→ -ms-filter: "alpha(opacity=70)";*/
+}
+.front .mv_under_img .hanahana_text {
+  color: #b378b6;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.front .mv_under_img .hanahana_text + img {
+  height: 160px;
 }
 .front .mv_under_text {
   margin-bottom: 40px;
@@ -833,6 +852,32 @@ pc sp ひょうじひひょうじ 改行
     right: 1vw;
   }
 }
+.front .snss {
+  margin: 40px auto;
+  max-width: 900px;
+  position: relative;
+}
+.front .snss .twitter {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 27%;
+  left: 18%;
+}
+.front .snss .insta {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 40%;
+  left: 41%;
+}
+.front .snss a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 .entry {
   /********************************
@@ -865,15 +910,26 @@ pc sp ひょうじひひょうじ 改行
   .entry .entry_mv .entry_mv_content {
     left: 5vw;
     text-align: left;
+    bottom: 10vw;
   }
 }
 .entry .entry_mv .entry_mv_title {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 765px) {
+  .entry .entry_mv .entry_mv_title {
+    font-size: 2.5rem;
+  }
+}
 .entry .entry_mv .entry_mv_text {
-  font-size: 20px;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 765px) {
+  .entry .entry_mv .entry_mv_text {
+    font-size: 1rem;
+  }
 }
 .entry .content1 {
   padding: 0 20px;
@@ -945,6 +1001,11 @@ pc sp ひょうじひひょうじ 改行
   margin-bottom: 40px;
   line-height: 2.5;
 }
+@media screen and (max-width: 765px) {
+  .entry .content2_text {
+    text-align: left;
+  }
+}
 .entry .content2_flex {
   display: flex;
   justify-content: center;
@@ -956,12 +1017,12 @@ pc sp ひょうじひひょうじ 改行
 }
 .entry .content2_item {
   position: relative;
-  margin: 0 40px;
+  margin: 0 2%;
 }
 @media screen and (max-width: 765px) {
   .entry .content2_item {
     margin: 0 auto;
-    width: 90%;
+    width: 350px;
     margin-bottom: 40px;
   }
 }
@@ -969,6 +1030,12 @@ pc sp ひょうじひひょうじ 改行
   text-align: left;
   padding: 0 40px;
   max-height: 480px;
+}
+@media screen and (max-width: 765px) {
+  .entry .entry_training {
+    max-height: 100%;
+    padding: 40px;
+  }
 }
 .entry .entry_training_back {
   position: absolute;
@@ -1095,6 +1162,57 @@ pc sp ひょうじひひょうじ 改行
   background-color: #f8edd8;
   position: relative;
 }
+.entry .content4 .t1 {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+.entry .content4 .t1 .item1 {
+  background-color: #f0a900;
+  width: 48%;
+  padding: 15px;
+  margin: 1%;
+  color: #fff;
+  font-weight: bold;
+}
+.entry .content4 .t1 .item2 {
+  background-color: #fff;
+  width: 48%;
+  padding: 15px;
+  margin: 1%;
+}
+.entry .content4 .t2 {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+.entry .content4 .t2 .item1 {
+  background-color: #f0a900;
+  width: 48%;
+  padding: 15px;
+  margin: 1%;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+.entry .content4 .t2 .item2 {
+  width: 48%;
+  padding: 15px;
+  margin: 1%;
+}
+.entry .content4 .flex {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 765px) {
+  .entry .content4 .flex {
+    display: block;
+  }
+  .entry .content4 .flex .item1,
+.entry .content4 .flex .item2 {
+    width: 90%;
+    text-align: left;
+    margin: 0 auto;
+  }
+}
 .entry .content4_title {
   margin: 0 auto;
   font-size: 2rem;
@@ -1118,14 +1236,6 @@ pc sp ひょうじひひょうじ 改行
 .entry .content4 td {
   padding: 10px 20px;
   text-align: left;
-}
-.entry .content4 .t1 {
-  margin: 0 auto;
-  margin-bottom: 80px;
-  width: 100%;
-  max-width: 950px;
-  border-collapse: separate;
-  border-spacing: 10px 10px;
 }
 .entry .content4 .t1 td {
   background-color: #fff;
@@ -1158,12 +1268,18 @@ header {
   margin: 0 auto;
   padding-top: 20px;
   text-align: center;
+  position: fixed;
+  transition: 1s;
+  z-index: 1;
   /********************************
   ハンバーガーボタン
   *********************************/
   /********************************
   ハンバーガーメニュー内容
   *********************************/
+}
+header.hide {
+  transform: translateY(-120px);
 }
 header .header_inner {
   max-width: 1920px;
@@ -1288,6 +1404,10 @@ header #ham .reservation_k {
   background-color: #a1d073;
   padding: 5px 10px;
   border-radius: 50px;
+}
+
+.header_padding {
+  padding-top: 120px;
 }
 
 footer {
@@ -1691,6 +1811,22 @@ HURU-HURUとは
     opacity: 1;
   }
 }
+.bottom_menu {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 9995;
+}
+.bottom_menu .flex {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 765px) {
+  .bottom_menu {
+    display: block;
+  }
+}
+
 .post_frame {
   max-width: 1000px;
   margin: 0 auto;
@@ -2550,6 +2686,11 @@ HURU-HURUとは
   margin-right: 0;
   margin-left: auto;
 }
+@media screen and (max-width: 765px) {
+  .kiyaku_s {
+    width: 100%;
+  }
+}
 .kiyaku_s textarea.kiyaku_text {
   width: 100%;
   padding: 10px;
@@ -2936,6 +3077,10 @@ HURU-HURUとは
 }
 .entry_form .filerow {
   margin: 80px auto;
+}
+.entry_form .filerow .btn_frame {
+  margin: 0 auto;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,15 @@ header {
     margin: 0 auto;
     padding-top: 20px;
     text-align: center;
+
+    position: fixed;
+    transition: 1s;
+    z-index: 1;
+
+    &.hide {
+        transform: translateY(-120px);
+    }
+
     .header_inner {
         max-width: 1920px;
     }
@@ -134,4 +143,7 @@ header {
             border-radius: 50px;
         }
     }
+}
+.header_padding {
+    padding-top: 120px;
 }

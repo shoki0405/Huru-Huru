@@ -1,3 +1,4 @@
+@use "variables" as var;
 .entry {
     /********************************
     シッター募集トップ
@@ -16,15 +17,22 @@
             @media screen and (max-width: 765px) {
                 left: 5vw;
                 text-align: left;
+                bottom: 10vw;
             }
         }
         .entry_mv_title {
             font-weight: bold;
-            font-size: 40px;
+            font-size: 3rem;
             margin-bottom: 20px;
+            @media screen and (max-width: 765px) {
+                font-size: 2.5rem;
+            }
         }
         .entry_mv_text {
-            font-size: 20px;
+            font-size: 1.2rem;
+            @media screen and (max-width: 765px) {
+                font-size: 1rem;
+            }
         }
     }
     .content1 {
@@ -94,6 +102,9 @@
     .content2_text {
         margin-bottom: 40px;
         line-height: 2.5;
+        @media screen and (max-width: 765px) {
+            text-align: left;
+        }
     }
     .content2_flex {
         display: flex;
@@ -104,10 +115,10 @@
     }
     .content2_item {
         position: relative;
-        margin: 0 40px;
+        margin: 0 2%;
         @media screen and (max-width: 765px) {
             margin: 0 auto;
-            width: 90%;
+            width: 350px;
             margin-bottom: 40px;
         }
     }
@@ -115,6 +126,10 @@
         text-align: left;
         padding: 0 40px;
         max-height: 480px;
+        @media screen and (max-width: 765px) {
+            max-height: 100%;
+            padding: 40px;
+        }
     }
     .entry_training_back {
         position: absolute;
@@ -240,7 +255,58 @@
         padding: 80px 10px;
         background-color: #f8edd8;
         position: relative;
+        .t1 {
+            max-width: 1000px;
+            margin: 0 auto 40px;
+            .item1 {
+                background-color: var.$orange;
+                width: 48%;
+                padding: 15px;
+                margin: 1%;
+                color: var.$white;
+                font-weight: bold;
+            }
+            .item2 {
+                background-color: var.$white;
+                width: 48%;
+                padding: 15px;
+                margin: 1%;
+            }
+        }
+        .t2 {
+            max-width: 800px;
+            margin: 0 auto 40px;
+
+            .item1 {
+                background-color: var.$orange;
+                width: 48%;
+                padding: 15px;
+                margin: 1%;
+                color: var.$white;
+                font-weight: bold;
+                text-align: center;
+            }
+            .item2 {
+                width: 48%;
+                padding: 15px;
+                margin: 1%;
+            }
+        }
+        .flex {
+            display: flex;
+            justify-content: center;
+            @media screen and (max-width: 765px) {
+                display: block;
+                .item1,
+                .item2 {
+                    width: 90%;
+                    text-align: left;
+                    margin: 0 auto;
+                }
+            }
+        }
     }
+
     .content4_title {
         margin: 0 auto;
         font-size: 2rem;
@@ -265,14 +331,14 @@
         padding: 10px 20px;
         text-align: left;
     }
-    .content4 .t1 {
-        margin: 0 auto;
-        margin-bottom: 80px;
-        width: 100%;
-        max-width: 950px;
-        border-collapse: separate;
-        border-spacing: 10px 10px;
-    }
+    // .content4 .t1 {
+    //     margin: 0 auto;
+    //     margin-bottom: 80px;
+    //     width: 100%;
+    //     max-width: 950px;
+    //     border-collapse: separate;
+    //     border-spacing: 10px 10px;
+    // }
     .content4 .t1 td {
         background-color: #fff;
     }
