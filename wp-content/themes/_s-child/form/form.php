@@ -12,6 +12,8 @@ define("YOYAKU_M", 2);
 define("CONTACT", 3);
 define("ENTRY", 4);
 define("TMP", "./wp-content/themes/_s-child/form/tmp/");
+// define("FROMMAIL", "info@sitters.co.jp");
+define("FROMMAIL", "wa.nozomu@gmail.com");
 
 function view_require($url)
 {
@@ -31,16 +33,34 @@ function send($type, $data, $file = null)
     // ヘッダー
     $header = "MIME-Version: 1.0\n";
     $header = "Content-Type: multipart/mixed;boundary=\"__BOUNDARY__\"\n";
-    $header .= "From: {$data["email"]}\n";
-    $header .= "Reply-To: {$data["email"]}\n";
+    $header .= "From: " . FROMMAIL . "\n";
+    $header .= "Reply-To: " . FROMMAIL . "\n";
 
-    $subject = subject($type);
+    $subject1 = subject1($type);
+    $subject2 = subject2($type);
     $body = body($type, $data, $file);
 
-    return mb_send_mail($data["email"], $subject, $body, $header);
+    // 運営へメール
+    mb_send_mail($data["email"], $subject2, $body, $header);
+
+    // 訪問者へメール
+    return mb_send_mail($data["email"], $subject1, $body, $header);
 }
 
-function subject($type)
+function subject1($type)
+{
+    if ($type === YOYAKU_B) {
+        return "[HURU-HURU]非会員よりシッターサービスの予約申し込みがありました";
+    } elseif ($type === YOYAKU_M) {
+        return "[HURU-HURU]会員よりシッターサービスの予約申し込みがありました";
+    } elseif ($type === CONTACT) {
+        return "[HURU-HURU]お問い合わせがありました";
+    } elseif ($type === ENTRY) {
+        return "[HURU-HURU]シッターに応募がありました";
+    }
+}
+
+function subject2($type)
 {
     if ($type === 1 || $type === 2) {
         return "[HURU-HURU]シッターサービスの予約申込ありがとうございます";

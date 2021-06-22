@@ -11,7 +11,7 @@ $img_fol_footer = get_stylesheet_directory_uri() . "/img/footer/";
         <div class="list">
             <div class="item front_btn_orange">
                 初めて予約する
-                <a href="" class="a"></a>
+                <a href="<?php echo esc_url(home_url('/reservation_biggner')); ?>" class="a"></a>
             </div>
             <div class="item">
                 <div class="tel_des">当日分(前日17時以降)の予約</div>
@@ -25,7 +25,7 @@ $img_fol_footer = get_stylesheet_directory_uri() . "/img/footer/";
     <div class="entry_banner">
         <img class="pc" src="<?php echo $img_fol_footer; ?>entry_banner.png" alt="">
         <img class="sp" src="<?php echo $img_fol_footer; ?>entry_banner_sp.png" alt="">
-        <a href="" class="a"></a>
+        <a href="<?php echo esc_url(home_url('/entry')); ?>" class="a"></a>
     </div>
     <!-- </div> -->
 </div>

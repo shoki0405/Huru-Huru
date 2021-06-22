@@ -2944,7 +2944,7 @@ HURU-HURUとは
   width: 60px;
   height: 60px;
   top: -40px;
-  right: -50px;
+  right: 0;
   position: absolute;
   object-fit: contain;
 }
@@ -2952,6 +2952,7 @@ HURU-HURUとは
   width: 40px;
   position: absolute;
   object-fit: contain;
+  top: 50%;
 }
 .contact .qas .accordion {
   width: 100%;
