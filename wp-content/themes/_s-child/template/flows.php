@@ -13,7 +13,7 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
             <div class="dot_back flows_h">ご予約</div>
             <div class="flows_des">
                 WEBにて申し込みをお願いします。<br>
-                <a href="">ご予約はこちら</a><br><br>
+                <a href="<?php echo esc_url(home_url('/reserve-visitor-edit1')); ?>">ご予約はこちら</a><br><br>
                 お申し込み後、手配の状況を含めてこちらからメールにてご連絡いたします。
             </div>
         </div>

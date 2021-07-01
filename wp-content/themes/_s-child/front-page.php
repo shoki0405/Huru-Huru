@@ -1,6 +1,5 @@
 <?php
 get_header();
-
 get_template_part("template/right_menu");
 get_template_part("template/bottom_menu");
 $img_fol = get_stylesheet_directory_uri() . "/img/";
@@ -9,10 +8,7 @@ $img_fol_front_sp = get_stylesheet_directory_uri() . "/img/front_sp/";
 $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
 ?>
 
-
-
 <div class="front">
-
     <div class="mv">
         <div class="mv_text">
             <div class="mv_text_orange">
@@ -21,20 +17,16 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
             <div class="mv_text_orange">シッターサービスを</div>
             <div>大切なお子様に愛情をもって<br>寄り添います</div>
         </div>
-
         <div class="mv_backimg">
             <img class="pc_765" src="<?php echo $img_fol_front; ?>mv.png" alt="">
             <img class="tb_765" src="<?php echo $img_fol_front_sp; ?>mv.png" alt="">
         </div>
-
     </div>
-
-
     <div class="mv_under front_content">
         <div class="mv_under_img">
             <img class="pc" src="<?php echo $img_fol_front; ?>tokyobaby_banner.png" alt="">
             <img class="sp" src="<?php echo $img_fol_front_sp; ?>tokyobaby_banner.png" alt="">
-            <a href="" class="a"></a>
+            <a href="<?php echo esc_url(home_url('/price#tokyoriyo')); ?>" class="a"></a>
         </div>
         <div class="heading">
             ハートフルな<span class="kaigyo_765">シッターサービスを</span>
@@ -55,12 +47,11 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
         </div>
         <div class="mv_under_img">
             <div class="hanahana_text">24時間対応託児所花花はこちらから</div>
-            <img class="pc" src="<?php echo $img_fol_front; ?>kizz.svg" alt="">
+            <img class="pc" src="<?php echo $img_fol_front; ?>kizz.png" alt="">
             <img class="sp" src="<?php echo $img_fol_front_sp; ?>kizz.png" alt="">
             <a href="https://www.kizz-hana-hana.jp/" class="a" target="_blank"></a>
         </div>
     </div>
-
     <div class="dot_back">
         <div class="front_news front_content">
             <div class="heading">
@@ -78,7 +69,6 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
                 query_posts([
                     'posts_per_page' => 3,
                 ]);
-
                 //News記事取得ループ
                 if (have_posts()) :
                     while (have_posts()) :
@@ -97,7 +87,6 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
             </div>
         </div>
     </div>
-
     <div class="front_features">
         <div class="back_cloud_top">
             <img class="pc_765" src="<?php echo $img_fol; ?>back_cloud_top.png" alt="">
@@ -186,8 +175,6 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
             <img class="tb_765" src="<?php echo $img_fol; ?>back_cloud_bottom_sp.png" alt="">
         </div>
     </div>
-
-
     <div class="dot_back">
         <div class="front_member front_content">
             <div class="itemimg1">
@@ -201,7 +188,10 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
             </div>
             <div class="list_frame">
                 <div class="des">
-                    人柄を重視し、資格保有者または保育経験者(3年以上)のみ採用し、併設託児所内で研修を通過したシッターのみ派遣しております。<br>
+                    <span class="kaigyo_pc_765">
+                        人柄を重視し、資格保有者または保育経験者を採用し、併設託児所内で研修を通過した
+                    </span>
+                    シッターのみ派遣しております。<br>
                     その中からお客様のニーズに合ったシッターを責任をもって選定致します。
                 </div>
                 <div class="list">
@@ -284,10 +274,12 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
 
     <div class="pc_765 snss">
         <div class="twitter">
-            <a href=""></a>
+            <img src="<?php echo $img_fol_front; ?>twitter.svg" alt="">
+            <a href="https://twitter.com/Huru2626Huru" target="_blank"></a>
         </div>
         <div class="insta">
-            <a href=""></a>
+            <img src="<?php echo $img_fol_front; ?>insta.svg" alt="">
+            <a href="https://www.instagram.com/huruhuru_j/?hl=ja" target="_blank"></a>
         </div>
         <img src="<?php echo $img_fol_front; ?>sns.svg" alt="">
     </div>

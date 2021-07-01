@@ -36,6 +36,8 @@
         width: calc(100% - 270px);
         background-color: var.$input_back;
         border: none;
+        font-size: 16px;
+        // transform: scale(calc(15 / 16));
         @media screen and (max-width: 850px) {
             width: 100%;
         }
@@ -76,7 +78,8 @@
     }
     .submit_frame {
         margin: 40px auto;
-        max-width: 300px;
+        width: 350px;
+        text-align: center;
         .submit {
             background-color: var.$orange;
             padding: 20px 40px;
@@ -88,6 +91,58 @@
             border-radius: 50px;
             letter-spacing: 5px;
             width: 100%;
+            position: relative;
+            &:hover {
+                cursor: pointer;
+            }
+            i {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20px;
+            }
+        }
+    }
+    .btn-back1 {
+        color: var.$white;
+        background-color: #9b9a9a;
+        border: none;
+        padding: 15px 0;
+        width: 300px;
+        border-radius: 50px;
+        position: relative;
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 40px auto;
+        &:hover {
+            cursor: pointer;
+        }
+        i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20px;
+        }
+    }
+    .btn-back2 {
+        color: var.$white;
+        background-color: #b3b2b2;
+        border: none;
+        padding: 15px 0;
+        width: 300px;
+        border-radius: 50px;
+        position: relative;
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 40px auto;
+        &:hover {
+            cursor: pointer;
+        }
+        i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20px;
         }
     }
     .radio {
@@ -147,6 +202,16 @@
             }
         }
     }
+}
+.success_message {
+    margin: 20px auto;
+    max-width: 1000px;
+    color: #0f0;
+}
+.error_message {
+    margin: 20px auto;
+    max-width: 1000px;
+    color: #f00;
 }
 /********************************
 規約部分
@@ -291,9 +356,12 @@
                     height: 5px;
                     background-color: #f0a900;
                     position: absolute;
-                    top: 14%;
+                    top: 18px;
                     left: 50%;
                     z-index: -1;
+                    @media screen and (max-width: 765px) {
+                        top: 13px;
+                    }
                 }
                 &:last-child::after {
                     display: none;
@@ -306,6 +374,10 @@
                 width: 40px;
                 height: 40px;
                 background-color: var.$orange;
+                @media screen and (max-width: 765px) {
+                    width: 30px;
+                    height: 30px;
+                }
                 div {
                     background-color: #fff;
                     width: 60%;
@@ -400,6 +472,9 @@
             }
         }
     }
+    .complate_text {
+        margin: 40px 20px;
+    }
 }
 
 /********************************
@@ -450,12 +525,23 @@
                 background-color: var.$orange;
                 text-align: center;
                 vertical-align: middle;
+                i {
+                    transform: rotateZ(180deg);
+                    transition: 0.3s;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
             }
             .cat {
                 font-weight: bold;
                 font-size: 1.2rem;
                 vertical-align: middle;
                 padding-left: 20px;
+            }
+            &.selected .arrow i {
+                transform: rotateZ(0deg);
+                transition: 0.3s;
             }
         }
         .accordion_section {

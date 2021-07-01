@@ -39,8 +39,8 @@
             @media screen and (max-width: 765px) {
                 max-width: 100%;
             }
-            &:nth-of-type(2) {
-                top: -54px;
+            &:nth-of-type(3) {
+                top: -44px;
                 @media screen and (max-width: 1000px) {
                     top: 0;
                 }
@@ -82,16 +82,20 @@
                     left: 75%;
                 }
             }
-            .list_item {
+            .list {
                 display: inline-block;
                 width: 45%;
+                vertical-align: top;
                 @media screen and (max-width: 765px) {
                     width: 100%;
                 }
             }
+            .list_item {
+                width: 100%;
+            }
             .des {
                 font-size: 12px;
-                margin-bottom: 20px;
+                margin: 20px auto;
             }
         }
         .item2 {
@@ -118,9 +122,6 @@
             font-size: 1.2rem;
             font-weight: bold;
             margin: 10px auto;
-        }
-        .list {
-            margin-bottom: 20px;
         }
         .list_item span {
             color: #f0a900;

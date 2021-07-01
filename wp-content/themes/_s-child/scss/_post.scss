@@ -1,24 +1,31 @@
+@use "variables" as var;
 .post_frame {
     max-width: 1000px;
     margin: 0 auto;
     margin-bottom: 80px;
     padding: 80px;
+    @media screen and (max-width: 765px) {
+        padding: 20px;
+    }
 }
 
 .post_title {
     font-size: 1.8rem;
     font-weight: bold;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
-
+.post_date {
+    color: var.$orange;
+    font-size: 0.9rem;
+}
 .post_content {
-    margin-bottom: 80px;
+    margin: 40px auto 80px;
 }
 
 .back_news {
     font-size: 1.2rem;
-    background-color: #f0a900;
-    color: #fff;
+    background-color: var.$orange;
+    color: var.$white;
     border-radius: 50px;
     width: 300px;
     margin: 0 auto;
@@ -31,6 +38,9 @@
     margin: 0 auto;
     margin-bottom: 80px;
     padding: 80px;
+    @media screen and (max-width: 765px) {
+        padding: 20px;
+    }
 }
 
 .page_title {

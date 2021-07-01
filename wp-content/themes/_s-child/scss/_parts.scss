@@ -1,17 +1,85 @@
+@use "variables" as var;
+/********************************
+ライトメニュー
+*********************************/
 .right_list {
     position: fixed;
     right: 0;
-    top: 540px;
-    z-index: 9997;
+    bottom: 5vh;
+    z-index: 9996;
+    animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
     @media screen and (max-width: 765px) {
         display: none;
     }
+    .right_item {
+        width: 100px;
+        height: 100px;
+        color: var.$white;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+        line-height: 1.2;
+        letter-spacing: 2px;
+        img {
+            height: 40px;
+            margin: 6px auto;
+            object-fit: contain;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .menu_visitor {
+        background-color: var.$violet;
+    }
+    .menu_member {
+        background-color: var.$purple;
+    }
+    .menu_top {
+        background-color: var.$black;
+        opacity: 0.6;
+        i {
+            font-size: 2.5rem;
+            margin: 20px auto 10px;
+        }
+    }
 }
-.right_item {
-    width: 100px;
-}
-.right_list {
+/********************************
+シッター募集　ライトメニュー
+*********************************/
+.right_list_entry {
+    position: fixed;
+    right: 3vw;
+    bottom: 5vh;
+    z-index: 9996;
     animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+    .right_item {
+        width: 100px;
+        height: 100px;
+        color: var.$white;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+        line-height: 1.2;
+        letter-spacing: 2px;
+        border-radius: 100%;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .menu_entry {
+        background-color: var.$orange;
+        padding: 20px;
+        font-size: 1.5rem;
+    }
+    .menu_top {
+        background-color: var.$black;
+        opacity: 0.6;
+        i {
+            font-size: 2.5rem;
+            margin: 20px auto 10px;
+        }
+    }
 }
 @keyframes slideIn {
     0% {
@@ -26,17 +94,73 @@
         opacity: 1;
     }
 }
-
+/********************************
+スマホ　ボトムメニュー
+*********************************/
 .bottom_menu {
     display: none;
     position: fixed;
     bottom: 0;
     z-index: 9995;
+    width: 100%;
+    @media screen and (max-width: 765px) {
+        display: block;
+    }
+    .menu_top {
+        width: 20vw;
+        height: 20vw;
+        color: var.$white;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+        line-height: 1.2;
+        letter-spacing: 1px;
+        border-radius: 100%;
+        background-color: var.$black;
+        opacity: 0.6;
+        margin-right: 3%;
+        margin-left: auto;
+        margin-bottom: 3%;
+        &:hover {
+            cursor: pointer;
+        }
+        i {
+            font-size: 5vw;
+            margin: 4vw auto 2vw;
+        }
+    }
     .flex {
         display: flex;
         justify-content: center;
-    }
-    @media screen and (max-width: 765px) {
-        display: block;
+        .bottom_item {
+            width: 25vw;
+            height: 25vw;
+            color: var.$white;
+            text-align: center;
+            font-weight: bold;
+            line-height: 1.2;
+            letter-spacing: 1px;
+            margin: 0 auto;
+            img {
+                height: 43%;
+                margin: 6% auto;
+                object-fit: contain;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .menu_visitor {
+            background-color: var.$violet;
+        }
+        .menu_member {
+            background-color: var.$purple;
+        }
+        .menu_price {
+            background-color: var.$green;
+        }
+        .menu_entry {
+            background-color: var.$beige;
+        }
     }
 }

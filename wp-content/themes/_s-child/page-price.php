@@ -2,6 +2,7 @@
 get_header();
 
 get_template_part("template/right_menu");
+get_template_part("template/bottom_menu");
 $img_fol = get_stylesheet_directory_uri() . "/img/";
 $img_fol_price = get_stylesheet_directory_uri() . "/img/price/";
 ?>
@@ -42,7 +43,10 @@ $img_fol_price = get_stylesheet_directory_uri() . "/img/price/";
             </tr>
             <tr>
                 <td>入会金</td>
-                <td class="t_col2">50,000円</td>
+                <td class="t_col2 td_nyukai">
+                    50,000円
+                    <img src="<?php echo $img_fol_price; ?>num2.png" alt="">
+                </td>
                 <td>0円</td>
             </tr>
             <tr>
@@ -104,6 +108,10 @@ $img_fol_price = get_stylesheet_directory_uri() . "/img/price/";
                 <td class="t_col2">2,000円/時<span class="kaigyo">(延長500円/15分)/+交通費</span></td>
             </tr>
             <tr>
+                <td>沐浴・シャワー</td>
+                <td class="t_col2">500円(シッターにより可)</td>
+            </tr>
+            <tr>
                 <td>買い物</td>
                 <td class="t_col2">1,500円/回<span class="kaigyo">(1時間以内の範囲)</span></td>
             </tr>
@@ -153,7 +161,7 @@ $img_fol_price = get_stylesheet_directory_uri() . "/img/price/";
 
 
 
-    <div class="price3">
+    <div class="price3" id="tokyoriyo">
         <div class="inner">
             <div class="title">東京都ベビーシッター<span class="kaigyo">利用支援</span></div>
 
@@ -243,7 +251,7 @@ $img_fol_price = get_stylesheet_directory_uri() . "/img/price/";
                     <img src="<?php echo $img_fol_price; ?>price3_num2.svg" alt="">
                 </div>
                 <div>
-                    HURU-HURUに未登録の方は、<a href="">こちら</a>から登録をお願いします。
+                    HURU-HURUに未登録の方は、<a href="<?php echo esc_url(home_url('/reserve-visitor-edit1')); ?>">こちら</a>から登録をお願いします。
                 </div>
             </div>
 
@@ -267,7 +275,7 @@ $img_fol_price = get_stylesheet_directory_uri() . "/img/price/";
                 </div>
                 <div class="under_banner2">
                     東京都専用ホームページへ
-                    <a href=""></a>
+                    <a href="https://www.fukushihoken.metro.tokyo.lg.jp/kodomo/hoiku/bs/bs3nendo.html" class="a" target="_blank"></a>
                 </div>
             </div>
         </div>

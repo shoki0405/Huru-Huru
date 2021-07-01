@@ -2,6 +2,7 @@
 get_header();
 
 get_template_part("template/right_menu");
+get_template_part("template/bottom_menu");
 $img_fol = get_stylesheet_directory_uri() . "/img/";
 $img_fol_service = get_stylesheet_directory_uri() . "/img/service/";
 $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
@@ -30,9 +31,10 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
                     <img src="<?php echo $img_fol_service; ?>content1_2.png" alt="">
                 </div>
                 <div class="des">
-                    HURU-HURUは、資格の有無だけでなく誠実な人柄、お子様の変化に気づき、状況に合わせて対応ができるシッターの育成を目指しています。<br>
-                    そのため、併設の託児所内にて多くのお子様と触れ合い、おむつ交換、遊び等、学ぶ場を提供しております。<br>
-                    また、シッターとしての礼儀やマナーについても研修を行いお客様が安心してご利用頂けるよう努めています。
+                    ベビーシッターサービスのほかに託児所も併設しています。お友達と一緒に過ごすことで、家庭ではできない経験を得ることができます。<br>
+                    お客様のご要望に応じ、シッターサービスと併せてご利用いただけます。<br><br>
+
+                    <span>＊HURU-HURU会員は託児所も会員としてご利用いただけます。</span>
                 </div>
             </div>
             <div class="item">
@@ -40,10 +42,11 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
                     <img src="<?php echo $img_fol_service; ?>content1_3.png" alt="">
                 </div>
                 <div class="des">
-                    ベビーシッターサービスのほかに託児所も併設しています。お友達と一緒に過ごすことで、家庭ではできない経験を得ることができます。<br>
-                    お客様のご要望に応じ、シッターサービスと併せてご利用いただけます。<br><br>
+                    HURU-HURUは、資格の有無だけでなく誠実な人柄、お子様の変化に気づき、状況に合わせて対応ができるシッターの育成を目指しています。<br>
+                    そのため、併設の託児所内にて多くのお子様と触れ合い、おむつ交換、遊び等、学ぶ場を提供しております。<br>
+                    また、シッターとしての礼儀やマナーについても研修を行いお客様が安心してご利用頂けるよう努めています。
 
-                    <span>＊HURU-HURU会員は託児所も会員としてご利用いただけます。</span>
+
                 </div>
             </div>
         </div>
@@ -61,21 +64,22 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
                 <div class="item_title">できること</div>
                 <div class="list">
                     <div class="list_item"><span>●</span>ご自宅でのシッティング</div>
-                    <div class="list_item"><span>●</span>早朝、夜間利用</div>
-
                     <div class="list_item"><span>●</span>外遊び</div>
-                    <div class="list_item"><span>●</span>託児所利用</div>
-
                     <div class="list_item"><span>●</span>食事介助</div>
-                    <div class="list_item"><span>●</span>病児保育</div>
-
                     <div class="list_item"><span>●</span>買い物</div>
-                    <div class="list_item"><span>●</span>投薬(投薬依頼書に基づき)</div>
-
                     <div class="list_item"><span>●</span>送迎</div>
                 </div>
+                <div class="list">
+                    <div class="list_item"><span>●</span>沐浴・シャワー(シッターにより可)</div>
+                    <div class="list_item"><span>●</span>早朝、夜間利用</div>
+                    <div class="list_item"><span>●</span>託児所利用</div>
+                    <div class="list_item"><span>●</span>病児保育</div>
+                    <div class="list_item"><span>●</span>投薬(投薬依頼書に基づき)</div>
+                </div>
                 <div class="des">
-                    ※買い物に関しましては保育時間内は致しません。保育時間前後にご利用ください。シッティングに支障が出る範囲のものや、お子様の状況によっては難しい場合もございます。ご了承ください。
+                    ※買い物に関しましては保育時間内は致しません。
+                    保育時間前後にご利用ください。シッティングに支障が出る範囲のものや、
+                    お子様の状況によっては難しい場合もございます。ご了承ください。
                 </div>
             </div>
             <div class="item2">
@@ -83,7 +87,6 @@ $img_fol_flow = get_stylesheet_directory_uri() . "/img/flow/";
                     <img src="<?php echo $img_fol_service; ?>service_content2_2.png" alt="">
                 </div>
                 <div class="item_title">できないこと</div>
-                <div class="list_item"><span>●</span>沐浴・シャワー</div>
                 <div class="list_item"><span>●</span>調理</div>
                 <div class="list_item"><span>●</span>掃除・洗濯</div>
                 <div class="list_item"><span>●</span>車・自動車の運転</div>

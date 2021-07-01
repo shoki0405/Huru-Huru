@@ -4,27 +4,30 @@ footer {
     text-align: center;
     position: relative;
     background-color: var.$cream;
-    .img {
-        width: 60px;
-        position: absolute;
-        top: 130px;
-        left: 60%;
-        @media screen and (max-width: 1000px) {
-            top: 100px;
-            left: 70%;
-        }
-        @media screen and (max-width: 765px) {
-            width: 50px;
-            top: 55px;
-            left: 80%;
-        }
+    @media screen and (max-width: 765px) {
+        margin-bottom: 25vw;
     }
     .content {
         max-width: 1000px;
         margin: 0 auto;
         padding-bottom: 40px;
+        position: relative;
         @media screen and (max-width: 1000px) {
             padding-top: 40px;
+        }
+        .img {
+            width: 60px;
+            position: absolute;
+            top: -55px;
+            left: 30%;
+            @media screen and (max-width: 1000px) {
+                top: -40px;
+            }
+            @media screen and (max-width: 765px) {
+                width: 50px;
+                top: 0px;
+                left: 18%;
+            }
         }
     }
     .logo {
@@ -32,13 +35,36 @@ footer {
         font-size: 2rem;
         margin-bottom: 40px;
     }
-    .nav1 {
+    .nav {
         display: flex;
         margin-bottom: 40px;
         justify-content: center;
         @media screen and (max-width: 1000px) {
             display: block;
             margin-bottom: 20px;
+        }
+        .item {
+            margin: 0 20px;
+            @media screen and (max-width: 1000px) {
+                margin: 0 auto;
+                width: 280px;
+                margin-bottom: 20px;
+            }
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+    .nav_sns {
+        display: flex;
+        margin-bottom: 40px;
+        justify-content: center;
+        .item {
+            margin: 0 20px;
+            img {
+                object-fit: contain;
+                width: 30px;
+            }
         }
     }
     .btns {
@@ -49,50 +75,33 @@ footer {
             display: block;
             margin-bottom: 20px;
         }
-    }
-    .nav2 {
-        display: flex;
-        margin-bottom: 40px;
-        justify-content: center;
-        @media screen and (max-width: 1000px) {
-            display: block;
-            margin-bottom: 20px;
+        .btn_orange {
+            color: #fff;
+            background-color: #f0a900;
+            border-radius: 50px;
+            margin-left: 20px;
+            margin-right: auto;
+            width: 200px;
+            padding: 10px;
+            @media screen and (max-width: 1000px) {
+                margin: 0 auto;
+                width: 280px;
+                margin-bottom: 20px;
+            }
         }
-    }
-    .item {
-        margin: 0 20px;
-        @media screen and (max-width: 1000px) {
-            margin: 0 auto;
-            width: 280px;
-            margin-bottom: 20px;
-        }
-    }
-    .btn_orange {
-        color: #fff;
-        background-color: #f0a900;
-        border-radius: 50px;
-        margin-right: 20px;
-        margin-left: auto;
-        width: 200px;
-        padding: 10px;
-        @media screen and (max-width: 1000px) {
-            margin: 0 auto;
-            width: 280px;
-            margin-bottom: 20px;
-        }
-    }
-    .btn_green {
-        color: #fff;
-        background-color: #a1d073;
-        border-radius: 50px;
-        margin-left: 20px;
-        margin-right: auto;
-        width: 200px;
-        padding: 10px 20px;
-        @media screen and (max-width: 1000px) {
-            margin: 0 auto;
-            width: 280px;
-            margin-bottom: 40px;
+        .btn_green {
+            color: #fff;
+            background-color: #a1d073;
+            border-radius: 50px;
+            margin-right: 20px;
+            margin-left: auto;
+            width: 200px;
+            padding: 10px 20px;
+            @media screen and (max-width: 1000px) {
+                margin: 0 auto;
+                width: 280px;
+                margin-bottom: 40px;
+            }
         }
     }
     .copyright {

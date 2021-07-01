@@ -3,7 +3,7 @@ get_header();
 
 get_template_part("template/right_menu");
 $img_fol = get_stylesheet_directory_uri() . "/img/";
-$img_fol_overview = get_stylesheet_directory_uri() . "/img/overview/";
+$img_fol_news = get_stylesheet_directory_uri() . "/img/news/";
 ?>
 
 <div class="post_frame">
@@ -11,6 +11,13 @@ $img_fol_overview = get_stylesheet_directory_uri() . "/img/overview/";
     <div class="post_title">
         <?php the_title(); ?>
     </div>
+
+    <div class="post_date">
+        <?php echo get_the_date("Y/m/d"); ?>
+    </div>
+
+    <img class="pc" src="<?php echo $img_fol_news; ?>single_border.png" alt="">
+    <img class="sp" src="<?php echo $img_fol_news; ?>single_border_sp.png" alt="">
 
     <div class="post_content">
         <?php the_content(); ?>

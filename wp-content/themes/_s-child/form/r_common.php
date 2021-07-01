@@ -34,9 +34,17 @@
 <div class="row">
     <div class="heading">延長の可能性*</div>
     <div class="col radio">
-        <input type="radio" name="extension" id="entyo_ari" value="有り" checked required>
+        <input type="radio" name="extension" id="entyo_ari" value="有り" <?php if (!empty($_SESSION["data"]["extension"])) {
+                                                                            if ($_SESSION["data"]["extension"] == "有り") {
+                                                                                echo "checked";
+                                                                            }
+                                                                        } ?> required>
         <label for="entyo_ari" class="radio-label">有り</label>
-        <input type="radio" name="extension" id="entyo_nasi" value="無し" required>
+        <input type="radio" name="extension" id="entyo_nasi" value="無し" <?php if (!empty($_SESSION["data"]["extension"])) {
+                                                                            if ($_SESSION["data"]["extension"] == "無し") {
+                                                                                echo "checked";
+                                                                            }
+                                                                        } ?> required>
         <label for="entyo_nasi" class="radio-label">無し</label>
     </div>
 </div>

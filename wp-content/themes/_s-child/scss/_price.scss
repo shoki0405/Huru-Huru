@@ -46,7 +46,7 @@
                 color: #fff;
                 font-size: 1.6rem;
                 @media screen and (max-width: 765px) {
-                    font-size: 1rem;
+                    font-size: 3vw;
                     padding: 10px;
                 }
             }
@@ -131,6 +131,17 @@
     }
     td:nth-child(even) {
         background-color: #fbedcd;
+    }
+    .td_nyukai {
+        position: relative;
+        img {
+            position: absolute;
+            width: 55%;
+            min-width: 200px;
+            object-fit: contain;
+            top: 30px;
+            left: 18%;
+        }
     }
     .li_title {
         font-weight: bold;

@@ -2,6 +2,7 @@
 get_header();
 
 get_template_part("template/right_menu");
+get_template_part("template/bottom_menu");
 $img_fol = get_stylesheet_directory_uri() . "/img/";
 $img_fol_news = get_stylesheet_directory_uri() . "/img/news/";
 ?>
@@ -47,8 +48,13 @@ $img_fol_news = get_stylesheet_directory_uri() . "/img/news/";
                     <div class="des">
                         <?php the_excerpt(); ?>
                     </div>
+
                     <!-- 記事のリンク -->
-                    <a href="<?php the_permalink(); ?>" class="a"></a>
+                    <div class="news_btn">
+                        続きを読む
+                        <a href="<?php the_permalink(); ?>" class="a"></a>
+                    </div>
+
 
                 </div>
 
@@ -65,8 +71,8 @@ $img_fol_news = get_stylesheet_directory_uri() . "/img/news/";
             "total"        => $the_query->max_num_pages,
             "mid_size"     => 0,
             "end_size"     => 0,
-            "prev_text"    => "<span class='btn-prev'>PREV</span>",
-            "next_text"    => "<span class='btn-next'>NEXT</span>",
+            "prev_text"    => "<span class='btn-prev'><i class='fas fa-arrow-left'></i>PREV</span>",
+            "next_text"    => "<span class='btn-next'>NEXT<i class='fas fa-arrow-right'></i></span>",
         );
         echo paginate_links($paginate_args);
         ?>

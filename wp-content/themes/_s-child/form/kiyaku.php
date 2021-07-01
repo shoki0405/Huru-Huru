@@ -2,7 +2,7 @@
 <div class="kiyaku">
     <div class="inner">
         <div class="kiyaku_des">
-            以下の『個人情報の取扱いについて』と『利用規定』をお読みいただき、「同意する」にチェックをお願いします。
+            以下の『個人情報の取扱いについて』と『利用規約』をお読みいただき、「同意する」にチェックをお願いします。
         </div>
         <div class="kiyaku_title">
             利用規約
